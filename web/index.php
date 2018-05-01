@@ -12,6 +12,8 @@
     $username = filter_input(INPUT_GET, 'username');
     if(isset($username)) {
       echo "<p>Welcome $username!</p>";
+    } else {
+      echo "<p>You are not logged in</p>";
     }
     for($i = 1; $i <= 10; $i++) {
       if($i % 2 == 0) {
