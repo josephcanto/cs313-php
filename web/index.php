@@ -7,8 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-  <?php echo "<p>This is a PHP page.</p>"?>
   <?php
+    echo "<p>This is a PHP page.</p>";
+    $username = filter_input(INPUT_GET, 'username');
+    if(isset($username)) {
+      echo "<p>Welcome $username!</p>";
+    }
     for($i = 1; $i <= 10; $i++) {
       if($i % 2 == 0) {
         echo "<div id='Div$i' style='color: red'>Div$i</div><br>";
