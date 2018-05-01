@@ -11,7 +11,7 @@
   <?php
     for($i = 1; $i <= 10; $i++) {
       if($i % 2 == 0) {
-        echo "<div id='Div$i' style='font-color: red'>Div$i</div><br>";
+        echo "<div id='Div$i' style='color: red'>Div$i</div><br>";
       } else {
         echo "<div id='Div$i'>Div$i</div><br>";
       }
