@@ -10,7 +10,11 @@
   <?php echo "<p>This is a PHP page.</p>"?>
   <?php
     for($i = 1; $i <= 10; $i++) {
-      echo "<div id='Div$i'>Div$i</div>";
+      if($i % 2 == 0) {
+        echo "<div id='Div$i' style='font-color: red'>Div$i</div><br>";
+      } else {
+        echo "<div id='Div$i'>Div$i</div><br>";
+      }
     }
   ?>
 </body>
