@@ -7,6 +7,11 @@
   <title>Document</title>
 </head>
 <body>
-  <?php echo "This is a PHP page."?>
+  <?php echo "<p>This is a PHP page.</p>"?>
+  <?php
+    for($i = 1; $i <= 10; $i++) {
+      echo "<div id='Div$i'>Div$i</div>";
+    }
+  ?>
 </body>
 </html>
