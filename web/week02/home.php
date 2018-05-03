@@ -1,9 +1,8 @@
 <?php session_start(); ?>
 <!doctype html>
-<html>
+<html lang='en-US'>
 <head>
-  <title>Home</title>
-    
+    <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
