@@ -13,12 +13,12 @@
         <?php include 'navbar.php'; ?>
     </header>
 	<main>
-        <p>Welcome
+        <p>
             <?php
                 if(isset($_SESSION['user'])) {
-                    echo $_SESSION['user'] . '!';
+                    echo 'Welcome ' . $_SESSION['user'] . '!';
                 } else {
-                    echo '. You are not logged in.';
+                    echo 'Welcome. You are not logged in.';
                 }
             ?>
         </p>
