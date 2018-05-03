@@ -14,12 +14,14 @@
     
 	<main>
         
-        <p>Welcome. 
-            <?php if(isset($_SESSION['user'])) {echo $_SESSION['user'];} else {echo 'You are not logged in';} ?>
-            .
-        </p>
-        <p>
-        <?php var_dump($_SESSION['user']); ?>
+        <p>Welcome
+            <?php
+                if(isset($_SESSION['user'])) {
+                    echo $_SESSION['user'] . '!';
+                } else {
+                    echo 'You are not logged in.';
+                }
+            ?>
         </p>
     </main>
     
