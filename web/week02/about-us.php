@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -10,8 +9,9 @@
 </head>
 
 <body>
-    <header><?php include 'navbar.php'?></header>
-    
+    <header>
+        <?php include 'navbar.php'; ?>
+    </header>
 	<main>
         <p>We make mouthwatering snacks to satisfy your cool cravings in the heat of summer.</p>
     </main>

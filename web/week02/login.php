@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -10,8 +9,9 @@
 </head>
 
 <body>
-    <header><?php include 'navbar.php'?></header>
-    
+    <header>
+        <?php include 'navbar.php'; ?>
+    </header>
 	<main>
         <p><a href="adminlogin.php">Log in as Administrator</a></p>
         <p><a href="testerlogin.php">Log in as Tester</a></p>

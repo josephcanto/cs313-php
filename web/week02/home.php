@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -10,16 +9,16 @@
 </head>
 
 <body>
-    <header><?php include 'navbar.php'?></header>
-    
+    <header>
+        <?php include 'navbar.php'; ?>
+    </header>
 	<main>
-        
         <p>Welcome
             <?php
                 if(isset($_SESSION['user'])) {
                     echo $_SESSION['user'] . '!';
                 } else {
-                    echo 'You are not logged in.';
+                    echo '. You are not logged in.';
                 }
             ?>
         </p>

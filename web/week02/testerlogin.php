@@ -1,4 +1,5 @@
-<?php 
-$_SESSION['user'] = 'Tester';
-header("Location: /week02/home.php");
+<?php
+    session_start();
+    $_SESSION['user'] = 'Tester';
+    include 'home.php';
 ?>
