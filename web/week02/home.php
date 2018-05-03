@@ -19,10 +19,16 @@
                 if(isset($_SESSION['user'])) {
                     echo 'Welcome ' . $_SESSION['user'] . '!';
                 } else {
-                    echo 'Welcome. You are not logged in.';
+                    header('Location: login.php');
+                    exit();
                 }
             ?>
         </p>
+        <?php
+            if(isset($_SESSION['user'])) {
+                echo "<a href='logout.php' title='Click here to log out' class='btn btn-primary' role='button'>Logout</a>";
+            }
+        ?>
     </main>
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
