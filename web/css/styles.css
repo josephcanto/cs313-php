@@ -2,14 +2,23 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     margin: 0;
     padding: 0;
+}
+
+.home-page {
     background-image: url('../images/huskies.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 /* Background image source: https://unsplash.com/photos/oIuDXlOJSiE */
+
+.assignments-page {
+    background-image: url('../images/huskies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
 
 p {

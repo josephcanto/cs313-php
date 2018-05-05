@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home | CS313-02 | Joe</title>
 </head>
-<body>
+<body class='home-page'>
     <?php
         include 'modules/header.php';
         include 'modules/nav.php';
