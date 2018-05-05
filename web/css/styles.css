@@ -32,15 +32,29 @@ p {
 
 a:link {
     color: white;
+    text-decoration: none;
 }
 
 a:visited {
     color: lightgray;
 }
 
+a:hover {
+    color: lightskyblue;
+}
+
+a:active {
+    color: blue;
+}
+
 .main-nav {
     display: flex;
     flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+li {
+    margin: 15px;
 }
 
 @media screen and (min-width: 720px) {
