@@ -5,4 +5,24 @@
 html {
     margin: 0;
     padding: 0;
+    background-image: url('../images/huskies.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Background image source: https://unsplash.com/photos/oIuDXlOJSiE */
+/* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
+
+p {
+    font-family: sans-serif;
+}
+
+.main-nav {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media screen and (min-width: 720px) {
+    .main-nav {
+        flex-flow: row nowrap;
+    }
 }
