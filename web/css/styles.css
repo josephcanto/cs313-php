@@ -15,14 +15,27 @@ html, body {
 /* Background image source: https://unsplash.com/photos/oIuDXlOJSiE */
 
 .assignments-page {
-    background-image: url('../images/huskies.jpg');
+    background-image: url('../images/husky.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 /* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
 
+h1 {
+    color: white;
+}
+
 p {
     font-family: sans-serif;
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: lightgray;
 }
 
 .main-nav {
