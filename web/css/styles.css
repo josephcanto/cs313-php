@@ -56,10 +56,15 @@ a:active {
     color: blue;
 }
 
+header {
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .main-nav {
     display: flex;
     flex-flow: column nowrap;
-    background-color: black;
 }
 
 ul {
