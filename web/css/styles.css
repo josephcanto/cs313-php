@@ -2,9 +2,14 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
 }
 
 .home-page {
@@ -50,11 +55,15 @@ a:active {
 .main-nav {
     display: flex;
     flex-flow: column nowrap;
+    background-color: black;
+}
+
+ul {
     list-style-type: none;
 }
 
 li {
-    margin: 15px;
+    margin: 0 5px 0 0;
 }
 
 @media screen and (min-width: 720px) {
