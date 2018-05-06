@@ -20,6 +20,6 @@
         <p>Aren't Siberian Huskies the greatest? They are beautiful, curious creatures. Some people say that they are escape artists. Some people say that they aren't good with children. Some people say that they shed a lot... but, I love them! I'm not going to let anyone change that. So go ahead and try to change my mind if you want, but I promise you, you won't succeed!</p>
     </main>
     <!-- <?php include 'modules/footer.php'; ?> -->
-    <script src='js/script.js'></script>
+    <script src='scripts/script.js'></script>
 </body>
 </html>

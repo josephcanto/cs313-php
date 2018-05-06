@@ -17,6 +17,6 @@
         </ul>
     </main>
     <!-- <?php include 'modules/footer.php'; ?> -->
-    <script src='js/script.js'></script>
+    <script src='scripts/script.js'></script>
 </body>
 </html>
