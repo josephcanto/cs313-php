@@ -17,5 +17,6 @@
         </ul>
     </main>
     <!-- <?php include 'modules/footer.php'; ?> -->
+    <script src='js/script.js'></script>
 </body>
 </html>
