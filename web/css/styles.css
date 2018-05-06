@@ -6,24 +6,24 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
 }
 
 body {
     display: flex;
     flex-flow: column nowrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .home-page {
     background-image: url('../images/huskies.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 /* Background image source: https://unsplash.com/photos/oIuDXlOJSiE */
 
 .assignments-page {
     background-image: url('../images/husky.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 /* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
 
