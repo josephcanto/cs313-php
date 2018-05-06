@@ -77,7 +77,7 @@ header h1 {
 
 .main-title {
     cursor: pointer;
-    transition: all 500ms ease-out;
+    transition: all 250ms ease-out;
 }
 
 .main-nav {
