@@ -96,7 +96,7 @@ main {
 }
 
 .main-assignments {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -105,7 +105,7 @@ footer {
     padding: 15px;
     background-color: black;
     color: #555;
-    flex-shrink: 0;
+    margin-top: auto;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
