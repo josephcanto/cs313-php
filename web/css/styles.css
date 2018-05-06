@@ -25,6 +25,7 @@ html, body {
 
 h1 {
     color: white;
+    margin: 0;
 }
 
 p {
@@ -58,6 +59,12 @@ header {
     padding: 15px;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    height: 80px;
+}
+
+header h1 {
+    height: 80px;
 }
 
 .main-nav {
