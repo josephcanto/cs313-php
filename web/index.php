@@ -9,7 +9,7 @@
 </head>
 <body class='home-page'>
     <?php include 'modules/header.php'; ?>
-    <main>
+    <main class='main-home'>
         <?php
             $username = filter_input(INPUT_GET, 'username');
             if(isset($username)) {
