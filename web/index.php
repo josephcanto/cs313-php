@@ -8,10 +8,7 @@
     <title>Home | CS313-02 | Joe</title>
 </head>
 <body class='home-page'>
-    <?php
-        include 'modules/header.php';
-        include 'modules/nav.php';
-    ?>
+    <?php include 'modules/header.php'; ?>
     <main>
         <?php
             $username = filter_input(INPUT_GET, 'username');

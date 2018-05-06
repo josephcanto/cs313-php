@@ -35,6 +35,10 @@ p {
     color: white;
 }
 
+a {
+    font-family: sans-serif;
+}
+
 a:link {
     color: white;
     text-decoration: none;
@@ -64,6 +68,12 @@ ul {
 
 li {
     margin: 0 5px 0 0;
+}
+
+main {
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 @media screen and (min-width: 720px) {

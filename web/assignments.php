@@ -8,10 +8,7 @@
     <title>Assignments | CS313-02 | Joe</title>
 </head>
 <body class='assignments-page'>
-    <?php
-        include 'modules/header.php';
-        include 'modules/nav.php';
-    ?>
+    <?php include 'modules/header.php'; ?>
     <main>
         <ul class='assignment-list'>
             <li><a href='week01/hello.html' title='See my Hello World assignment from Week 1'>Week 1 - Hello World Assignment</a></li>
