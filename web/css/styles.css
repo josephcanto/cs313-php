@@ -74,6 +74,10 @@ header h1 {
     height: 40px;
 }
 
+.main-title {
+    cursor: pointer;
+}
+
 .main-nav {
     display: flex;
     flex-flow: row nowrap;
