@@ -18,6 +18,7 @@ body {
 }
 
 .home-page {
+    max-height: 500px;
     background-image: url('../images/huskies.jpg');
 }
 /* Background image source: https://unsplash.com/photos/oIuDXlOJSiE */
@@ -36,7 +37,7 @@ h1 {
 p {
     font-family: sans-serif;
     color: white;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 a {
@@ -75,7 +76,7 @@ header h1 {
 
 .main-nav {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
 }
 
 ul {
