@@ -115,9 +115,3 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-@media screen and (min-width: 720px) {
-    .main-nav {
-        flex-flow: row nowrap;
-    }
-}
