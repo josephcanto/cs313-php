@@ -22,7 +22,7 @@
         <input type='radio' name='major' value='Computer Engineering'>
         <label>Computer Engineering</label><br><br>
         <label for='comments'>Comments:</label>
-        <textarea rows='4' cols='50'></textarea><br><br>
+        <textarea rows='4' cols='50' id='comments' name='comments'></textarea><br><br>
         <input type='submit' value='Submit'>
     </form>
 </body>
