@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 ?>
 <!DOCTYPE html>
@@ -31,6 +31,7 @@ function test_input($data) {
         echo "<a href='mailto:$email'>$email</a>";
         echo "<p>$major</p>";
         echo "<p>$comments</p><ul>";
+        var_dump($continents);
         foreach($continents as $continent) {
             echo "<li>$continent</li>";
         }
