@@ -1,12 +1,12 @@
 <?php
 // define variables and set to empty values
-$name = $email = $major = $comment = "";
+$name = $email = $major = $comments = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
   $major = test_input($_POST["major"]);
-  $comment = test_input($_POST["comment"]);
+  $comments = test_input($_POST["comments"]);
 }
 
 function test_input($data) {
@@ -29,7 +29,7 @@ function test_input($data) {
         echo "<h1>$name</h1>";
         echo "<a href='mailto:$email'>$email</a>";
         echo "<p>$major</p>";
-        echo "<p>$comment</p>";
+        echo "<p>$comments</p>";
     ?>
 </body>
 </html>
