@@ -5,9 +5,9 @@ $name = $email = $major = $comments = $continents = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
   $email = test_input($_POST["email"]);
-  $major = test_input($_POST["major"]);
+  $major = $_POST["major"];
   $comments = test_input($_POST["comments"]);
-  $continents = test_input($_POST["continents"]);
+  $continents = $_POST["continents"];
 }
 
 function test_input($data) {
