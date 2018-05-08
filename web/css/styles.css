@@ -62,6 +62,10 @@ a:active {
     color: rgb(0, 247, 255);
 }
 
+.active {
+    font-weight: bold;
+}
+
 header {
     background-color: black;
     padding: 15px;
