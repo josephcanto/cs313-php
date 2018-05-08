@@ -23,6 +23,14 @@
         <label>Computer Engineering</label><br><br>
         <label for='comments'>Comments:</label>
         <textarea rows='4' cols='50' id='comments' name='comments'></textarea><br><br>
+        <label>Which continents have you visited?</label><br>
+        <input type='checkbox' name='continent'><label>North America</label><br>
+        <input type='checkbox' name='continent'><label>South America</label><br>
+        <input type='checkbox' name='continent'><label>Europe</label><br>
+        <input type='checkbox' name='continent'><label>Asia</label><br>
+        <input type='checkbox' name='continent'><label>Australia</label><br>
+        <input type='checkbox' name='continent'><label>Africa</label><br>
+        <input type='checkbox' name='continent'><label>Antarctica</label><br><br>
         <input type='submit' value='Submit'>
     </form>
 </body>
