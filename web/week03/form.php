@@ -24,13 +24,13 @@
         <label for='comments'>Comments:</label>
         <textarea rows='4' cols='50' id='comments' name='comments'></textarea><br><br>
         <label>Which continents have you visited?</label><br>
-        <input type='checkbox' name='continents'><label>North America</label><br>
-        <input type='checkbox' name='continents'><label>South America</label><br>
-        <input type='checkbox' name='continents'><label>Europe</label><br>
-        <input type='checkbox' name='continents'><label>Asia</label><br>
-        <input type='checkbox' name='continents'><label>Australia</label><br>
-        <input type='checkbox' name='continents'><label>Africa</label><br>
-        <input type='checkbox' name='continents'><label>Antarctica</label><br><br>
+        <input type='checkbox' name='continents' value='North America'><label>North America</label><br>
+        <input type='checkbox' name='continents' value='South America'><label>South America</label><br>
+        <input type='checkbox' name='continents' value='Europe'><label>Europe</label><br>
+        <input type='checkbox' name='continents' value='Asia'><label>Asia</label><br>
+        <input type='checkbox' name='continents' value='Australia'><label>Australia</label><br>
+        <input type='checkbox' name='continents' value='Africa'><label>Africa</label><br>
+        <input type='checkbox' name='continents' value='Antarctica'><label>Antarctica</label><br><br>
         <input type='submit' value='Submit'>
     </form>
 </body>
