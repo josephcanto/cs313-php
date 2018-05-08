@@ -63,7 +63,7 @@ a:active {
 }
 
 .active {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 header {
