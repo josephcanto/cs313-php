@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $major = test_input($_POST["major"]);
   $comments = test_input($_POST["comments"]);
-  $continents = test_input($_POST["continents"]);
+  $continents = test_input($_POST["continents[]"]);
 }
 
 function test_input($data) {
@@ -30,8 +30,11 @@ function test_input($data) {
         echo "<h1>$name</h1>";
         echo "<a href='mailto:$email'>$email</a>";
         echo "<p>$major</p>";
-        echo "<p>$comments</p>";
-        echo "<p>$continents</p>";
+        echo "<p>$comments</p><ul>";
+        foreach($continents as $continent) {
+            echo "<li>$continent</li>";
+        }
+        echo "</ul>";
     ?>
 </body>
 </html>
