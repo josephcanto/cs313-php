@@ -10,18 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $continentCodes = $_POST["continents"];
 }
 
-$continentNames = [
-    'North America',
-    'South America',
-    'Europe',
-    'Asia',
-    'Australia',
-    'Africa',
-    'Antarctica'
+$continents = [
+    'na' => 'North America',
+    'sa' => 'South America',
+    'eu' => 'Europe',
+    'as' => 'Asia',
+    'au' => 'Australia',
+    'af' => 'Africa',
+    'an' => 'Antarctica'
 ];
-
-$continents = array_combine($continentCodes, $continentNames);
-var_dump($continents);
 
 function test_input($data) {
     $data = trim($data);
@@ -44,8 +41,10 @@ function test_input($data) {
         echo "<a href='mailto:$email'>$email</a>";
         echo "<p>$major</p>";
         echo "<p>$comments</p><ul>";
-        foreach($continents as $continent) {
-            echo "<li>$continent</li>";
+        foreach($continents as $key => $value) {
+            if(array_key_exists($key, $continentCodes)) {
+                echo "<li>$value</li>";
+            }
         }
         echo "</ul>";
     ?>
