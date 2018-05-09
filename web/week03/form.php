@@ -26,7 +26,7 @@
             }
         ?>
         <br><label for='comments'>Comments:</label>
-        <textarea rows='4' cols='50' id='comments' name='comments'></textarea><br><br>
+        <textarea rows='4' cols='30' id='comments' name='comments'></textarea><br><br>
         <label>Which continents have you visited?</label><br>
         <input type='checkbox' name='continents[]' value='North America'><label>North America</label><br>
         <input type='checkbox' name='continents[]' value='South America'><label>South America</label><br>
