@@ -46,8 +46,9 @@ function test_input($data) {
         foreach($continents as $key => $value) {
             echo "<p>$key</p>";
             echo "<p>$value</p>";
+            echo " " . array_key_exists($key, $continentCodes);
             if(array_key_exists($key, $continentCodes)) {
-                echo "<li>$key => $value</li>";
+                echo "<li>$key</li>";
             }
         }
         echo "</ul>";
