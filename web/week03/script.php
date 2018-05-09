@@ -20,6 +20,8 @@ $continents = [
     'an' => 'Antarctica'
 ];
 
+var_dump($continentCodes);
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -43,7 +45,7 @@ function test_input($data) {
         echo "<p>$comments</p><ul>";
         foreach($continents as $key => $value) {
             if(array_key_exists($key, $continentCodes)) {
-                echo "<li>$value</li>";
+                echo "<li>$key => $value</li>";
             }
         }
         echo "</ul>";
