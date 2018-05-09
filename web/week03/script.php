@@ -1,6 +1,6 @@
 <?php
 // define variables and set to empty values
-$name = $email = $major = $comments = $continents = "";
+$name = $email = $major = $comments = $continentCodes = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
@@ -19,6 +19,9 @@ $continents = [
     'af' => 'Africa',
     'an' => 'Antarctica'
 ];
+
+var_dump($continents);
+var_dump($continentCodes);
 
 function test_input($data) {
     $data = trim($data);
