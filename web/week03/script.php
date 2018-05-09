@@ -21,8 +21,6 @@ $continentNames = [
 ];
 
 $continents = array_combine($continentCodes, $continentNames);
-var_dump($continentCodes);
-var_dump($continentNames);
 var_dump($continents);
 
 function test_input($data) {
