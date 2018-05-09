@@ -20,9 +20,6 @@ $continents = [
     'an' => 'Antarctica'
 ];
 
-var_dump($continents);
-var_dump($continentCodes);
-
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
