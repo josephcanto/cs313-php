@@ -43,7 +43,7 @@ function test_input($data) {
         echo "<p>$comments</p><ul>";
         foreach($continents as $key => $value) {
             if(array_search($key, $continentCodes)) {
-                echo "<li>$key</li>";
+                echo "<li>$value</li>";
             }
         }
         echo "</ul>";
