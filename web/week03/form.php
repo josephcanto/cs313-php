@@ -13,15 +13,19 @@
         <label for='email'>Email:</label>
         <input type='email' id='email' name='email'><br><br>
         <label>Major:</label><br>
-        <input type='radio' name='major' value='Computer Science'>
-        <label>Computer Science</label><br>
-        <input type='radio' name='major' value='Web Design and Development'>
-        <label>Web Design and Development</label><br>
-        <input type='radio' name='major' value='Computer information Technology'>
-        <label>Computer Information Technology</label><br>
-        <input type='radio' name='major' value='Computer Engineering'>
-        <label>Computer Engineering</label><br><br>
-        <label for='comments'>Comments:</label>
+        <?php
+            $majors = [
+                'Computer Science (CS)',
+                'Web Design and Development (WDD)',
+                'Computer Information Technology (CIT)',
+                'Computer Engineering (CE)'
+            ];
+            foreach($majors as $major) {
+                echo "<input type='radio' name='major' value='$major'>
+                <label>$major</label><br>";
+            }
+        ?>
+        <br><label for='comments'>Comments:</label>
         <textarea rows='4' cols='50' id='comments' name='comments'></textarea><br><br>
         <label>Which continents have you visited?</label><br>
         <input type='checkbox' name='continents[]' value='North America'><label>North America</label><br>
