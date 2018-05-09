@@ -7,8 +7,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $major = $_POST["major"];
   $comments = test_input($_POST["comments"]);
-  $continents = $_POST["continents"];
+  $continentCodes = $_POST["continents"];
 }
+
+$continentNames = [
+    'North America',
+    'South America',
+    'Europe',
+    'Asia',
+    'Australia',
+    'Africa',
+    'Antarctica'
+];
+
+$continents = array_combine($continentCodes, $continentNames);
+var_dump($continentCodes);
+var_dump($continentNames);
+var_dump($continents);
 
 function test_input($data) {
     $data = trim($data);

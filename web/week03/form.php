@@ -28,13 +28,13 @@
         <br><label for='comments'>Comments:</label>
         <textarea rows='4' cols='30' id='comments' name='comments'></textarea><br><br>
         <label>Which continents have you visited?</label><br>
-        <input type='checkbox' name='continents[]' value='North America'><label>North America</label><br>
-        <input type='checkbox' name='continents[]' value='South America'><label>South America</label><br>
-        <input type='checkbox' name='continents[]' value='Europe'><label>Europe</label><br>
-        <input type='checkbox' name='continents[]' value='Asia'><label>Asia</label><br>
-        <input type='checkbox' name='continents[]' value='Australia'><label>Australia</label><br>
-        <input type='checkbox' name='continents[]' value='Africa'><label>Africa</label><br>
-        <input type='checkbox' name='continents[]' value='Antarctica'><label>Antarctica</label><br><br>
+        <input type='checkbox' name='continents[]' value='na'><label>North America</label><br>
+        <input type='checkbox' name='continents[]' value='sa'><label>South America</label><br>
+        <input type='checkbox' name='continents[]' value='eu'><label>Europe</label><br>
+        <input type='checkbox' name='continents[]' value='as'><label>Asia</label><br>
+        <input type='checkbox' name='continents[]' value='au'><label>Australia</label><br>
+        <input type='checkbox' name='continents[]' value='af'><label>Africa</label><br>
+        <input type='checkbox' name='continents[]' value='an'><label>Antarctica</label><br><br>
         <input type='submit' value='Submit'>
     </form>
 </body>
