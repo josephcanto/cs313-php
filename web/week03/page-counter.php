@@ -16,12 +16,15 @@
 </head>
 <body>
     <?php
-        echo '<h1>You\'ve visited this page ' . $_SESSION["count"];
-        if($_SESSION["count"] == 1) {
-            echo ' time</h1>';
-        } else {
-            echo ' times</h1>';
+        while($_SESSION["count"] < 27) {
+                echo '<h1>You\'ve visited this page ' . $_SESSION["count"];
+            if($_SESSION["count"] == 1) {
+                echo ' time</h1>';
+            } else {
+                echo ' times</h1>';
+            }
         }
+        echo '<p><small>Don\'t you have anything better to do...?</small></p>';
     ?>
 </body>
 </html>
