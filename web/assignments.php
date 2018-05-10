@@ -15,6 +15,7 @@
             <li><a href='week01/hello.html' title='See my Hello World assignment from Week 1'>Week 1 - Hello World Assignment</a></li>
             <li><a href='week02/home.php' title="See my group's assignment from Week 2">Week 2 - Group Assignment</a></li>
             <li><a href='week03/form.php' title="See my group's assignment from Week 3">Week 3 - PHP Form Group Assignment</a></li>
+            <li><a href='week03/page-counter.php' title="See my group's second assignment from Week 3">Week 3 - Page Visit Counter Group Assignment</a></li>
         </ul>
     </main>
     <!-- <?php require 'modules/footer.php'; ?> -->

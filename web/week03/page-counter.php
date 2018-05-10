@@ -12,9 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Page Visits Counter</title>
 </head>
 <body>
-    <?php echo '<h1>' . $_SESSION["count"] . '</h1>'; ?>
+    <?php echo '<h1>You\'ve visited this page ' . $_SESSION["count"] . ' times</h1>'; ?>
 </body>
 </html>
