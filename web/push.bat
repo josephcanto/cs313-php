@@ -3,4 +3,4 @@ set /p comment=Enter your comment:
 git add .
 git commit -m "%comment%"
 git push heroku master
-heroku open index.php
+heroku open assignments.php

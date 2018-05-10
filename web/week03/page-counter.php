@@ -15,6 +15,13 @@
     <title>Page Visits Counter</title>
 </head>
 <body>
-    <?php echo '<h1>You\'ve visited this page ' . $_SESSION["count"] . ' times</h1>'; ?>
+    <?php
+        echo '<h1>You\'ve visited this page ' . $_SESSION["count"];
+        if($_SESSION["count"] == 1) {
+            echo ' time</h1>';
+        } else {
+            echo ' times</h1>';
+        }
+    ?>
 </body>
 </html>
