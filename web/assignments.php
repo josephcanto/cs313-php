@@ -19,7 +19,6 @@
             <li><a href='week03/shopping-cart/browse.php' title="See my Shopping Cart assignment from Week 3">Week 3 - Shopping Cart Assignment</a></li>
         </ul>
     </main>
-    <!-- <?php require 'modules/footer.php'; ?> -->
     <script src='scripts/script.js'></script>
 </body>
 </html>
