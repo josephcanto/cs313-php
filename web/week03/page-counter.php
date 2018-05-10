@@ -26,7 +26,7 @@
             echo '<p><small>Don\'t you have anything better to do...?</small></p>';
         }
         if($_SESSION["count"] > 50) {
-            echo '<p><small>Wow. Just wow.</p>';
+            echo '<p><small>Wow. Just wow.</small></p>';
         }
     ?>
 </body>
