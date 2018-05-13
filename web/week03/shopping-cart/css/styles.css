@@ -44,6 +44,8 @@ figcaption {
 
 button {
     width: 270px;
+    margin-top: -10px;
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 700px) {
