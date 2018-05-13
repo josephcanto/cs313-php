@@ -8,6 +8,10 @@
     <title>Your Shopping Cart</title>
 </head>
 <body>
+    <div id='top-bar'>
+        <p id='page-heading'>Your Shopping Cart</p>
+        <a href='view-cart.php'><img src='images/cart.png' alt='shopping cart icon' title='View cart' id='cart-icon'></a>
+    </div>
     <h1>Coming soon</h1>
 </body>
 </html>
