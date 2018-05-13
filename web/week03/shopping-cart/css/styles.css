@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 h1 {
@@ -28,6 +28,10 @@ figcaption {
 }
 
 @media screen and (min-width: 700px) {
+    body {
+        margin: 0 25%;
+    }
+
     #container {
         flex-flow: row wrap;
     }
