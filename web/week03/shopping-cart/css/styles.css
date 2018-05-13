@@ -27,6 +27,16 @@ figcaption {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+figure {
+    width: 100%;
+    min-width: 250px;
+    max-width: 320px;
+}
+
+img {
+    width: 100%;
+}
+
 @media screen and (min-width: 700px) {
     #container {
         flex-flow: row wrap;
