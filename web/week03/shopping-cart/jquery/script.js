@@ -1,5 +1,5 @@
 $('button').click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     $.ajax({
         type: "POST",
         url: "add.php",
