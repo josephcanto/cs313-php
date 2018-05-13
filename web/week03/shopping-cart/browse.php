@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     if(!isset($_SESSION['itemQtys'])) {
         $_SESSION['itemQtys'] = [
             '001' => 0,
@@ -38,7 +39,7 @@
                 <figcaption>Men's T-Shirt 001, Size: M, Price: $10.50</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='001'>
             </form>
         </div>
@@ -48,7 +49,7 @@
                 <figcaption>Men's T-Shirt 002, Size: M, Price: $12.25</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='002'>
             </form>
         </div>
@@ -58,7 +59,7 @@
                 <figcaption>Men's T-Shirt 003, Size: M, Price: $11.35</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='003'>
             </form>
         </div>
@@ -68,7 +69,7 @@
                 <figcaption>Men's T-Shirt 004, Size: M, Price: $15.40</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='004'>
             </form>
         </div>
@@ -78,7 +79,7 @@
                 <figcaption>Men's T-Shirt 005, Size: M, Price: $8.92</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='005'>
             </form>
         </div>
@@ -88,7 +89,7 @@
                 <figcaption>Men's T-Shirt 006, Size: M, Price: $13.11</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='006'>
             </form>
         </div>
@@ -98,7 +99,7 @@
                 <figcaption>Men's T-Shirt 007, Size: M, Price: $9.73</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='007'>
             </form>
         </div>
@@ -108,7 +109,7 @@
                 <figcaption>Men's T-Shirt 008, Size: M, Price: $10.38</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='008'>
             </form>
         </div>
@@ -118,7 +119,7 @@
                 <figcaption>Men's T-Shirt 009, Size: M, Price: $12.22</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='009'>
             </form>
         </div>
@@ -128,7 +129,7 @@
                 <figcaption>Men's T-Shirt 010, Size: M, Price: $14.71</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='010'>
             </form>
         </div>
@@ -138,7 +139,7 @@
                 <figcaption>Men's T-Shirt 011, Size: M, Price: $15.87</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='011'>
             </form>
         </div>
@@ -148,7 +149,7 @@
                 <figcaption>Men's T-Shirt 012, Size: M, Price: $14.88</figcaption>
             </figure>
             <form action='add.php' method='post'>
-                <input class='button' type='button' title='Add item to your cart' value='Add To Cart'>
+                <input class='button' type='submit' title='Add item to your cart' value='Add To Cart'>
                 <input type='hidden' name='item' value='012'>
             </form>
         </div>
