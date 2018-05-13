@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if(isset($_POST['id'])) {
-        $_SESSION['itemQtys'][$itemId]++;
+    if(isset($_POST['itemId'])) {
+        $_SESSION['itemQtys'][$_POST['itemId']]++;
     }
 ?>

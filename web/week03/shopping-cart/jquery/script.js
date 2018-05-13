@@ -4,6 +4,6 @@ $('button').click(function(e) {
     $.ajax({
         type: "POST",
         url: "../add.php",
-        data: this.id
+        data: { itemId: this.id }
     });
 });
