@@ -25,7 +25,7 @@ h1 {
     min-width: 350px;
 }
 
-figure {
+div, figure {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -48,7 +48,7 @@ button {
 
 @media screen and (min-width: 700px) {
     h1 {
-        font-size: 18pt;
+        font-size: 24pt;
     }
 
     #container {
