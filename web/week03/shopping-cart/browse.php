@@ -8,7 +8,10 @@
     <title>Browse | Rocket League T-Shirts</title>
 </head>
 <body>
-    <h1>Browse our selection of Rocket League T-Shirts</h1>
+    <div id='top-bar'>
+        <p id='page-heading'>Browse our selection of Rocket League T-Shirts</p>
+        <img src='images/cart.png' alt='shopping cart icon' id='cart-icon'>
+    </div>
     <div id='container'>
         <div>
             <figure>
