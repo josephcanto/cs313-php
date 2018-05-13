@@ -1,7 +1,6 @@
-$("button").click(function(e) {
+$('button').click(function(e) {
     // e.preventDefault();
-    var itemId = e.target.id;
-    alert(itemId);
+    alert(this.id);
     // $.ajax({
     //     type: "POST",
     //     url: "../add.php",
