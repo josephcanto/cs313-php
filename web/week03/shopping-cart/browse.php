@@ -13,73 +13,73 @@
         <div>
             <figure>
                 <img src='images/t-shirt-1.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $10.50</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $10.50</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-2.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $12.25</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $12.25</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-3.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $11.35</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $11.35</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-4.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $15.40</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $15.40</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-5.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $8.92</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $8.92</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-6.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $13.11</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $13.11</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-7.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $9.73</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $9.73</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-8.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $10.38</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $10.38</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-9.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $12.22</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $12.22</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-10.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $14.71</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $14.71</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-11.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $15.87</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $15.87</figcaption>
             </figure>
         </div>
         <div>
             <figure>
                 <img src='images/t-shirt-12.jpg' alt='Rocket League T-Shirt' width='300' height='300'>
-                <figcaption>Rocket League Men's T-Shirt, Size: M, Price: $14.88</figcaption>
+                <figcaption>Men's T-Shirt, Size: M, Price: $14.88</figcaption>
             </figure>
         </div>
     </div>
