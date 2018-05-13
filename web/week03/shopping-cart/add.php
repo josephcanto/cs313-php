@@ -15,9 +15,12 @@
         '011' => 0,
         '012' => 0
     ];
+    
     function increaseItemQty($itemId) {
         $_SESSION['itemQtys'][$itemId]++;
     }
 
-    var_dump($_SESSION['itemQtys'][$itemId]);
+    echo '<script language="javascript">';
+    echo 'alert(' . $_SESSION['itemQtys'][$itemId] . ')';
+    echo '</script>';
 ?>
