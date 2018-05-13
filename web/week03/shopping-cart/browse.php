@@ -16,7 +16,6 @@
             '012' => 0
         ];
     }
-    var_dump($_SESSION['itemQtys']);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
