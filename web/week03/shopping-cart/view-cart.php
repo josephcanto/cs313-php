@@ -16,6 +16,12 @@
     <a href='browse.php' title='Continue browsing'>Continue Browsing</a><br>
     <a href='checkout.php' title='Checkout'>Checkout</a>
     <h1>Take a look at what's in your shopping cart:</h1>
-    <?php var_dump($_SESSION['itemQtys']); ?>
+    <?php
+        echo '<ul>';
+        foreach($_SESSION['itemQtys'] as $item => $quantity) {
+            echo '<li>' . $item . ': ' . $quantity . '<a href="delete.php?item=' . $item . '" title="Remove item from cart">Remove from cart</a></li>';
+        }
+        echo '</ul>';
+    ?>
 </body>
 </html>

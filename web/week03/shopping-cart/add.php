@@ -1,8 +1,10 @@
 <?php
     session_start();
 
-    if(isset($_POST['itemId'])) {
-        $id = $_POST['itemId'];
+    $itemId = $_POST['item'];
+    addOneToQty($itemId);
+
+    function addOneToQty($id) {
         $_SESSION['itemQtys'][$id]++;
     }
 ?>
