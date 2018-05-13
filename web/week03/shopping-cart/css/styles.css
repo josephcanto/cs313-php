@@ -95,3 +95,9 @@ button {
         width: 300px;
     }
 }
+
+@media screen and (min-width: 1170px) {
+    #container {
+        margin: 0 auto;
+    }
+}
