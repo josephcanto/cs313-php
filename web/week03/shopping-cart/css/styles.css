@@ -35,6 +35,10 @@ figcaption {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+button {
+    width: 270px;
+}
+
 @media screen and (min-width: 700px) {
     h1 {
         font-size: 12pt;
@@ -47,5 +51,9 @@ figcaption {
     img {
         width: 300px;
         height: 300px;
+    }
+
+    button {
+        width: 300px;
     }
 }
