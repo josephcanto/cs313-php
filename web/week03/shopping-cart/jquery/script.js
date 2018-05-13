@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $('button').click(function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         var itemId = $(this).id;
-        $.ajax({
-            type: "POST",
-            url: "../add.php",
-            data: itemId
-        });
+        alert(itemId);
+        // $.ajax({
+        //     type: "POST",
+        //     url: "../add.php",
+        //     data: itemId
+        // });
     });
 });
