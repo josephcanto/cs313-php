@@ -6,5 +6,6 @@
 
     function removeItemFromCart($id) {
         $_SESSION['itemQtys'][$id] = 0;
+        header('Location: view-cart.php');
     }
 ?>

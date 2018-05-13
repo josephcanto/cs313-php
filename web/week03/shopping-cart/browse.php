@@ -35,7 +35,7 @@
     <div id='container'>
         <div>
             <figure>
-                <img src='images/t-shirt-1.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-001.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 001, Size: M, Price: $10.50</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -45,7 +45,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-2.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-002.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 002, Size: M, Price: $12.25</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -55,7 +55,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-3.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-003.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 003, Size: M, Price: $11.35</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -65,7 +65,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-4.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-004.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 004, Size: M, Price: $15.40</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -75,7 +75,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-5.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-005.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 005, Size: M, Price: $8.92</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -85,7 +85,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-6.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-006.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 006, Size: M, Price: $13.11</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -95,7 +95,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-7.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-007.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 007, Size: M, Price: $9.73</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -105,7 +105,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-8.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-008.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 008, Size: M, Price: $10.38</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -115,7 +115,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-9.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-009.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 009, Size: M, Price: $12.22</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -125,7 +125,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-10.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-010.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 010, Size: M, Price: $14.71</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -135,7 +135,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-11.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-011.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 011, Size: M, Price: $15.87</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -145,7 +145,7 @@
         </div>
         <div>
             <figure>
-                <img src='images/t-shirt-12.jpg' alt='Rocket League T-Shirt'>
+                <img src='images/t-shirt-012.jpg' alt='Rocket League T-Shirt'>
                 <figcaption>Men's T-Shirt 012, Size: M, Price: $14.88</figcaption>
             </figure>
             <form action='add.php' method='post'>
@@ -154,11 +154,5 @@
             </form>
         </div>
     </div>
-    <!-- <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous">
-    </script> -->
-    <!-- <script src="jquery/script.js"></script> -->
 </body>
 </html>

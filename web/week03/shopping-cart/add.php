@@ -6,5 +6,6 @@
 
     function addOneToQty($id) {
         $_SESSION['itemQtys'][$id]++;
+        header('Location: browse.php');
     }
 ?>
