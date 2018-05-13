@@ -123,5 +123,6 @@
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous">
     </script>
+    <script src="jquery/script.js"></script>
 </body>
 </html>
