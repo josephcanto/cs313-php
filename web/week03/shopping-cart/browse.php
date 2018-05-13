@@ -123,5 +123,6 @@
         crossorigin="anonymous">
     </script>
     <script src="jquery/script.js"></script>
+    <?php var_dump($_SESSION['itemQtys']); ?>
 </body>
 </html>
