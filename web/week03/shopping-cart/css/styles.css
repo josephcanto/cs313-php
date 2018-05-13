@@ -43,6 +43,21 @@ h1 {
     padding-left: 10px;
 }
 
+a {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px 0 0 10px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: blue;
+}
+
 #container {
     display: flex;
     flex-flow: column nowrap;
@@ -58,6 +73,10 @@ div, figure {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+figure img:hover {
+    transform: scale(1.1);
 }
 
 img {
