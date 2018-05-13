@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    min-width: 350px;
+    max-width: 1050px;
+}
+
+@media screen and (min-width: 700px) {
+    #container {
+        flex-flow: row wrap;
+    }
+}
