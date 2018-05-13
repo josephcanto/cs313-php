@@ -184,6 +184,15 @@ label {
     background-color: steelblue;
 }
 
+#order-confirm {
+    color: white;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 10pt;
+    width: 40%;
+}
+
 @media screen and (min-width: 700px) {
     #page-heading {
         font-size: 18pt;
@@ -245,11 +254,6 @@ label {
     }
 
     #order-confirm {
-        color: white;
-        margin-left: 10px;
-        margin-top: 20px;
-        margin-bottom: 40px;
         font-size: 12pt;
-        width: 40%;
     }
 }
