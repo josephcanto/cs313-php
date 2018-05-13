@@ -14,5 +14,6 @@
         <a href='view-cart.php'><img src='images/cart.png' alt='shopping cart icon' title='View cart' id='cart-icon'></a>
     </div>
     <h1>Take a look at what's in your shopping cart:</h1>
+    <?php var_dump($_SESSION['itemQtys']); ?>
 </body>
 </html>
