@@ -10,7 +10,7 @@
 <body>
     <div id='top-bar'>
         <p id='page-heading'>Browse our selection of Rocket League T-Shirts</p>
-        <img src='images/cart.png' alt='shopping cart icon' id='cart-icon'>
+        <a href='view-cart.php'><img src='images/cart.png' alt='shopping cart icon' title='View cart' id='cart-icon'></a>
     </div>
     <div id='container'>
         <div>
