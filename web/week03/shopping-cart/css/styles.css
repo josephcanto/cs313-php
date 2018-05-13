@@ -25,6 +25,12 @@ h1 {
     min-width: 350px;
 }
 
+figure {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 img {
     width: 200px;
     height: 200px;
