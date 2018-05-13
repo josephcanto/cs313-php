@@ -13,6 +13,8 @@
         <p id='page-heading'>Your Shopping Cart</p>
         <a href='view-cart.php'><img src='images/cart.png' alt='shopping cart icon' title='View cart' id='cart-icon'></a>
     </div>
+    <a href='browse.php' title='continue browsing'>Continue Browsing</a><br>
+    <a href='checkout.php' title='checkout'>Checkout</a>
     <h1>Take a look at what's in your shopping cart:</h1>
     <?php var_dump($_SESSION['itemQtys']); ?>
 </body>
