@@ -7,9 +7,7 @@ html {
 }
 
 body {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 h1 {
@@ -20,8 +18,13 @@ h1 {
 #container {
     display: flex;
     flex-flow: column nowrap;
+    width: 100%;
     min-width: 350px;
-    margin: 0 auto;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }
 
 figcaption {
@@ -32,5 +35,10 @@ figcaption {
 @media screen and (min-width: 700px) {
     #container {
         flex-flow: row wrap;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
     }
 }
