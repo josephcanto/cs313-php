@@ -1,2 +1,2 @@
-cmd "/C push.bat"
-cmd "/C dbconn.bat"
+cmd //c push
+cmd //c dbconn
