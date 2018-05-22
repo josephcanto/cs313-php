@@ -33,13 +33,13 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if(isset($_POST["search-text"])) {
   foreach ($rows as $row){
       if ($_POST['search-text'] == $row['book']) {
-        echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong><a href="scripture_text.php?scripture_id=' . $row['scripture_id'] . '">View Scripture</a>';
+        echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <a href="scripture_text.php?scripture_id=' . $row['scripture_id'] . '">View Scripture</a>';
       }
   }
 }
 else {
   foreach ($rows as $row) {
-    echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong><a href="scripture_text.php?scripture_id=' . $row['scripture_id'] . '"> View Scripture</a>';
+    echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <a href="scripture_text.php?scripture_id=' . $row['scripture_id'] . '">View Scripture</a>';
   }
 }
 ?>
