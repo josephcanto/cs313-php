@@ -17,6 +17,7 @@
             <li><a href='week03/group-assignments/form.php' title="View my group's assignment from Week 3">Week 3 - PHP Form Group Assignment</a></li>
             <li><a href='week03/group-assignments/page-counter.php' title="View my group's second assignment from Week 3">Week 3 - Page Visit Counter Group Assignment</a></li>
             <li><a href='week03/shopping-cart/browse.php' title="View my Shopping Cart assignment from Week 3">Week 3 - Shopping Cart Assignment</a></li>
+            <li><a href='week05/index.php' title="View my group's scripture database assignment from Week 5">Week 5 - Scripture Database Assignment</a></li>
         </ul>
         <h1>Projects</h1>
         <ul class='assignment-list'>
