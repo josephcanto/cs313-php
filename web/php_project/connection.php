@@ -10,6 +10,7 @@
     <h1>Awesome web app coming soon!</h1>
     <?php
         $dbUrl = getenv('DATABASE_URL');
+        echo $dbUrl;
 
         $dbopts = parse_url($dbUrl);
     
@@ -24,7 +25,9 @@
         // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
         $stmt = $db->prepare('SELECT * FROM users WHERE id=:id AND lastname=:lastname');
-        $stmt->execute(array(':lastname' => $lastname, ':id' => $id));
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
+        $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach($rows as $row) {
