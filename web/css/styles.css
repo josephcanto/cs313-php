@@ -26,6 +26,7 @@ body {
 
 .assignments-page {
     background-image: url('../images/husky.jpg');
+    background-position-x: center;
 }
 /* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
 
@@ -129,8 +130,11 @@ footer {
     justify-content: center;
 }
 
-@media screen and (min-width: 720px) {
+@media (min-width: 768px) {
     .home-page {
         max-height: 300px;
+    }
+    .assignments-page {
+        background-position-x: initial;
     }
 }
