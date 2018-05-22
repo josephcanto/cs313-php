@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connection Test</title>
+    <title>Database Connection Test</title>
 </head>
 <body>
     <h1>Awesome web app coming soon!</h1>
