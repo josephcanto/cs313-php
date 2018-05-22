@@ -26,9 +26,12 @@ body {
 
 .assignments-page {
     background-image: url('../images/husky.jpg');
-    background-position-x: center;
 }
 /* Background image source: https://unsplash.com/photos/2R9Rzn40Fow */
+
+.home-page, .assignments-page {
+    background-position-x: center;
+}
 
 h1 {
     color: white;
@@ -134,7 +137,7 @@ footer {
     .home-page {
         max-height: 300px;
     }
-    .assignments-page {
+    .home-page, .assignments-page {
         background-position-x: initial;
     }
 }
