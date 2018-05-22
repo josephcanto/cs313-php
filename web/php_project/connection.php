@@ -14,23 +14,19 @@
         $dbopts = parse_url($dbUrl);
     
         $dbHost = $dbopts["host"];
-        echo $dbHost . '<br>';
         $dbPort = $dbopts["port"];
-        echo $dbPort . '<br>';
         $dbUser = $dbopts["user"];
-        echo $dbUser . '<br>';
         $dbPassword = $dbopts["pass"];
-        echo $dbPassword . '<br>';
         $dbName = ltrim($dbopts["path"],'/');
-        echo $dbName;
     
         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     
         // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-        $stmt = $db->prepare('SELECT * FROM users WHERE id=:id AND lastname=:lastname');
-        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-        $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
+        $stmt = $db->prepare('SELECT * FROM users');
+        // $stmt = $db->prepare('SELECT * FROM users WHERE id=:id AND lastname=:lastname');
+        // $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        // $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
         $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
