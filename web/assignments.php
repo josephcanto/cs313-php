@@ -12,11 +12,15 @@
     <main class='main-assignments'>
         <h1>Assignments</h1>
         <ul class='assignment-list'>
-            <li><a href='week01/hello.html' title='See my Hello World assignment from Week 1'>Week 1 - Hello World Assignment</a></li>
-            <li><a href='week02/home.php' title="See my group's assignment from Week 2">Week 2 - Group Assignment</a></li>
-            <li><a href='week03/group-assignments/form.php' title="See my group's assignment from Week 3">Week 3 - PHP Form Group Assignment</a></li>
-            <li><a href='week03/group-assignments/page-counter.php' title="See my group's second assignment from Week 3">Week 3 - Page Visit Counter Group Assignment</a></li>
-            <li><a href='week03/shopping-cart/browse.php' title="See my Shopping Cart assignment from Week 3">Week 3 - Shopping Cart Assignment</a></li>
+            <li><a href='week01/hello.html' title='View my Hello World assignment from Week 1'>Week 1 - Hello World Assignment</a></li>
+            <li><a href='week02/home.php' title="View my group's assignment from Week 2">Week 2 - Group Assignment</a></li>
+            <li><a href='week03/group-assignments/form.php' title="View my group's assignment from Week 3">Week 3 - PHP Form Group Assignment</a></li>
+            <li><a href='week03/group-assignments/page-counter.php' title="View my group's second assignment from Week 3">Week 3 - Page Visit Counter Group Assignment</a></li>
+            <li><a href='week03/shopping-cart/browse.php' title="View my Shopping Cart assignment from Week 3">Week 3 - Shopping Cart Assignment</a></li>
+        </ul>
+        <h1>Projects</h1>
+        <ul class='assignment-list'>
+            <li><a href='php_project/connection.php' title='View my PHP project'>PHP Project</a></li>
         </ul>
     </main>
     <script src='scripts/script.js'></script>
