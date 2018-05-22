@@ -10,15 +10,19 @@
     <h1>Awesome web app coming soon!</h1>
     <?php
         $dbUrl = getenv('DATABASE_URL');
-        echo $dbUrl;
 
         $dbopts = parse_url($dbUrl);
     
         $dbHost = $dbopts["host"];
+        echo $dbHost;
         $dbPort = $dbopts["port"];
+        echo $dbPort;
         $dbUser = $dbopts["user"];
+        echo $dbUser;
         $dbPassword = $dbopts["pass"];
+        echo $dbPassword;
         $dbName = ltrim($dbopts["path"],'/');
+        echo $dbName;
     
         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     
