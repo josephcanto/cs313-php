@@ -30,9 +30,9 @@
         foreach ($movies as $movie) {
             $title = $movie['title'];
             $year = $movie['year'];
-            echo '<li>' . $title;
+            echo "<li>$title";
             if($movie['year'] != NULL) {
-                echo ' ($year)';
+                echo " ($year)";
             }
             echo "</li>";
         }
