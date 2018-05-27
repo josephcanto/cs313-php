@@ -223,7 +223,8 @@ a:active {
     }
 
     #banner {
-        height: 933px;
+        background-position-y: center;
+        height: 600px;
     }
 
     #comic {
