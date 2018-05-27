@@ -117,14 +117,10 @@
         if(isset($personEventsInfo)) {
             $eventsList .= "<ul class='event-info-list'>";
             foreach($personEventsInfo as $event) {
-                $name = $event['name'];
-                $date = $event['date'];
-                $frequency = $event['frequency'];
-                $reminder = $event['reminder'];
-                $eventsList .= "<li>Event: $name</li>";
-                $eventsList .= "<li>Date of event: $date</li>";
-                $eventsList .= "<li>Frequency of event: $frequency</li>";
-                $eventsList .= "<li>You will be reminded on: $reminder</li>";
+                $eventsList .= "<li>Event: " . $event['name'] . "</li>";
+                $eventsList .= "<li>Date of event: " . $event['date'] . "</li>";
+                $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
+                $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
             }
             $eventsList .= "</ul>";
         }
