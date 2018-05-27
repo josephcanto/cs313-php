@@ -230,6 +230,10 @@ a:active {
     color: #000;
 }
 
+#dashboard-page {
+    height: 400px;
+}
+
 .people-list-heading {
     color: #000;
 }

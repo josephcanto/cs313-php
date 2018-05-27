@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
-    <main>
+    <main id='dashboard-page'>
         <?php
             if(isset($_SESSION['peopleList'])) {
                 echo $_SESSION['peopleList'];
