@@ -106,6 +106,7 @@ section {
     border-style: solid;
     border-width: 2px;
     border-color: white;
+    border-radius: 5px;
     color: #fff;
     width: 175px;
     height: 45px;
@@ -181,8 +182,10 @@ h2 {
     border-style: solid;
     border-width: 1px;
     border-color: #000;
+    border-radius: 5px;
     transition: all 250ms ease-in;
     padding: 5px;
+    
 }
 
 #create-account-btn:hover {
@@ -247,7 +250,7 @@ a:active {
     }
 
     .comic-strip {
-        margin: 0 50px;
+        margin: 0 10px;
     }
     
     #testimonials-container {
