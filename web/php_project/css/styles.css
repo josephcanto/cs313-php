@@ -87,6 +87,11 @@ nav {
     border-color: yellowgreen;
 }
 
+#welcome-message {
+    color: white;
+    display: inline;
+}
+
 section {
     width: 100%;
     height: auto;
