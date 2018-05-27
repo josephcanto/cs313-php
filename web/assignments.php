@@ -22,7 +22,7 @@
         </ul>
         <h1>Projects</h1>
         <ul class='assignment-list'>
-            <li><a href='php_project/index.php' title='View my PHP project'>PHP Project - For-gift &amp; Forget App</a></li>
+            <li><a href='php_project/' title='View my PHP project'>PHP Project - For-gift &amp; Forget App</a></li>
         </ul>
     </main>
     <script src='scripts/script.js'></script>
