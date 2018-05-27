@@ -49,7 +49,7 @@
                 <input type='text' name='lastname' placeholder='Last name'>
                 <input type='email' name='emailaddress' placeholder='Email'>
                 <input type='password' name='newpassword' placeholder='Password'>
-                <input type='submit' id='create-account-btn' value='Create Account'>
+                <input type='submit' id='create-account-btn' value='Create Account' title='Click to create your account after filling out the form fields above'>
             </form>
         </section><!-- end of section 'registration' -->
     </main>
