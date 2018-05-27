@@ -208,8 +208,6 @@ a:active {
 
     section {
         height: 400px;
-        flex-flow: row nowrap;
-        justify-content: center;
     }
 
     #comic {
