@@ -76,6 +76,7 @@ nav {
     border-style: solid;
     border-width: 1px;
     border-color: white;
+    border-radius: 5px;
     transition: all 250ms ease-in;
     padding: 5px;
     text-align: center;
@@ -83,8 +84,7 @@ nav {
 
 #login-btn:hover {
     cursor: pointer;    
-    background-color: #fff;
-    color: black;
+    background-color: #000;
     border-color: yellowgreen;
 }
 
