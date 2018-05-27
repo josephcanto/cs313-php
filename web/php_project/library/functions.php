@@ -34,13 +34,13 @@
 
     function checkPassword($email, $password) {
         $db = dbConnect();
-        $sql = 'SELECT password FROM users WHERE email = :email';
+        $sql = 'SELECT email, password, firstname, lastname FROM users WHERE email = :email';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
-        $matchPassword = $stmt->fetch(PDO::FETCH_ASSOC);
+        $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-        if($password == $matchPassword){
+        if($password == $userInfo['password']){
             return TRUE;
         }
         else {
