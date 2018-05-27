@@ -6,11 +6,11 @@
 
     $personId = htmlspecialchars($_GET['id']);
     $personInfo = getEventsInfoByPersonId($personId);
-    var_dump($personInfo);
-    // if(!empty($personInfo)) {
-    //     $_SESSION['personInfo'] = $personInfo;
-    //     $eventsInfoList = buildEventsInfoList($personInfo);
-    // }
+    if(!empty($personInfo)) {
+        $_SESSION['personInfo'] = $personInfo;
+        $eventsInfoList = buildEventsInfoList($personInfo);
+        var_dump($eventsInfoList);
+    }
     // if(!empty($eventsInfoList)) {
     //     $_SESSION['eventsInfoList'] = $eventsInfoList;
     //     header('Location: ../view-person.php');
