@@ -16,10 +16,11 @@
             $_SESSION['firstname'] = $firstname;
 
             $people = getPeopleList($userInfo['id']);
-            $peopleList = buildPeopleList($people);
-            $_SESSION['peopleList'] = $peopleList;
-            
-            header('Location: ../dashboard.php');
+            var_dump($people);
+            // $peopleList = buildPeopleList($people);
+            // $_SESSION['peopleList'] = $peopleList;
+
+            // header('Location: ../dashboard.php');
         } else {
             header('Location: ../index.php');
         }
