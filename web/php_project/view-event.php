@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>View Person | For-gift &amp; Forget</title>
+    <title>View Event | For-gift &amp; Forget</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -18,14 +18,14 @@
     <main id='person-page'>
         <h2 id='person-name'>
             <?php
-                if(isset($_SESSION['personName'])) {
-                    echo $_SESSION['personName'];
+                if(isset($_SESSION['eventName'])) {
+                    echo $_SESSION['personName'] . "'s " . $_SESSION['eventName'];
                 }
             ?>
         </h2>
         <?php
-            if(isset($_SESSION['eventsInfoList'])) {
-                echo $_SESSION['eventsInfoList'];
+            if(isset($_SESSION['giftIdeasList'])) {
+                echo $_SESSION['giftIdeasList'];
             }
         ?>
     </main>

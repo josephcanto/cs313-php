@@ -133,8 +133,82 @@
                 $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
                 $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
                 $eventsList .= "</ul>";
+                $eventsList .= "<a href='library/event.php?eventid=" . $event['id'] . "' title='View your gift ideas for this event'>View My Gift Ideas</a>";
             }
         }
         return $eventsList;
+    }
+
+    function getNameByEventId($eventId) {
+        $db = dbConnect();
+        $sql = 'SELECT name FROM events WHERE id = :eventId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':eventId', $eventId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;
+    }
+
+    function getGiftIdeasByEventId($eventId) {
+        $db = dbConnect();
+        $sql = 'SELECT id, name, notes, event_id FROM ideas WHERE event_id = :eventId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':eventId', $eventId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;        
+    }
+
+    function buildGiftIdeasList($giftInfo) {
+        $ideasList = "";
+        if(isset($giftInfo)) {
+            foreach($giftInfo as $idea) {
+                $ideasList .= "<ul class='gift-info-list'>";
+                $ideasList .= "<li>Gift Idea: " . $idea['name'] . "</li>";
+                $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
+                $ideasList .= "</ul>";
+                $ideasList .= "<a href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a>";
+            }
+        }
+        return $ideasList;
+    }
+
+    function getNameByGiftId($giftId) {
+        $db = dbConnect();
+        $sql = 'SELECT name FROM ideas WHERE id = :giftId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':giftId', $giftId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;
+    }
+
+    function getLocationsByGiftId($giftId) {
+        $db = dbConnect();
+        $sql = 'SELECT id, name, address, website, price, gift_id FROM locations WHERE gift_id = :giftId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':giftId', $giftId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;        
+    }
+
+    function buildLocationsList($locationInfo) {
+        $locationsList = "";
+        if(isset($locationInfo)) {
+            foreach($locationInfo as $location) {
+                $locationsList .= "<ul class='gift-info-list'>";
+                $locationsList .= "<li>Store Name: " . $location['name'] . "</li>";
+                $locationsList .= "<li>Address: " . $location['address'] . "</li>";
+                $locationsList .= "<li>Website: " . $location['website'] . "</li>";
+                $locationsList .= "<li>Price: " . $location['price'] . "</li>";
+                $locationsList .= "</ul>";
+            }
+        }
+        return $locationsList;
     }
 ?>
