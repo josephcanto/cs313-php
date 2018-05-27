@@ -26,7 +26,7 @@
             $_SESSION['error'] = 'Error. Registration failed. Please try again.';
         }
     } else {
-        $_SESSION['error'] = 'Error. You are already logged in.';
-        header('Location: ../index.php');
+        $_SESSION['error'] = 'Error. You are already logged in with another account.';
+        header('Location: ../index.php#registration');
     }
 ?>
