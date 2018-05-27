@@ -261,7 +261,8 @@ a:active {
 
 .person-link:link, .person-link:visited,
 .event-link:link, .event-link:visited,
-.location-link:link, .location-link:visited {
+.location-link:link, .location-link:visited,
+.store-website-link:link, .store-website-link:visited {
     color: #000;
 }
 
