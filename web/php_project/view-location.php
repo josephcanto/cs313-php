@@ -21,7 +21,7 @@
         <h2 id='location-name'>
             <?php
                 if(isset($_SESSION['giftName'])) {
-                    echo $_SESSION['giftName'];
+                    echo $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'];
                 }
             ?>
         </h2>
