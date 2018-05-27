@@ -232,6 +232,7 @@ a:active {
 
 #dashboard-page {
     height: 600px;
+    padding: 75px 30px; 
 }
 
 #dashboard-page p {
