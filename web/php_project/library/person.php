@@ -8,7 +8,7 @@
     $personInfo = getEventsInfoByPersonId($personId);
     if(!empty($personInfo)) {
         $_SESSION['personInfo'] = $personInfo;
-        var_dump($_SESSION['personInfo']['name']);
+        var_dump($_SESSION['personInfo']);
         $eventsInfoList = buildEventsInfoList($personInfo);
     }
     // if(!empty($eventsInfoList)) {
