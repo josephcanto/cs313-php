@@ -234,6 +234,11 @@ a:active {
     height: 400px;
 }
 
+#dashboard-page p {
+    margin: 0;
+    padding: 75px;
+}
+
 .people-list-heading {
     color: #000;
 }
