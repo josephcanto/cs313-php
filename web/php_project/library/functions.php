@@ -62,7 +62,7 @@
 
     function getPeopleList($userId) {
         $db = dbConnect();
-        $sql = 'SELECT name, is_family, address FROM people WHERE user_id = :userId';
+        $sql = 'SELECT id, name, is_family, address FROM people WHERE user_id = :userId';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
@@ -80,11 +80,11 @@
             foreach($people as $person) {
                 if($person['is_family']) {
                     // add the person to the list of family members if they are family, and increase the number of family members added by 1
-                    $family .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                    $family .= "<li><a href='person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
-                    $friends .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                    $friends .= "<li><a href='person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
                     $numFriends++;
                 }
             }

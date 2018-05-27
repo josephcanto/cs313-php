@@ -11,7 +11,18 @@
 <body>
     <?php require 'modules/header.php'; ?>
     <main>
-        <h1>Content coming soon</h1>
+        <h1>
+            <?php
+                if(isset($_SESSION['personInfo']['name'])) {
+                    echo $_SESSION['personInfo']['name'];
+                }
+            ?>
+        </h1>
+        <?php
+            if(isset($_SESSION['personInfoList'])) {
+                echo $_SESSION['personInfoList'];
+            }
+        ?>
     </main>
     <?php require 'modules/footer.php'; ?>
 </body>

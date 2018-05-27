@@ -19,6 +19,9 @@
     <?php require 'modules/header.php'; ?>
     <main id='dashboard-page'>
         <?php
+            if(isset($_SESSION['errorMessage'])) {
+                echo $_SESSION['errorMessage'];
+            }
             if(isset($_SESSION['peopleList'])) {
                 echo $_SESSION['peopleList'];
             } else {
