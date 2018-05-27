@@ -18,16 +18,13 @@
 <body>
     <?php require 'modules/header.php'; ?>
     <main>
-        <h1>Family</h1>
-            <ul>
-                <li><a href="view-person.php?name=rick" title="View Rick's page">Rick</a></li>
-                <li><a href="view-person.php?name=lucy" title="View Lucy's page">Lucy</a></li>
-            </ul>
-        <h1>Friends</h1>
-            <ul>
-                <li><a href="view-person.php?name=fred" title="View Fred's page">Fred</a></li>
-                <li><a href="view-person.php?name=ethel" title="View Ethel's page">Ethel</a></li>
-            </ul>
+        <?php
+            if(isset($_SESSION['peopleList'])) {
+                echo $_SESSION['peopleList'];
+            } else {
+                echo "<h1>Looks like you haven't added anyone yet!</h1>";
+            }
+        ?>
     </main>
     <?php require 'modules/footer.php'; ?>
 </body>
