@@ -6,15 +6,16 @@
 
     $personId = htmlspecialchars($_GET['id']);
     $personInfo = getEventsInfoByPersonId($personId);
-    if(!empty($personInfo)) {
-        $_SESSION['personInfo'] = $personInfo;
-        $eventsInfoList = buildEventsInfoList($personInfo);
-    }
-    if(!empty($eventsInfoList)) {
-        $_SESSION['eventsInfoList'] = $eventsInfoList;
-        header('Location: ../view-person.php');
-    } else {
-        $_SESSION['errorMessage'] = "<p class='notice'>Oops, something went wrong on our end.</p>";
-        header('Location: ../dashboard.php');
-    }
+    var_dump($personInfo);
+    // if(!empty($personInfo)) {
+    //     $_SESSION['personInfo'] = $personInfo;
+    //     $eventsInfoList = buildEventsInfoList($personInfo);
+    // }
+    // if(!empty($eventsInfoList)) {
+    //     $_SESSION['eventsInfoList'] = $eventsInfoList;
+    //     header('Location: ../view-person.php');
+    // } else {
+    //     $_SESSION['errorMessage'] = "<p class='notice'>Oops, something went wrong on our end.</p>";
+    //     header('Location: ../dashboard.php');
+    // }
 ?>
