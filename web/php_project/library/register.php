@@ -27,5 +27,6 @@
         }
     } else {
         $_SESSION['error'] = 'Error. You are already logged in.';
+        header('Location: ../index.php');
     }
 ?>
