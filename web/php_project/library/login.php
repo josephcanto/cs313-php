@@ -15,6 +15,7 @@
             $_SESSION['loggedIn'] = TRUE;
             $_SESSION['firstname'] = $firstname;
 
+            var_dump($userInfo['id']);
             $people = getPeopleList($userInfo['id']);
             var_dump($people);
             // $peopleList = buildPeopleList($people);

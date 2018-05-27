@@ -62,7 +62,7 @@
 
     function getPeopleList($userId) {
         $db = dbConnect();
-        $sql = 'SELECT name, is_family, address FROM people WHERE user_id = :userId';
+        $sql = 'SELECT "name", is_family, "address" FROM people WHERE user_id = :userId';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
@@ -72,7 +72,6 @@
 
     function buildPeopleList($people) {
         $output = "<p>Here is what's in the people variable:</p>";
-        var_dump($people);
         // if(!empty($people) && $person['is_family']) {
         //     $output .= "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
         //     for($i = 0; $i < count($people); $i++) {
