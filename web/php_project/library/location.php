@@ -5,7 +5,9 @@
     session_start();
 
     $giftid = htmlspecialchars($_GET['giftid']);
+    var_dump($giftId);
     $giftName = getNameByGiftId($giftId);
+    $var_dump($giftName);
     $_SESSION['giftName'] = $giftName['name'];
     $locationInfo = getLocationsByGiftId($giftId);
     var_dump($locationInfo);
