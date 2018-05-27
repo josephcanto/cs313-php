@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
-    <main>
+    <main id='person-page'>
         <h1>
             <?php
                 if(isset($_SESSION['personInfo']['name'])) {

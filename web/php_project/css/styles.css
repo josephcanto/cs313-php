@@ -234,7 +234,7 @@ a:active {
     color: #000;
 }
 
-#dashboard-page {
+#dashboard-page, #person-page {
     height: 600px;
     padding: 75px 30px; 
 }
