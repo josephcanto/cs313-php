@@ -260,7 +260,8 @@ a:active {
     }
 
     h1 {
-        font-size: 24pt;
+        font-size: 36pt;
+        margin: -100px 0 30px 0;
     }
 
     #comic {
