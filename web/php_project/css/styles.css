@@ -192,7 +192,6 @@ h4 {
     border-radius: 5px;
     transition: all 250ms ease-in;
     padding: 5px;
-    
 }
 
 #create-account-btn:hover {
@@ -268,5 +267,13 @@ a:active {
     #testimonials {
         flex-flow: row nowrap;
         justify-content: center;
+    }
+
+    .testimonial {
+        margin: 0 20px;
+    }
+
+    #create-account-btn {
+        font-size: 14pt;
     }
 }
