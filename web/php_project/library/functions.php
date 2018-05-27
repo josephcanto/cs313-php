@@ -51,7 +51,7 @@
     // This function will get a user's first name using his or her email address
     function getUserInfoByEmail($email) {
         $db = dbConnect();
-        $sql = 'SELECT email, password, firstname, lastname FROM users WHERE email = :email';
+        $sql = 'SELECT id, email, password, firstname, lastname FROM users WHERE email = :email';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -60,21 +60,27 @@
         return $results;
     }
 
-    function buildPeopleList($userId) {
+    function getPeopleList($userId) {
         $db = dbConnect();
-        $sql = 'SELECT firstname FROM users WHERE id = :userId';
+        $sql = 'SELECT name, is_family, address FROM people WHERE user_id = :userId';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':userID', $userId, PDO::PARAM_INT);
+        $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
         $people = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
+    }
 
+    function buildPeopleList($people) {
+        $output = "";
         if(!empty($people) && $person['is_family']) {
-            echo "<ul>";
-            foreach($people as $person) {
-                echo "<li>" . $person['name'] . "</li>";
+            $output .= "<h1>Family</h1><ul>";
+            for($i = 0; $i < count($people); $i++) {
+                foreach($people[$i] as $person) {
+                    $output .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                }
             }
-            echo "</ul>";
+            $output .= "</ul>";
         }
+        return $output;
     }
 ?>

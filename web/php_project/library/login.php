@@ -10,10 +10,15 @@
         $userInfo = getUserInfoByEmail($email);
         $passwordCheck = checkPassword($email, $password);
         $firstname = $userInfo['firstname'];
-        
+
         if(isset($firstname) && $passwordCheck) {
             $_SESSION['loggedIn'] = TRUE;
             $_SESSION['firstname'] = $firstname;
+
+            $people = getPeopleList($userInfo['id']);
+            $peopleList = buildPeopleList($people);
+            $_SESSION['peopleList'] = $peopleList;
+            
             header('Location: ../dashboard.php');
         } else {
             header('Location: ../index.php');

@@ -12,7 +12,11 @@
     if(isset($_SESSION['error'])) {
         unset($_SESSION['error']);
     }
-    
+
+    if(isset($_SESSION['peopleList'])) {
+        unset($_SESSION['peopleList']);
+    }
+
     session_destroy();
 
     header('Location: ../index.php');
