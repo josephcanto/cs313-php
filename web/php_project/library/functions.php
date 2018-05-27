@@ -93,9 +93,9 @@
             if($numFamily != 0 && $numFriends != 0) {
                 $peopleList = $family . $friends;
             } elseif($numFamily != 0 && $numFriends == 0) {
-                $peopleList = $family . "<h1>Looks like you haven't added any friends yet.</h1>";
+                $peopleList = $family . "<h1 class='people-list-heading'>Looks like you haven't added any friends yet.</h1>";
             } else {
-                $peopleList = "<h1>Looks like you haven't added any family yet.</h1>" . $friends;
+                $peopleList = "<h1 class='people-list-heading'>Looks like you haven't added any family yet.</h1>" . $friends;
             }
         }
         return $peopleList;
