@@ -88,6 +88,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 #banner {
@@ -111,6 +112,10 @@ section {
     cursor: pointer;
     background-color: #000;
     border-color: yellowgreen;
+}
+
+h1 {
+    color: #fff;
 }
 
 #comic {
@@ -232,6 +237,10 @@ a:active {
 
     #comic {
         padding: 5px;
+    }
+
+    .comic-strip {
+        margin: 0 50px;
     }
     
     #testimonials-container {
