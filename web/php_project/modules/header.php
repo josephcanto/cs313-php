@@ -1,5 +1,5 @@
 <header>
-    <img id='logo' src='images/logo_tiny.jpg' alt='for-gift &amp; forget website logo'>
+    <a href='index.php' title='Click here to go to the home page'><img id='logo' src='images/logo_tiny.jpg' alt='for-gift &amp; forget website logo'></a>
     <nav>
         <?php
             if($_SESSION['loggedIn']) {
