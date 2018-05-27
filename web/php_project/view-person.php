@@ -13,8 +13,8 @@
     <main id='person-page'>
         <h2 id='person-name'>
             <?php
-                if(isset($_SESSION['personInfo']['name'])) {
-                    echo $_SESSION['personInfo']['name'];
+                if(isset($_SESSION['personName'])) {
+                    echo $_SESSION['personName'];
                 }
             ?>
         </h2>

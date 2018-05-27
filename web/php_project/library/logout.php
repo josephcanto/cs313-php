@@ -1,23 +1,12 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['loggedIn'])) {
-        unset($_SESSION['loggedIn']);
-    }
-    
-    if(isset($_SESSION['firstname'])) {
-        unset($_SESSION['firstname']);
-    }
+    // removes all session variables
+    session_unset();
 
-    if(isset($_SESSION['error'])) {
-        unset($_SESSION['error']);
-    }
-
-    if(isset($_SESSION['peopleList'])) {
-        unset($_SESSION['peopleList']);
-    }
-
+    // destroys the session
     session_destroy();
 
+    // redirects to the home page
     header('Location: ../index.php');
 ?>
