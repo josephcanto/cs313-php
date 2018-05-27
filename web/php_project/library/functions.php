@@ -68,6 +68,7 @@
         $stmt->execute();
         $people = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
+        return $people;
     }
 
     function buildPeopleList($people) {
