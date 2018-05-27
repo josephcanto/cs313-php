@@ -17,8 +17,8 @@
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
-    <main id='person-page'>
-        <h2 id='person-name'>
+    <main id='event-page'>
+        <h2 id='event-name'>
             <?php
                 if(isset($_SESSION['eventName'])) {
                     echo $_SESSION['personName'] . "'s " . $_SESSION['eventName'];

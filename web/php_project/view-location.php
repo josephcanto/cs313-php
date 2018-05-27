@@ -17,8 +17,8 @@
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
-    <main id='person-page'>
-        <h2 id='person-name'>
+    <main id='location-page'>
+        <h2 id='location-name'>
             <?php
                 if(isset($_SESSION['locationName'])) {
                     echo $_SESSION['locationName'];

@@ -234,12 +234,18 @@ a:active {
     color: #000;
 }
 
-#dashboard-page, #person-page {
+#dashboard-page,
+#person-page,
+#event-page,
+#location-page {
     height: 600px;
     padding: 75px 30px; 
 }
 
-.people-list-heading, #person-name {
+.people-list-heading, 
+#person-name,
+#event-name,
+#location-name {
     font-size: 24pt;
     margin: 0;
     color: #000;
