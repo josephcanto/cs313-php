@@ -1,16 +1,4 @@
-<?php
-    // This function will get a user's first name using his or her email address
-    function getUserFirstNameByEmail($email) {
-        $db = dbConnect();
-        $sql = 'SELECT firstname FROM users WHERE email = :email';
-        $stmt = $db->prepare($sql);
-        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $stmt->closeCursor();
-        return $result[0];
-    }
-    
+<?php    
     // This function will check for an existing email address
     function checkExistingEmail($email){
         $db = dbConnect();
@@ -58,6 +46,18 @@
         else {
             return TRUE;
         }        
+    }
+
+    // This function will get a user's first name using his or her email address
+    function getUserInfoByEmail($email) {
+        $db = dbConnect();
+        $sql = 'SELECT email, password, firstname, lastname FROM users WHERE email = :email';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;
     }
 
     function buildPeopleList($userId) {
