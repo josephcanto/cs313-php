@@ -19,6 +19,7 @@
 
         $result = registerUser($valUserEmail, $user_password, $firstname, $lastname);
         if($result == 1) {
+            $_SESSION['loggedIn'] = TRUE;
             header('Location: ../dashboard.php');
         }
         else {

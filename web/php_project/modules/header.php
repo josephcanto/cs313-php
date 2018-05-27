@@ -2,7 +2,7 @@
     <img id='logo' src='images/logo_tiny.jpg' alt='for-gift &amp; forget website logo'>
     <nav>
         <?php
-            if(isset($_SESSION['firstname'])) {
+            if($_SESSION['loggedIn']) {
                 $firstname = $_SESSION['firstname'];
                 echo "<p>Welcome, $firstname! </p><a id='logout-button' href='library/logout.php' title='Click here to log out'>Log Out</a>";
             } else {
