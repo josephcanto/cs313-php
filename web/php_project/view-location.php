@@ -20,14 +20,14 @@
     <main id='location-page'>
         <h2 id='location-name'>
             <?php
-                if(isset($_SESSION['locationName'])) {
-                    echo $_SESSION['locationName'];
+                if(isset($_SESSION['giftName'])) {
+                    echo $_SESSION['giftName'];
                 }
             ?>
         </h2>
         <?php
-            if(isset($_SESSION['giftLocationsList'])) {
-                echo $_SESSION['giftLocationsList'];
+            if(isset($_SESSION['locationsList'])) {
+                echo $_SESSION['locationsList'];
             }
         ?>
     </main>
