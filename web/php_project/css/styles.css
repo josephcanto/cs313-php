@@ -259,16 +259,12 @@ a:active {
     margin-left: 20px; 
 }
 
-.person-link {
-    text-decoration: underline;
-    color: yellowgreen;
-}
-
 .person-link:link, .person-link:visited,
 .event-link:link, .event-link:visited,
 .location-link:link, .location-link:visited,
 .store-website-link:link, .store-website-link:visited {
-    color: #000;
+    text-decoration: underline;
+    color: yellowgreen;
 }
 
 @media screen and (min-width: 768px) {
