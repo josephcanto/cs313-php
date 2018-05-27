@@ -55,7 +55,7 @@
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         return $results;
     }

@@ -7,8 +7,6 @@
     if(!isset($_SESSION['loggedIn'])) {
         $email = filter_input(INPUT_POST, 'email');
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-        var_dump($email);
-        var_dump($password);
         $userInfo = getUserInfoByEmail($email);
         $passwordCheck = checkPassword($password);
     
