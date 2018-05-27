@@ -133,7 +133,7 @@
                 $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
                 $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
                 $eventsList .= "</ul>";
-                $eventsList .= "<a href='library/event.php?eventid=" . $event['id'] . "' title='View your gift ideas for this event'>View My Gift Ideas</a>";
+                $eventsList .= "<a class='event-link' href='library/event.php?eventid=" . $event['id'] . "' title='View your gift ideas for this event'>View My Gift Ideas</a>";
             }
         }
         return $eventsList;
@@ -169,7 +169,7 @@
                 $ideasList .= "<li>Gift Idea: " . $idea['name'] . "</li>";
                 $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
                 $ideasList .= "</ul>";
-                $ideasList .= "<a href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a>";
+                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a>";
             }
         }
         return $ideasList;

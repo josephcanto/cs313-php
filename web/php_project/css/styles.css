@@ -253,7 +253,9 @@ a:active {
     margin-left: 20px; 
 }
 
-.person-link:link, .person-link:visited {
+.person-link:link, .person-link:visited,
+.event-link:link, .event-link:visited,
+.location-link:link, .location-link:visited {
     color: #000;
 }
 
