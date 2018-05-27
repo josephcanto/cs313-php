@@ -18,6 +18,10 @@
 <body>
     <?php require 'modules/header.php'; ?>
     <main id='person-page'>
+        <?php
+            echo "<a class='breadcrumb-trail' href='dashboard.php' title='Go back to the Dashboard page'>Dashboard</a> &gt;"
+             . $_SESSION['personName'];
+        ?>
         <h2 id='person-name'>
             <?php
                 if(isset($_SESSION['personName'])) {

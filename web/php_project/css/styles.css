@@ -262,9 +262,14 @@ a:active {
 .person-link:link, .person-link:visited,
 .event-link:link, .event-link:visited,
 .location-link:link, .location-link:visited,
-.store-website-link:link, .store-website-link:visited {
+.store-website-link:link, .store-website-link:visited,
+.breadcrumb-trail:link, .breadcrumb-trail:visited {
     text-decoration: underline;
     color: yellowgreen;
+}
+
+.breadcrumb-trail {
+    font-size: 10pt;
 }
 
 @media screen and (min-width: 768px) {
