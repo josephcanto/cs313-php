@@ -73,6 +73,7 @@ nav {
     border-color: white;
     transition: all 250ms ease-in;
     padding: 5px;
+    text-align: center;
 }
 
 #login-btn:hover {
@@ -106,6 +107,7 @@ section {
     height: 45px;
     transition: all 250ms ease-in;
     padding: 5px;
+    text-align: center;
 }
 
 #action-button:hover {
@@ -209,7 +211,8 @@ a:active {
 
 @media screen and (min-width: 768px) {
     main {
-        margin: 0 200px;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     header, footer {
