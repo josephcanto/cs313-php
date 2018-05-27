@@ -160,6 +160,10 @@ h2 {
     border: solid 2px #fff;
 }
 
+h4 {
+    text-align: center;
+}
+
 #registration {
     background-color: white;
 }
