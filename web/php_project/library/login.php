@@ -10,12 +10,14 @@
         $firstname = getUserFirstNameByEmail($email);
         $passwordCheck = checkPassword($password);
     
-        if(!empty($firstname) && $passwordCheck) {
-            $_SESSION['loggedIn'] = TRUE;
-            $_SESSION['firstname'] = $firstname;
-            header('Location: ../dashboard.php');
-        } else {
-            header('Location: ../index.php');
-        }
+        var_dump($firstname);
+        var_dump($passwordCheck);
+        // if(!empty($firstname) && $passwordCheck) {
+        //     $_SESSION['loggedIn'] = TRUE;
+        //     $_SESSION['firstname'] = $firstname;
+        //     header('Location: ../dashboard.php');
+        // } else {
+        //     header('Location: ../index.php');
+        // }
     }
 ?>

@@ -19,12 +19,10 @@
 
         $result = registerUser($valUserEmail, $user_password, $firstname, $lastname);
         if($result == 1) {
-            // header('Location: ../dashboard.php');
-            echo '<p>Registration successful!</p>';
+            header('Location: ../dashboard.php');
         }
         else {
-            echo '<p>Registration failed.</p>';
-            // $_SESSION['error'] = 'Error. Registration failed. Please try again.';
+            $_SESSION['error'] = 'Error. Registration failed. Please try again.';
         }
     } else {
         $_SESSION['error'] = 'Error. You are already logged in.';
