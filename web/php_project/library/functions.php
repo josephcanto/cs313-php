@@ -214,7 +214,7 @@
                     $locationsList .= "<li>Website: Not specified</li>";
                 }
                 if(isset($location['price'])) {
-                    $locationsList .= "<li>Price: " . $location['price'] . "</li>";
+                    $locationsList .= "<li>Price: $" . $location['price'] . "</li>";
                 } else {
                     $locationsList .= "<li>Price: Not specified</li>";
                 }
