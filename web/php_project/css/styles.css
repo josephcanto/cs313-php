@@ -276,6 +276,10 @@ a:active {
         padding: 5px 15px;
     }
 
+    h2 {
+        margin: -60px 0 30px 0;
+    }
+
     #testimonials {
         flex-flow: row nowrap;
         justify-content: center;
