@@ -12,12 +12,18 @@
         $user_password = filter_input(INPUT_POST, 'newpassword', FILTER_SANITIZE_STRING);
         $_SESSION['firstname'] = $firstname;
 
+        var_dump($firstname);
+        var_dump($lastname);
+        var_dump($valUserEmail);
+        var_dump($user_password);
+
         $emailCheck = checkExistingEmail($valUserEmail);
+        var_dump($emailCheck);
         if($emailCheck == 0) {
             $_SESSION['error'] = 'Email address already exists in our system. Try a different one, or, log in above.';
         }
 
-        $result = registerUser($firstname, $lastname, $valUserEmail, $user_password);
+        $result = registerUser($valUserEmail, $user_password, $firstname, $lastname);
         var_dump($result);
         // if($result == 1) {
         //     header('Location: ../dashboard.php');

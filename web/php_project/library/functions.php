@@ -29,15 +29,15 @@
     }
 
     // This function will handle site registrations
-    function registerUser($firstname, $lastname, $email, $password){
+    function registerUser($email, $password, $firstname, $lastname){
        $db = dbConnect();
-       $sql = 'INSERT INTO users (firstname, lastname, email, "password")
-               VALUES (:firstname, :lastname, :email, :"password")';
+       $sql = 'INSERT INTO users (email, password, firstname, lastname)
+               VALUES (:email, :password, :firstname, :lastname)';
        $stmt = $db->prepare($sql);
-       $stmt->bindValue(':firstname', $firstname, PDO::PARAM_STR);
-       $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
        $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+       $stmt->bindValue(':firstname', $firstname, PDO::PARAM_STR);
+       $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
        $stmt->execute();
        $rowsChanged = $stmt->rowCount();
        $stmt->closeCursor();
