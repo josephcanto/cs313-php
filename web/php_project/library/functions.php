@@ -71,7 +71,8 @@
     }
 
     function buildPeopleList($people) {
-        $output = "<p>Here is what's in the people variable: " . var_dump($people) . "</p>";
+        $output = "<p>Here is what's in the people variable:</p>";
+        var_dump($people);
         // if(!empty($people) && $person['is_family']) {
         //     $output .= "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
         //     for($i = 0; $i < count($people); $i++) {
