@@ -87,6 +87,10 @@ nav {
     border-color: yellowgreen;
 }
 
+#logout-button {
+    margin-left: 5px;
+}
+
 #welcome-message {
     color: white;
     display: inline;
