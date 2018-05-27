@@ -5,12 +5,14 @@
     session_start();
 
     $personId = htmlspecialchars($_GET['id']);
-    $personInfo = getEventsInfoByPersonId($personId);
-    if(!empty($personInfo)) {
-        $_SESSION['personInfo'] = $personInfo;
-        var_dump($_SESSION['personInfo']);
-        $eventsInfoList = buildEventsInfoList($personInfo);
-    }
+    $personName = getNameByPersonId($personId);
+    var_dump($personName);
+    // $_SESSION['personName'] = $personName;
+    // $personInfo = getEventsInfoByPersonId($personId);
+    // if(!empty($personInfo)) {
+    //     $_SESSION['personInfo'] = $personInfo;
+    //     $eventsInfoList = buildEventsInfoList($personInfo);
+    // }
     // if(!empty($eventsInfoList)) {
     //     $_SESSION['eventsInfoList'] = $eventsInfoList;
     //     header('Location: ../view-person.php');

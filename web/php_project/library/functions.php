@@ -101,6 +101,17 @@
         return $peopleList;
     }
 
+    function getNameByPersonId($personId) {
+        $db = dbConnect();
+        $sql = 'SELECT name FROM people WHERE id = :personId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':personId', $personId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;
+    }
+
     function getEventsInfoByPersonId($personId) {
         $db = dbConnect();
         $sql = 'SELECT id, name, date, frequency, reminder, person_id FROM events WHERE person_id = :personId';
