@@ -72,16 +72,20 @@
     }
 
     function buildPeopleList($people) {
-        $output = "";
-        if(!empty($people) && $person['is_family']) {
-            $output .= "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
+        if(!empty($people)) {
+            $family = "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
+            $friends = "<h1 class='people-list-heading'>Friends</h1><ul class='people-list'>";
             for($i = 0; $i < count($people); $i++) {
-                foreach($people[$i] as $person) {
-                    $output .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                if($people[$i]['is_family']) {
+                    $family .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                } else {
+                    $friends .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
                 }
             }
-            $output .= "</ul>";
+            $family .= "</ul>";
+            $friends .= "</ul>";
+            $peopleList = $family . $friends;
         }
-        return $output;
+        return $peopleList;
     }
 ?>
