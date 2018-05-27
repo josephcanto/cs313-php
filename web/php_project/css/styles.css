@@ -76,6 +76,7 @@ nav {
 }
 
 #login-btn:hover {
+    cursor: pointer;    
     background-color: #fff;
     color: black;
     border-color: yellowgreen;
@@ -107,6 +108,7 @@ section {
 }
 
 #action-button:hover {
+    cursor: pointer;
     background-color: #000;
     border-color: yellowgreen;
 }
@@ -173,6 +175,7 @@ h2 {
 }
 
 #create-account-btn:hover {
+    cursor: pointer;
     background-color: #000;
     border-color: yellowgreen;
 }
