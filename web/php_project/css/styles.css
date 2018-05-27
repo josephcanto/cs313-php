@@ -10,13 +10,14 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: yellowgreen;
     width: 100%;
 }
 
 main {
     width: 100%;
     margin: 0 0;
+    background-color: white;
 }
 
 header, footer {
