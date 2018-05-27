@@ -259,6 +259,10 @@ a:active {
         height: 600px;
     }
 
+    h1 {
+        font-size: 24pt;
+    }
+
     #comic {
         padding: 5px;
     }
@@ -281,6 +285,10 @@ a:active {
     }
 
     #create-account-btn {
+        font-size: 14pt;
+    }
+
+    h3 {
         font-size: 14pt;
     }
 }

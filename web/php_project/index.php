@@ -42,7 +42,7 @@
             </div>
         </section><!-- end of section 'testimonials' -->
         <section id='registration'>
-            <h5>Register today, and start impressing everyone with your awesome gift ideas! Never forget another special occasion again!</h5>
+            <h3>Register today, and start impressing everyone with your awesome gift ideas! Never forget another special occasion again!</h3>
             <?php if(isset($_SESSION['error'])) echo "<p id='error-message' style='color: red;'>" . $_SESSION['error'] . "</p>"; ?>
             <form id='registration-form' action='library/register.php' method='post'>
                 <input type='text' name='firstname' placeholder='First name'>
