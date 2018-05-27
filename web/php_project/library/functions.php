@@ -73,8 +73,8 @@
 
     function buildPeopleList($people) {
         if(!empty($people)) {
-            $family = "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
-            $friends = "<h1 class='people-list-heading'>Friends</h1><ul class='people-list'>";
+            $family = "<h2 class='people-list-heading'>Family</h2><ul class='people-list'>";
+            $friends = "<h2 class='people-list-heading'>Friends</h2><ul class='people-list'>";
             $numFamily = 0;
             $numFriends = 0;
             foreach($people as $person) {
@@ -93,9 +93,9 @@
             if($numFamily != 0 && $numFriends != 0) {
                 $peopleList = $family . $friends;
             } elseif($numFamily != 0 && $numFriends == 0) {
-                $peopleList = $family . "<h1 class='people-list-heading'>Looks like you haven't added any friends yet.</h1>";
+                $peopleList = $family . "<h2 class='people-list-heading'>Looks like you haven't added any friends yet.</h2>";
             } else {
-                $peopleList = "<h1 class='people-list-heading'>Looks like you haven't added any family yet.</h1>" . $friends;
+                $peopleList = "<h2 class='people-list-heading'>Looks like you haven't added any family yet.</h2>" . $friends;
             }
         }
         return $peopleList;

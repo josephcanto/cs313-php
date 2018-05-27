@@ -241,6 +241,7 @@ a:active {
 }
 
 .people-list-heading {
+    font-size: 24pt;
     margin: 0;
     color: #000;
 }

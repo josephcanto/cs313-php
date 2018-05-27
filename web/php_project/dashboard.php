@@ -22,7 +22,7 @@
             if(isset($_SESSION['peopleList'])) {
                 echo $_SESSION['peopleList'];
             } else {
-                echo "<h1 class='people-list-heading'>Looks like you haven't added anyone yet!</h1>";
+                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2>";
             }
         ?>
     </main>
