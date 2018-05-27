@@ -62,7 +62,7 @@
 
     function getPeopleList($userId) {
         $db = dbConnect();
-        $sql = 'SELECT * FROM people WHERE user_id = :userId';
+        $sql = 'SELECT name, is_family, address FROM people WHERE user_id = :userId';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
