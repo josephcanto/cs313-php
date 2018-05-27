@@ -10,12 +10,12 @@
         $firstname = getUserFirstNameByEmail($email);
         $passwordCheck = checkPassword($password);
     
-        if(isset($firstname) && $passwordCheck) {
+        if(!empty($firstname) && $passwordCheck) {
             $_SESSION['loggedIn'] = TRUE;
             $_SESSION['firstname'] = $firstname;
-            header('Location: dashboard.php');
+            header('Location: ../dashboard.php');
         } else {
-            header('Location: index.php');
+            header('Location: ../index.php');
         }
     }
 ?>
