@@ -15,13 +15,11 @@
             $_SESSION['loggedIn'] = TRUE;
             $_SESSION['firstname'] = $firstname;
 
-            var_dump($userInfo['id']);
             $people = getPeopleList($userInfo['id']);
-            var_dump($people);
-            // $peopleList = buildPeopleList($people);
-            // $_SESSION['peopleList'] = $peopleList;
+            $peopleList = buildPeopleList($people);
+            $_SESSION['peopleList'] = $peopleList;
 
-            // header('Location: ../dashboard.php');
+            header('Location: ../dashboard.php');
         } else {
             header('Location: ../index.php');
         }
