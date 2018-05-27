@@ -22,7 +22,7 @@
             echo "<a class='breadcrumb-trail' href='dashboard.php' title='Go back to the Dashboard page'>Dashboard</a> &gt;"
             . "<a class='breadcrumb-trail' href='view-person.php' title='Go back to the Person page'>" . $_SESSION['personName'] . "</a> &gt;"
             . "<a class='breadcrumb-trail' href='view-event.php' title='Go back to the Event page'>" . $_SESSION['eventName'] . "</a> &gt;"
-            . $_SESSION['giftName'];
+            . "<span class='breadcrumb-trail'>" . $_SESSION['giftName'] . "</span>";
         ?>
         <h2 id='location-name'>
             <?php

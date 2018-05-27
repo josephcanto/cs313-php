@@ -20,7 +20,7 @@
     <main id='person-page'>
         <?php
             echo "<a class='breadcrumb-trail' href='dashboard.php' title='Go back to the Dashboard page'>Dashboard</a> &gt;"
-             . $_SESSION['personName'];
+             . "<span class='breadcrumb-trail'>" . $_SESSION['personName'] . "</span>";
         ?>
         <h2 id='person-name'>
             <?php
