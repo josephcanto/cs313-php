@@ -153,6 +153,7 @@ h2 {
 .testimonial {
     width: 250px;
     height: 300px;
+    margin: 0 10px;
 }
 
 .person-image {
