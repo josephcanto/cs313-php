@@ -18,12 +18,13 @@
         }
 
         $result = registerUser($firstname, $lastname, $valUserEmail, $user_password);
-        if($result == 1) {
-            header('Location: ../dashboard.php');
-        }
-        else {
-            $_SESSION['error'] = 'Error. Registration failed. Please try again.';
-        }
+        var_dump($result);
+        // if($result == 1) {
+        //     header('Location: ../dashboard.php');
+        // }
+        // else {
+        //     $_SESSION['error'] = 'Error. Registration failed. Please try again.';
+        // }
     } else {
         $_SESSION['error'] = 'Error. You are already logged in.';
     }
