@@ -115,14 +115,14 @@
     function buildEventsInfoList($personEventsInfo) {
         $eventsList = "";
         if(isset($personEventsInfo)) {
-            $eventsList .= "<ul class='event-info-list'>";
             foreach($personEventsInfo as $event) {
+                $eventsList .= "<ul class='event-info-list'>";
                 $eventsList .= "<li>Event: " . $event['name'] . "</li>";
                 $eventsList .= "<li>Date of event: " . $event['date'] . "</li>";
                 $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
                 $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
+                $eventsList .= "</ul>";
             }
-            $eventsList .= "</ul>";
         }
         return $eventsList;
     }

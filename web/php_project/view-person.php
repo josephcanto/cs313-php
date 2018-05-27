@@ -11,13 +11,13 @@
 <body>
     <?php require 'modules/header.php'; ?>
     <main id='person-page'>
-        <h1>
+        <h2 id='person-name'>
             <?php
                 if(isset($_SESSION['personInfo']['name'])) {
                     echo $_SESSION['personInfo']['name'];
                 }
             ?>
-        </h1>
+        </h2>
         <?php
             if(isset($_SESSION['eventsInfoList'])) {
                 echo $_SESSION['eventsInfoList'];
