@@ -59,4 +59,22 @@
             return TRUE;
         }        
     }
+
+    function buildPeopleList($userId) {
+        $db = dbConnect();
+        $sql = 'SELECT firstname FROM users WHERE id = :userId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':userID', $userId, PDO::PARAM_INT);
+        $stmt->execute();
+        $people = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+
+        if(!empty($people) && $person['is_family']) {
+            echo "<ul>";
+            foreach($people as $person) {
+                echo "<li>" . $person['name'] . "</li>";
+            }
+            echo "</ul>";
+        }
+    }
 ?>

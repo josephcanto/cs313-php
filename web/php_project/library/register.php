@@ -1,6 +1,6 @@
 <?php
-    require 'library/connection.php';
-    require 'library/functions.php';
+    require 'connection.php';
+    require 'functions.php';
 
     session_start();
 
