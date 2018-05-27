@@ -4,7 +4,7 @@
         <?php
             if($_SESSION['loggedIn']) {
                 $firstname = $_SESSION['firstname'];
-                echo "<p>Welcome, $firstname! </p><a id='logout-button' href='library/logout.php' title='Click here to log out'>Log Out</a>";
+                echo "<p id='welcome-message'>Welcome, $firstname! </p><a id='logout-button' href='library/logout.php' title='Click here to log out'>Log Out</a>";
             } else {
                 echo "
                     <form id='login-form' action='library/login.php' method='post'>
