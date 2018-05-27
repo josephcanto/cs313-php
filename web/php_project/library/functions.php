@@ -80,11 +80,11 @@
             foreach($people as $person) {
                 if($person['is_family']) {
                     // add the person to the list of family members if they are family, and increase the number of family members added by 1
-                    $family .= "<li><a href='person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
+                    $family .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
-                    $friends .= "<li><a href='person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
+                    $friends .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
                     $numFriends++;
                 }
             }
@@ -99,5 +99,31 @@
             }
         }
         return $peopleList;
+    }
+
+    function getEventsInfoByPersonId($personId) {
+        $db = dbConnect();
+        $sql = 'SELECT id, name, date, frequency, reminder, person_id FROM events WHERE person_id = :personId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':personId', $personId, PDO::PARAM_INT);
+        $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;        
+    }
+
+    function buildEventsInfoList($personEventsInfo) {
+        $eventsList = "";
+        if(isset($personEventsInfo)) {
+            $eventsList .= "<ul class='event-info-list'>";
+            foreach($personEventsInfo as $event) {
+                $eventsList .= "<li>Event: " . $event['name'] . "</li>";
+                $eventsList .= "<li>Date of event: " . $event['date'] . "</li>";
+                $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
+                $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
+            }
+            $eventsList .= "</ul>";
+        }
+        return $eventsList;
     }
 ?>

@@ -19,8 +19,8 @@
             ?>
         </h1>
         <?php
-            if(isset($_SESSION['personInfoList'])) {
-                echo $_SESSION['personInfoList'];
+            if(isset($_SESSION['eventsInfoList'])) {
+                echo $_SESSION['eventsInfoList'];
             }
         ?>
     </main>
