@@ -75,16 +75,28 @@
         if(!empty($people)) {
             $family = "<h1 class='people-list-heading'>Family</h1><ul class='people-list'>";
             $friends = "<h1 class='people-list-heading'>Friends</h1><ul class='people-list'>";
-            for($i = 0; $i < count($people); $i++) {
-                if($people[$i]['is_family']) {
+            $numFamily = 0;
+            $numFriends = 0;
+            foreach($people as $person) {
+                if($person['is_family']) {
+                    // add the person to the list of family members if they are family, and increase the number of family members added by 1
                     $family .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                    $numFamily++;
                 } else {
+                    // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
                     $friends .= "<li>" . $person['name'] . "<ul><li>" . $person['address'] . "</li></ul></li>";
+                    $numFriends++;
                 }
             }
             $family .= "</ul>";
             $friends .= "</ul>";
-            $peopleList = $family . $friends;
+            if($numFamily != 0 && $numFriends != 0) {
+                $peopleList = $family . $friends;
+            } elseif($numFamily != 0 && $numFriends == 0) {
+                $peopleList = $family . "<h1>Looks like you haven't added any friends yet.</h1>";
+            } else {
+                $peopleList = "<h1>Looks like you haven't added any family yet.</h1>" . $friends;
+            }
         }
         return $peopleList;
     }
