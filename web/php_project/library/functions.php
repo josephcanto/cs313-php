@@ -32,20 +32,20 @@
        return $rowsChanged;
     }
 
-    function checkPassword($password) {
+    function checkPassword($email, $password) {
         $db = dbConnect();
-        $sql = 'SELECT "password" FROM users WHERE "password" = :"password"';
+        $sql = 'SELECT password FROM users WHERE email = :email';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
-        $matchPassword = $stmt->fetch(PDO::FETCH_NUM);
+        $matchPassword = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-        if(empty($matchPassword)){
-            return FALSE;
+        if($password == $matchPassword){
+            return TRUE;
         }
         else {
-            return TRUE;
-        }        
+            return FALSE;
+        }
     }
 
     // This function will get a user's first name using his or her email address
