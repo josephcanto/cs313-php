@@ -1,5 +1,5 @@
 <header>
-    <img id='logo' src='images/logo.png' alt='for-gift &amp; forget website logo'>
+    <img id='logo' src='images/person_icon.jpg' alt='for-gift &amp; forget website logo'>
     <nav>
         <?php
             if(isset($_SESSION['firstname'])) {
