@@ -107,7 +107,7 @@
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':personId', $personId, PDO::PARAM_INT);
         $stmt->execute();
-        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         return $results;        
     }
