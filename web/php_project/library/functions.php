@@ -206,17 +206,17 @@
                 if(isset($location['address'])) {
                     $locationsList .= "<li>Address: " . $location['address'] . "</li>";
                 } else {
-                    $locationsList .= "<li>Address: Not specified.</li>";
+                    $locationsList .= "<li>Address: Not specified</li>";
                 }
                 if(isset($location['website'])) {
-                    $locationsList .= "<li>Website: " . $location['website'] . "</li>";
+                    $locationsList .= "<li>Website: <a href='http://www." . $location['website'] . "' title='Click here to go to " . $location['website'] . "'>" . $location['website'] . "</a></li>";
                 } else {
-                    $locationsList .= "<li>Website: Not specified.</li>";
+                    $locationsList .= "<li>Website: Not specified</li>";
                 }
                 if(isset($location['price'])) {
                     $locationsList .= "<li>Price: " . $location['price'] . "</li>";
                 } else {
-                    $locationsList .= "<li>Price: Not specified.</li>";
+                    $locationsList .= "<li>Price: Not specified</li>";
                 }
                 $locationsList .= "</ul>";
             }
