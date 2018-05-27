@@ -70,7 +70,7 @@ nav {
     padding: 5px;
 }
 
-#login-btn {
+#login-btn, #logout-button {
     background-color: yellowgreen;
     color: white;
     border-style: solid;
@@ -81,7 +81,7 @@ nav {
     text-align: center;
 }
 
-#login-btn:hover {
+#login-btn:hover, #logout-button:hover {
     cursor: pointer;    
     background-color: #000;
     border-color: yellowgreen;
@@ -245,7 +245,7 @@ a:active {
         height: 50px;
     }
 
-    #login-btn {
+    #login-btn, #logout-button {
         width: 100px;
     }
 

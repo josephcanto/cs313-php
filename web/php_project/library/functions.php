@@ -32,7 +32,7 @@
     function registerUser($firstname, $lastname, $email, $password){
        $db = dbConnect();
        $sql = 'INSERT INTO users (firstname, lastname, email, "password")
-               VALUES (:firstname, :lastname, :email, :password)';
+               VALUES (:firstname, :lastname, :email, :"password")';
        $stmt = $db->prepare($sql);
        $stmt->bindValue(':firstname', $firstname, PDO::PARAM_STR);
        $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
@@ -42,5 +42,21 @@
        $rowsChanged = $stmt->rowCount();
        $stmt->closeCursor();
        return $rowsChanged;
+    }
+
+    function checkPassword($password) {
+        $db = dbConnect();
+        $sql = 'SELECT "password" FROM users WHERE "password" = :"password"';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+        $stmt->execute();
+        $matchPassword = $stmt->fetch(PDO::FETCH_NUM);
+        $stmt->closeCursor();
+        if(empty($matchPassword)){
+            return FALSE;
+        }
+        else {
+            return TRUE;
+        }        
     }
 ?>

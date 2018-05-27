@@ -1,9 +1,10 @@
 <?php
-        require 'library/connection.php';
-        require 'library/functions.php';
-    
-        session_start();
-    
+    require 'library/connection.php';
+    require 'library/functions.php';
+
+    session_start();
+
+    if(!isset($_SESSION['loggedIn'])) {
         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $sanUserEmail = filter_input(INPUT_POST, 'emailaddress', FILTER_SANITIZE_EMAIL);
@@ -23,4 +24,7 @@
         else {
             $_SESSION['error'] = 'Error. Registration failed. Please try again.';
         }
+    } else {
+        $_SESSION['error'] = 'Error. You are already logged in.';
+    }
 ?>
