@@ -51,8 +51,8 @@
 
     // Get user inputs
     $book = filter_input(INPUT_POST, 'book', FILTER_SANITIZE_STRING);
-    $chapter = filter_input(INPUT_POST, 'chapter', FILTER_SANITIZE_NUMBER_INT);
-    $verse = filter_input(INPUT_POST, 'verse', FILTER_SANITIZE_NUMBER_INT);
+    $chapter = (int)filter_input(INPUT_POST, 'chapter', FILTER_SANITIZE_NUMBER_INT);
+    $verse = (int)filter_input(INPUT_POST, 'verse', FILTER_SANITIZE_NUMBER_INT);
     $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
     $topics = $_POST['topics'];
     var_dump($book);
