@@ -11,18 +11,6 @@
 </head>
 <body>
     <?php
-        $dbUrl = getenv('DATABASE_URL');
-
-        $dbopts = parse_url($dbUrl);
-    
-        $dbHost = $dbopts["host"];
-        $dbPort = $dbopts["port"];
-        $dbUser = $dbopts["user"];
-        $dbPassword = $dbopts["pass"];
-        $dbName = ltrim($dbopts["path"],'/');
-    
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
         if(isset($_SESSION['error'])) echo $_SESSION['error'];
     ?>
     <form action='insert_scriptures.php' method='post'>
@@ -35,6 +23,18 @@
         <label for='content'>Content</label>
         <textarea id='content' name='content'></textarea><br>
         <?php
+            $dbUrl = getenv('DATABASE_URL');
+
+            $dbopts = parse_url($dbUrl);
+        
+            $dbHost = $dbopts["host"];
+            $dbPort = $dbopts["port"];
+            $dbUser = $dbopts["user"];
+            $dbPassword = $dbopts["pass"];
+            $dbName = ltrim($dbopts["path"],'/');
+        
+            $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+            
             $stmt = $db->prepare("SELECT name FROM topics");
             $stmt->execute();
             $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
