@@ -25,24 +25,24 @@
 
         if(isset($_SESSION['error'])) echo $_SESSION['error'];
     ?>
-    <form action='scripture_text.php' method='post'>
+    <form action='insert_scriptures.php' method='post'>
         <label for='book'>Book</label>
-        <input type='text' id='book' name='book'>
+        <input type='text' id='book' name='book'><br>
         <label for='chapter'>Chapter</label>
-        <input type='text' id='chapter' name='chapter'>
+        <input type='text' id='chapter' name='chapter'><br>
         <label for='verse'>Verse</label>
-        <input type='text' id='verse' name='verse'>
+        <input type='text' id='verse' name='verse'><br>
         <label for='content'>Content</label>
-        <textarea id='content' name='content'></textarea>
+        <textarea id='content' name='content'></textarea><br>
         <?php
             $stmt = $db->prepare("SELECT name FROM topics");
             $stmt->execute();
             $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             foreach($topics as $topic) {
-                echo "<input type='checkbox' name='topics[]' value='" . $topic['name'] . "'>" . $topic['name'];
+                echo "<input type='checkbox' name='topics[]' value='" . $topic['name'] . "'>" . $topic['name'] . "<br>";
             }
-        ?>
+        ?><br>
         <input type='submit' value='Insert'>
     </form>
 </body>
