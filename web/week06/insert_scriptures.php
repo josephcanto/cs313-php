@@ -57,23 +57,26 @@
     $topics = $_POST['topics'];
 
     $result = insertScripture();
-    if($result != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "SCripture insert failed. Please try again.";
-    }
+    var_dump($result);
+    // if($result != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "SCripture insert failed. Please try again.";
+    // }
 
     $rowsChanged = insertTopic();
-    if($rowsChanged != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "Topic insert failed. Please try again.";
-    }
+    var_dump($rowsChanged);
+    // if($rowsChanged != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "Topic insert failed. Please try again.";
+    // }
 
     $rowsAffected = insertScriptureTopic();
-    if($rowsAffected != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "Insert failed. Please try again.";
-    }
+    var_dump($rowsAffected);
+    // if($rowsAffected != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "Insert failed. Please try again.";
+    // }
 ?>
