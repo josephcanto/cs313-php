@@ -25,21 +25,9 @@
         $stmt->closeCursor();
     }
 
-    function insertTopic($topics) {
-        foreach($topics as $topic) {
-            $stmt = $db->prepare("INSERT INTO topics (name)
-            VALUES (:topic)");
-            $stmt->bindValue(':topic', $topic['name'], PDO::PARAM_STR);
-            $stmt->execute();
-            $rowsChanged = $stmt->rowCount();
-            $stmt->closeCursor();
-            if($rowsChanged == 0) return 0;
-        }
-    }
-
-    function insertScriptureTopic() {
+    function insertScriptureTopic($topics) {
         $scripture_id = $pdo->lastInsertId('scripture_id_seq');
-        $topic_id = $pdo->lastInsertId('topic_id_seq');
+
         $stmt = $db->prepare("INSERT INTO scripture_topics (scripture_id, topic_id)
         VALUES (:scripture_id, :topic_id");
         $stmt->bindValue(':scripture_id', $scripture_id, PDO::PARAM_INT);
@@ -48,6 +36,18 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
     }
+
+    // function insertTopic($topics) {
+    //     foreach($topics as $topic) {
+    //         $stmt = $db->prepare("INSERT INTO topics (name)
+    //         VALUES (:topic)");
+    //         $stmt->bindValue(':topic', $topic['name'], PDO::PARAM_STR);
+    //         $stmt->execute();
+    //         $rowsChanged = $stmt->rowCount();
+    //         $stmt->closeCursor();
+    //         if($rowsChanged == 0) return 0;
+    //     }
+    // }
 
     // Get user inputs
     $book = filter_input(INPUT_POST, 'book', FILTER_SANITIZE_STRING);
@@ -63,17 +63,17 @@
         $_SESSION['error'] = "SCripture insert failed. Please try again.";
     }
 
-    $rowsChanged = insertTopic($topics);
-    if($rowsChanged != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "Topic insert failed. Please try again.";
-    }
+    // $rowsAffected = insertScriptureTopic();
+    // if($rowsAffected != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "Insert failed. Please try again.";
+    // }
 
-    $rowsAffected = insertScriptureTopic();
-    if($rowsAffected != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "Insert failed. Please try again.";
-    }
+    // $rowsChanged = insertTopic($topics);
+    // if($rowsChanged != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "Topic insert failed. Please try again.";
+    // }
 ?>
