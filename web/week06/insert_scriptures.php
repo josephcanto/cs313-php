@@ -55,30 +55,25 @@
     $verse = (int)filter_input(INPUT_POST, 'verse', FILTER_SANITIZE_NUMBER_INT);
     $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
     $topics = $_POST['topics'];
-    var_dump($book);
-    var_dump($chapter);
-    var_dump($verse);
-    var_dump($content);
-    var_dump($topics);
 
-    // $result = insertScripture();
-    // if($result != 0) {
-    //     header('Location: scripture_text.php');
-    // } else {
-    //     $_SESSION['error'] = "SCripture insert failed. Please try again.";
-    // }
+    $result = insertScripture();
+    if($result != 0) {
+        header('Location: scripture_text.php');
+    } else {
+        $_SESSION['error'] = "SCripture insert failed. Please try again.";
+    }
 
-    // $rowsChanged = insertTopic();
-    // if($rowsChanged != 0) {
-    //     header('Location: scripture_text.php');
-    // } else {
-    //     $_SESSION['error'] = "Topic insert failed. Please try again.";
-    // }
+    $rowsChanged = insertTopic();
+    if($rowsChanged != 0) {
+        header('Location: scripture_text.php');
+    } else {
+        $_SESSION['error'] = "Topic insert failed. Please try again.";
+    }
 
-    // $rowsAffected = insertScriptureTopic();
-    // if($rowsAffected != 0) {
-    //     header('Location: scripture_text.php');
-    // } else {
-    //     $_SESSION['error'] = "Insert failed. Please try again.";
-    // }
+    $rowsAffected = insertScriptureTopic();
+    if($rowsAffected != 0) {
+        header('Location: scripture_text.php');
+    } else {
+        $_SESSION['error'] = "Insert failed. Please try again.";
+    }
 ?>
