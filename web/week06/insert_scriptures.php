@@ -56,14 +56,14 @@
     $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
     $topics = $_POST['topics'];
 
-    $result = insertScripture();
+    $result = insertScripture($book, $chapter, $verse, $content);
     if($result != 0) {
         header('Location: scripture_text.php');
     } else {
         $_SESSION['error'] = "SCripture insert failed. Please try again.";
     }
 
-    $rowsChanged = insertTopic();
+    $rowsChanged = insertTopic($topics);
     if($rowsChanged != 0) {
         header('Location: scripture_text.php');
     } else {
