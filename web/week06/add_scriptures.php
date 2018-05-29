@@ -17,9 +17,9 @@
         <label for='book'>Book</label>
         <input type='text' id='book' name='book'><br>
         <label for='chapter'>Chapter</label>
-        <input type='text' id='chapter' name='chapter'><br>
+        <input type='number' id='chapter' name='chapter'><br>
         <label for='verse'>Verse</label>
-        <input type='text' id='verse' name='verse'><br>
+        <input type='number' id='verse' name='verse'><br>
         <label for='content'>Content</label>
         <textarea id='content' name='content'></textarea><br>
         <?php
@@ -34,7 +34,7 @@
             $dbName = ltrim($dbopts["path"],'/');
         
             $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-            
+
             $stmt = $db->prepare("SELECT name FROM topics");
             $stmt->execute();
             $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
