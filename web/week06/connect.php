@@ -17,5 +17,4 @@
             header('location: add_scriptures.php');
         }
     }
-    dbConnect();
 ?>
