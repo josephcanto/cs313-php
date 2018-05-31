@@ -16,7 +16,7 @@
     // echo "date: $date\n";
 
     $query = "INSERT INTO note (course_id, content, date) VALUES (:courseId, :content, :date)";
-    $db->prepare($query);
+    $stmt = $db->prepare($query);
     $stmt->bindValue(':courseId', $courseId, PDO::PARAM_INT);
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->bindValue(':date', $date, PDO::PARAM_STR);
