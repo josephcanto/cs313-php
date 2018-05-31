@@ -9,7 +9,7 @@
 
     $id = $_GET['id'];
 
-    $query = "SELECT name, number FROM course INNER JOIN note ON course.id=note.course_id WHERE course.id=:id";
+    $query = "SELECT name, number FROM course WHERE id=:id";
     $stmt = $db->prepare($query);
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
