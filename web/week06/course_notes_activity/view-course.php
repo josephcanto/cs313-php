@@ -14,6 +14,12 @@
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     $courseInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $query = "SELECT content, date FROM note WHERE course_id=:id";
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +30,16 @@
     <title><?php echo $courseInfo["name"]; ?> Course Information</title>
 </head>
 <body>
-    <h1><?php echo $courseInfo["name"]; ?></h1>
-    <?php var_dump($courseInfo); ?>
+    <h1><?php echo "Showing notes for: " . $courseInfo["number"] . " - " . $courseInfo["name"]; ?></h1>
+    <?php
+        if(isset($notes)) {
+            foreach($notes as $note) {
+                $content = $note["content"];
+                $date = $note["date"];
+    
+                echo "<p>$date</p><p>$note</p><br>";
+            }
+        }
+    ?>
 </body>
 </html>
