@@ -16,13 +16,16 @@
     function insertScriptureTopic($topics) {
         $db = dbConnect();
         $scripture_id = $pdo->lastInsertId('scripture_id_seq');
-        $stmt = $db->prepare("INSERT INTO scripture_topics (scripture_id, topic_id)
-        VALUES (:scripture_id, :topic_id)");
-        $stmt->bindValue(':scripture_id', $scripture_id, PDO::PARAM_INT);
-        $stmt->bindValue(':topic_id', $topic_id, PDO::PARAM_INT);
-        $stmt->execute();
-        $rowsChanged = $stmt->rowCount();
-        $stmt->closeCursor();
+        $rowsChanged = 0;
+        foreach($topics as $topic) {
+            $stmt = $db->prepare("INSERT INTO scripture_topics (scripture_id, topic_id)
+            VALUES (:scripture_id, :topic_id)");
+            $stmt->bindValue(':scripture_id', $scripture_id, PDO::PARAM_INT);
+            $stmt->bindValue(':topic_id', $topic['id'], PDO::PARAM_INT);
+            $stmt->execute();
+            $rowsChanged += $stmt->rowCount();
+            $stmt->closeCursor();
+        }
         return $rowsChanged;
     }
 

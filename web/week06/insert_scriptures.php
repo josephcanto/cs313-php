@@ -11,20 +11,20 @@
     $content = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_STRING);
     $topics = $_POST['topics'];
 
-    $result = insertScripture($book, $chapter, $verse, $content);
-    if($result == 0) {
+    $rowsChanged = insertScripture($book, $chapter, $verse, $content);
+    if($rowsChanged == 0) {
         $_SESSION['error'] = "Scripture insert failed. Please try again.";
         header('Location: add_scriptures.php');
     }
 
-    $rowsAffected = insertScriptureTopic();
-    if($rowsAffected == 0) {
+    $rowsChanged = insertScriptureTopic($topics);
+    if($rowsChanged == 0) {
         $_SESSION['error'] = "Insert failed. Please try again.";
         header('Location: add_scriptures.php');
     }
 
     $rowsChanged = insertTopic($topics);
-    if($rowsChanged ==0) {
+    if($rowsChanged == 0) {
         $_SESSION['error'] = "Topic insert failed. Please try again.";
         header('Location: add_scriptures.php');
     }
