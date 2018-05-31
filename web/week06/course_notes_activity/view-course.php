@@ -11,13 +11,13 @@
 
     $query = "SELECT name, number FROM course WHERE id=:id";
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':id', $courseId, PDO::PARAM_INT);
     $stmt->execute();
     $courseInfo = $stmt->fetch(PDO::FETCH_ASSOC);
 
     $query = "SELECT content, date FROM note WHERE course_id=:id";
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':id', $courseId, PDO::PARAM_INT);
     $stmt->execute();
     $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
