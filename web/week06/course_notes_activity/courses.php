@@ -30,7 +30,7 @@
                 $name = $course["name"];
                 $number = $course["number"];
 
-                echo "<li>$number - <a href='view-course.php?id=$id&name=$name' title='View more information on the $name course'>$name</a></li>";
+                echo "<li>$number - <a href='view-course.php?id=$id' title='View more information on the $name course'>$name</a></li>";
             }
         ?>
     </ul>
