@@ -31,7 +31,7 @@
 </head>
 <body>
     <h1><?php echo "Showing notes for: " . $courseInfo["number"] . " - " . $courseInfo["name"]; ?></h1>
-    <form action="insertNote.php" method="POST">
+    <form action="insertNote.php" method="post">
         <input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
         <input type="date" name="date"><br>
         <textarea name="content" placeholder="Content"></textarea>

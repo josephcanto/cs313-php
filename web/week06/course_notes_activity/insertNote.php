@@ -8,8 +8,8 @@
     }
 
     $courseId = htmlspecialchars($_POST["course_id"]);
-    $date = htmlspecialchars($_POST["date"]);
     $content = htmlspecialchars($_POST["content"]);
+    $date = htmlspecialchars($_POST["date"]);
 
     // echo "Course: $courseId\n";
     // echo "date: $date\n";
