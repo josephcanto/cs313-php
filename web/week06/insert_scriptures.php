@@ -40,18 +40,18 @@
         $stmt->closeCursor();
     }
 
-    // function insertTopic($topics) {
-    //     foreach($topics as $topic) {
-    //         $db = dbConnect();
-    //         $stmt = $db->prepare("INSERT INTO topics (name)
-    //         VALUES (:topic)");
-    //         $stmt->bindValue(':topic', $topic['name'], PDO::PARAM_STR);
-    //         $stmt->execute();
-    //         $rowsChanged = $stmt->rowCount();
-    //         $stmt->closeCursor();
-    //         if($rowsChanged == 0) return 0;
-    //     }
-    // }
+    function insertTopic($topics) {
+        foreach($topics as $topic) {
+            $db = dbConnect();
+            $stmt = $db->prepare("INSERT INTO topics (name)
+            VALUES (:topic)");
+            $stmt->bindValue(':topic', $topic['name'], PDO::PARAM_STR);
+            $stmt->execute();
+            $rowsChanged = $stmt->rowCount();
+            $stmt->closeCursor();
+            if($rowsChanged == 0) return 0;
+        }
+    }
 
     // Get user inputs
     $book = filter_input(INPUT_POST, 'book', FILTER_SANITIZE_STRING);
