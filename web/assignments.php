@@ -19,7 +19,8 @@
             <li><a href='week03/shopping-cart/browse.php' title="View my Shopping Cart assignment from Week 3">Week 3 - Shopping Cart Assignment</a></li>
             <li><a href='week05/index.php' title="View my group's scripture database assignment from Week 5">Week 5 - Scripture Database Assignment</a></li>
             <li><a href='week05/movies.php' title="View my in-class movies database activity from Week 5">Week 5 - Movies Database Activity</a></li>
-            <li><a href='week06/add_scriptures.php' title="View my group's scripture database activity from Week 6">Week 6 - Scripture Database Activity</a></li>
+            <li><a href='week06/scriptures_activity/add_scriptures.php' title="View my group's scripture database activity from Week 6">Week 6 - Scripture Database Activity</a></li>
+            <li><a href='week06/course_notes_activity/courses.php' title="View my in-class course notes activity from Week 6">Week 6 - Course Notes Activity</a></li>
         </ul>
         <h1>Projects</h1>
         <ul class='assignment-list'>
