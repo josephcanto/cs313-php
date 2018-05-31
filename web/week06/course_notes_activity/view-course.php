@@ -44,7 +44,7 @@
                 $content = $note["content"];
                 $date = $note["date"];
     
-                echo "<p>$date</p><p>$note</p><br>";
+                echo "<p>$date</p><p>$content</p><br>";
             }
         } else {
             echo "<p>No notes found for " . $courseInfo['number'] . "</p>";
