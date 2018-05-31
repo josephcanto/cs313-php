@@ -61,11 +61,12 @@
     $topics = $_POST['topics'];
 
     $result = insertScripture($book, $chapter, $verse, $content);
-    if($result != 0) {
-        header('Location: scripture_text.php');
-    } else {
-        $_SESSION['error'] = "SCripture insert failed. Please try again.";
-    }
+    var_dump($result);
+    // if($result != 0) {
+    //     header('Location: scripture_text.php');
+    // } else {
+    //     $_SESSION['error'] = "SCripture insert failed. Please try again.";
+    // }
 
     // $rowsAffected = insertScriptureTopic();
     // if($rowsAffected != 0) {
