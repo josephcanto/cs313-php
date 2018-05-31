@@ -22,6 +22,7 @@
     <title>Courses</title>
 </head>
 <body>
+    <h1>Courses</h1>
     <ul>
         <?php
             foreach($courses as $course) {
