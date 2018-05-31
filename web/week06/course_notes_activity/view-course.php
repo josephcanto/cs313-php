@@ -7,7 +7,7 @@
         die("DB Connection was not set");
     }
 
-    $id = htmlspecialchars($_GET['id']);
+    $courseId = htmlspecialchars($_GET['course_id']);
 
     $query = "SELECT name, number FROM course WHERE id=:id";
     $stmt = $db->prepare($query);
@@ -32,7 +32,7 @@
 <body>
     <h1><?php echo "Showing notes for: " . $courseInfo["number"] . " - " . $courseInfo["name"]; ?></h1>
     <form action="insertNote.php" method="POST">
-        <input type="hidden" name="course_id" value="<?php echo $id; ?>">
+        <input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
         <input type="date" name="date"><br>
         <textarea name="content" placeholder="Content"></textarea>
         <br><br>

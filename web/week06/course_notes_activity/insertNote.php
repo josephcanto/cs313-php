@@ -21,10 +21,5 @@
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->bindValue(':date', $date, PDO::PARAM_STR);
     $stmt->execute();
-    $rowsChanged = $stmt->rowCount();
-    if($rowsChanged != 0) {
-        header('Location: view-course.php');
-    } else {
-        echo "<p>Note insert failed</p>";
-    }
+    header('Location: view-course.php?course_id=$courseId');
 ?>
