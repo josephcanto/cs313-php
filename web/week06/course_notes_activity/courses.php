@@ -26,10 +26,11 @@
     <ul>
         <?php
             foreach($courses as $course) {
+                $id = $course["id"];
                 $name = $course["name"];
                 $number = $course["number"];
 
-                echo "<li>$number - $name</li>";
+                echo "<li>$number - <a href='view-course.php?id=$id&name=$name' title='View more information on the $name course'>$name</a></li>";
             }
         ?>
     </ul>
