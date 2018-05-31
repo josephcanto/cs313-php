@@ -8,12 +8,13 @@
     }
 
     $id = $_GET['id'];
+    var_dump($id);
 
-    $query = "SELECT name, number FROM course INNER JOIN note ON course.id=note.course_id WHERE course.id=:id";
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
-    $courseInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // $query = "SELECT name, number FROM course INNER JOIN note ON course.id=note.course_id WHERE course.id=:id";
+    // $stmt = $db->prepare($query);
+    // $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    // $stmt->execute();
+    // $courseInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
