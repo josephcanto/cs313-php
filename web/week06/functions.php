@@ -10,6 +10,7 @@
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
+        return $rowsChanged;
     }
 
     function insertScriptureTopic($topics) {
@@ -22,6 +23,7 @@
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
+        return $rowsChanged;
     }
 
     function insertTopic($topics) {
@@ -33,7 +35,11 @@
             $stmt->execute();
             $rowsChanged = $stmt->rowCount();
             $stmt->closeCursor();
-            if($rowsChanged == 0) return 0;
+            return $rowsChanged;
         }
     }
+
+    // function getScripturesAndTopics() {
+
+    // }
 ?>
