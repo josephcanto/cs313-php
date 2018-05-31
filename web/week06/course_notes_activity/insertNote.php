@@ -21,5 +21,5 @@
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->bindValue(':date', $date, PDO::PARAM_STR);
     $stmt->execute();
-    header('Location: view-course.php?course_id=$courseId');
+    header('Location: view-course.php?course_id=' . $courseId);
 ?>
