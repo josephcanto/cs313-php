@@ -229,17 +229,17 @@
             foreach($locationInfo as $location) {
                 $locationsList .= "<ul class='gift-info-list'>";
                 $locationsList .= "<li>Store Name: " . $location['name'] . "</li>";
-                if(isset($location['address'])) {
+                if(!empty($location['address'])) {
                     $locationsList .= "<li>Address: " . $location['address'] . "</li>";
                 } else {
                     $locationsList .= "<li>Address: Not specified</li>";
                 }
-                if(isset($location['website'])) {
+                if(!empty($location['website'])) {
                     $locationsList .= "<li>Website: <a class='store-website-link' target='_blank' href='http://www." . $location['website'] . "' title='Click here to go to " . $location['website'] . "'>" . $location['website'] . "</a></li>";
                 } else {
                     $locationsList .= "<li>Website: Not specified</li>";
                 }
-                if(isset($location['price'])) {
+                if(!empty($location['price'])) {
                     $locationsList .= "<li>Price: $" . $location['price'] . "</li>";
                 } else {
                     $locationsList .= "<li>Price: Not specified</li>";
