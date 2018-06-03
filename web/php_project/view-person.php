@@ -72,7 +72,7 @@
             if($_SESSION['eventsInfoList'] != NULL) {
                 echo $_SESSION['eventsInfoList'];
             } else {
-                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p>";
+                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p><br><br><br>";
             }
         ?>
     </main>
