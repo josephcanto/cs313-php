@@ -56,7 +56,6 @@
             <input type='hidden' name='personid' value='<?php echo $personId; ?>'>
         </form>
         <?php
-            var_dump($_SESSION['eventsInfoList']);
             if($_SESSION['eventsInfoList'] != NULL) {
                 echo $_SESSION['eventsInfoList'];
             } else {
