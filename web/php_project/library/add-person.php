@@ -15,7 +15,10 @@
 
     $rowsChanged = addPerson($name, $isFamily, $address, $userId);
     if($rowsChanged != 0) {
-        $_SESSION['successMessage'] = "<p>New person successfully added.</p>";
+        $_SESSION['successMessage'] = "<p id='success-message'>New person successfully added.</p>";
+        $people = getPeopleList($_SESSION['user_id']);
+        $peopleList = buildPeopleList($people);
+        $_SESSION['peopleList'] = $peopleList;
     } else {
         $_SESSION['errorMessage'] = "<p>Failed to new add person. Please try again.</p>";
     }
