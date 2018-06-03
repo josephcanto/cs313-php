@@ -6,7 +6,7 @@
 
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
-    if($notes == "") {
+    if($notes == NULL) {
         $notes = "No notes have been added for this gift idea.";
     }
     $eventId = $_POST['eventid'];
