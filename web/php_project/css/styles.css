@@ -30,8 +30,8 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 50px 0 0 0;
-    padding: 15px;
+    padding: 10px;
+    margin: 0;
 }
 
 footer p {
@@ -192,6 +192,7 @@ h4 {
 #registration-form {
     width: 250px;
     height: 270px;
+    margin-bottom: 75px;
 }
 
 #registration-form input {
