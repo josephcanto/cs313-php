@@ -309,11 +309,15 @@ a:active {
     margin: 10px 0;
 }
 
-.modify-links-container {
-    margin-left: 10px;
+.modify-links {
+    text-decoration: underline;
 }
 
 .modify-links:link {
+    color: yellowgreen;
+}
+
+.modify-links:visited {
     color: yellowgreen;
 }
 

@@ -317,9 +317,8 @@
 
      function deleteData($tableName, $itemId) {
         $db = dbConnect();
-        $sql = 'DELETE FROM :tableName WHERE id=:itemId';
+        $sql = 'DELETE FROM ' . $tableName . ' WHERE id=:itemId';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':tableName', $tableName, PDO::PARAM_STR);
         $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
