@@ -140,6 +140,10 @@ h1 {
     padding: 15px;
 }
 
+#comic-images {
+    text-align: center;
+}
+
 .comic-strip {
     width: 350px;
     height: 250px;
