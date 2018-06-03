@@ -54,7 +54,7 @@
             <label for='address'>Address:</label>
             <input type='text' id='address' name='address'><br>
             <label for='website'>Website URL:</label>
-            <input type='text' id='website' name='website'><br>
+            <input type='url' id='website' name='website'><br>
             <label for='price'>Price: $</label>
             <input type='number' id='price' name='price' required><br>
             <input type='submit' value='Add Location'>
