@@ -46,25 +46,45 @@
                 echo $_SESSION['errorMessage'];
                 unset($_SESSION['errorMessage']);
             }
-        ?>
-        <p class='user-form-instructions'>Use the form below to add a new event for <?php echo $_SESSION['personName']; ?>.</p>
-        <form class='user-form' action='library/add-event.php' method='post'>
-            <label for='name'>Name:</label>
-            <input type='text' id='name' name='name' required><br>
-            <label for='date'>Date: </label>
-            <input type='date' id='date' name='date' required><br>
-            <label for='frequency'>Frequency:</label>
-            <select id='frequency' name='frequency' required>
-                <option value="Yearly" selected="selected">Yearly</option>
-                <option value="Monthly">Monthly</option>
-                <option value="One-time">One-time</option>
-            </select><br>
-            <label for='reminder'>Reminder (choose a date (optional)):</label>
-            <input type='date' id='reminder' name='reminder'><br>
-            <input type='submit' value='Add Event'>
-            <input type='hidden' name='personid' value='<?php echo $personId; ?>'>
-        </form>
-        <?php
+
+            if(isset($_GET['action']) && $_GET['action'] == 'edit') {
+                echo "<p class='user-form-instructions'>Use the form below to edit the event for " . $_SESSION['personName'] . ".</p>
+                      <form class='user-form' action='library/edit-event.php' method='post'>
+                          <label for='name'>Name:</label>
+                          <input type='text' id='name' name='name' required><br>
+                          <label for='date'>Date: </label>
+                          <input type='date' id='date' name='date' required><br>
+                          <label for='frequency'>Frequency:</label>
+                          <select id='frequency' name='frequency' required>
+                              <option value='Yearly' selected='selected'>Yearly</option>
+                              <option value='Monthly'>Monthly</option>
+                              <option value='One-time'>One-time</option>
+                          </select><br>
+                          <label for='reminder'>Reminder (choose a date (optional)):</label>
+                          <input type='date' id='reminder' name='reminder'><br>
+                          <input type='submit' value='Add Event'>
+                          <input type='hidden' name='personid' value='$personId'>
+                      </form>";
+            } else {
+                echo "<p class='user-form-instructions'>Use the form below to add a new event for " . $_SESSION['personName'] . ".</p>
+                     <form class='user-form' action='library/add-event.php' method='post'>
+                            <label for='name'>Name:</label>
+                            <input type='text' id='name' name='name' required><br>
+                            <label for='date'>Date: </label>
+                            <input type='date' id='date' name='date' required><br>
+                            <label for='frequency'>Frequency:</label>
+                            <select id='frequency' name='frequency' required>
+                                <option value='Yearly' selected='selected'>Yearly</option>
+                                <option value='Monthly'>Monthly</option>
+                                <option value='One-time'>One-time</option>
+                            </select><br>
+                            <label for='reminder'>Reminder (choose a date (optional)):</label>
+                            <input type='date' id='reminder' name='reminder'><br>
+                            <input type='submit' value='Add Event'>
+                            <input type='hidden' name='personid' value='$personId'>
+                      </form>";
+            }
+
             if($_SESSION['eventsInfoList'] != NULL) {
                 echo $_SESSION['eventsInfoList'] . "<br><br>";
             } else {

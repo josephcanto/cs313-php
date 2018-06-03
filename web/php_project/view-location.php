@@ -48,21 +48,37 @@
                 echo $_SESSION['errorMessage'];
                 unset($_SESSION['errorMessage']);
             }
-        ?>
-        <p class='user-form-instructions'>Use the form below to add a new location to buy <?php echo $_SESSION['giftName']; ?> for <?php echo $_SESSION['personName']; ?>'s <?php echo $_SESSION['eventName']; ?>.</p>
-        <form class='user-form' action='library/add-location.php' method='post'>
-            <label for='name'>Name:</label>
-            <input type='text' id='name' name='name' required><br>
-            <label for='address'>Address (optional):</label>
-            <input type='text' id='address' name='address'><br>
-            <label for='website'>Website URL (optional):</label>
-            <input type='url' id='website' name='website'><br>
-            <label for='price'>Price (optional): $</label>
-            <input type='number' id='price' name='price'><br>
-            <input type='submit' value='Add Location'>
-            <input type='hidden' name='giftid' value='<?php echo $giftId; ?>'>
-        </form>
-        <?php
+
+            if(isset($_GET['action']) && $_GET['action'] == 'edit') {
+                echo "<p class='user-form-instructions'>Use the form below to edit the location to buy " . $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
+                      <form class='user-form' action='library/edit-location.php' method='post'>
+                          <label for='name'>Name:</label>
+                          <input type='text' id='name' name='name' required><br>
+                          <label for='address'>Address (optional):</label>
+                          <input type='text' id='address' name='address'><br>
+                          <label for='website'>Website URL (optional):</label>
+                          <input type='url' id='website' name='website'><br>
+                          <label for='price'>Price (optional): $</label>
+                          <input type='number' id='price' name='price'><br>
+                          <input type='submit' value='Add Location'>
+                          <input type='hidden' name='giftid' value='$giftId'>
+                      </form>";
+            } else {
+                echo "<p class='user-form-instructions'>Use the form below to add a new location to buy " . $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
+                      <form class='user-form' action='library/add-location.php' method='post'>
+                          <label for='name'>Name:</label>
+                          <input type='text' id='name' name='name' required><br>
+                          <label for='address'>Address (optional):</label>
+                          <input type='text' id='address' name='address'><br>
+                          <label for='website'>Website URL (optional):</label>
+                          <input type='url' id='website' name='website'><br>
+                          <label for='price'>Price (optional): $</label>
+                          <input type='number' id='price' name='price'><br>
+                          <input type='submit' value='Add Location'>
+                          <input type='hidden' name='giftid' value='$giftId'>
+                      </form>";
+            }
+
             if($_SESSION['locationsList'] != NULL) {
                 echo $_SESSION['locationsList'] . "<br><br>";
             } else {
