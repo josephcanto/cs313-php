@@ -19,9 +19,9 @@
         $_SESSION['successMessage'] = "<p id='success-message'>New event successfully added.</p>";
         $events = getEventsInfoByPersonId($personId);
         $eventsList = buildEventsInfoList($events);
-        $_SESSION['eventsList'] = $eventsList;
+        $_SESSION['eventsInfoList'] = $eventsList;
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new event. Please try again.</p>";
     }
-    header('Location: ../view-person.php?id=' . $personId);
+    header('Location: ../view-person.php');
 ?>
