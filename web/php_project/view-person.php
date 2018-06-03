@@ -56,7 +56,8 @@
             <input type='hidden' name='personid' value='<?php echo $personId; ?>'>
         </form>
         <?php
-            if(isset($_SESSION['eventsInfoList'])) {
+            var_dump($_SESSION['eventsInfoList']);
+            if($_SESSION['eventsInfoList'] != NULL) {
                 echo $_SESSION['eventsInfoList'];
             } else {
                 echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p>";
