@@ -374,7 +374,7 @@
         $sql = 'UPDATE ideas SET name=:name, notes=:notes WHERE id=:giftId';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-        $stmt->bindValue(':notes', $date, PDO::PARAM_STR);
+        $stmt->bindValue(':notes', $notes, PDO::PARAM_STR);
         $stmt->bindValue(':giftId', $giftId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsUpdated = $stmt->rowCount();
