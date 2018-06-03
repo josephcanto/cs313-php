@@ -56,7 +56,7 @@
             <label for='website'>Website URL:</label>
             <input type='text' id='website' name='website'><br>
             <label for='price'>Price: $</label>
-            <input type='number' id='price' name='price'><br>
+            <input type='number' id='price' name='price' step='0.01' min='0.00'><br>
             <input type='submit' value='Add Location'>
             <input type='hidden' name='giftid' value='<?php echo $giftId; ?>'>
         </form>
