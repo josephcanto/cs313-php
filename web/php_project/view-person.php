@@ -48,7 +48,6 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                var_dump($_SESSION['personInfo']);
                 foreach($_SESSION['personInfo'] as $event) {
                     if($_GET['eventid'] = $event['id']) {
                         $eventId = $event['id'];

@@ -49,14 +49,24 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
+                foreach($_SESSION['giftInfo'] as $giftIdea) {
+                    if($_GET['giftid'] = $giftIdea['id']) {
+                        $giftId = $giftIdea['id'];
+                        $name = $giftIdea['name'];
+                        $notes = $giftIdea['notes'];
+                        $event_id = $giftIdea['event_id'];
+                    }
+                }
+
                 echo "<p class='user-form-instructions'>Use the form below to edit the gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
                       <form class='user-form' action='library/edit-idea.php' method='post'>
                           <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required><br>
+                          <input type='text' id='name' name='name' required value='$name'><br>
                           <label for='notes'>Notes (optional): </label>
-                          <textarea id='notes' name='notes' rows='4' cols='37'></textarea><br>
+                          <textarea id='notes' name='notes' rows='4' cols='37'>$notes</textarea><br>
                           <input type='submit' value='Edit Gift Idea'>
-                          <input type='hidden' name='eventid' value='$eventId'>
+                          <input type='hidden' name='giftid' value='$giftId'>
+                          <input type='hidden' name='eventid' value='$event_id'>
                       </form>";
             } else {
                 echo "<p class='user-form-instructions'>Use the form below to add a new gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>

@@ -1,27 +1,28 @@
 <?php
-    // require 'connection.php';
-    // require 'functions.php';
+    require 'connection.php';
+    require 'functions.php';
 
-    // session_start();
+    session_start();
 
-    // $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    // if(isset($_POST['family'])) {
-    //     $isFamily = TRUE;
-    // } else {
-    //     $isFamily = FALSE;
-    // }
-    // $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
-    // $personId = $_POST['personid'];
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+    $website = filter_input(INPUT_POST, 'website', FILTER_VALIDATE_URL);
+    $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_INT);
+    if($price == "") {
+        $price = "0.00";
+    }
+    $locationId = $_POST['locationid'];
+    $giftId = $_POST['giftid'];
 
-    // $rowsUpdated = updatePerson($name, $isFamily, $address, $personId);
-    // if($rowsUpdated != 0) {
-    //     $_SESSION['successMessage'] = "<p id='success-message'>Person successfully updated.</p>";
-    //     $people = getPeopleList($_SESSION['user_id']);
-    //     $_SESSION['peopleInfo'] = $people;
-    //     $peopleList = buildPeopleList($people);
-    //     $_SESSION['peopleList'] = $peopleList;
-    // } else {
-    //     $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update person. Please try again.</p>";
-    // }
-    // header('Location: ../dashboard.php');
+    $rowsUpdated = updateLocation($name, $address, $website, $price, $locationId);
+    if($rowsUpdated != 0) {
+        $_SESSION['successMessage'] = "<p id='success-message'>Location successfully updated.</p>";
+        $locationsInfo = getLocationsByGiftId($giftId);
+        $_SESSION['locationsInfo'] = $locationsInfo;
+        $locationsList = buildLocationsList($locationsInfo);
+        $_SESSION['locationsList'] = $locationsList;
+    } else {
+        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update location. Please try again.</p>";
+    }
+    header('Location: ../view-location.php');
 ?>

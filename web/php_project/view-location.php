@@ -50,18 +50,30 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
+                foreach($_SESSION['locationInfo'] as $location) {
+                    if($_GET['locationid'] = $location['id']) {
+                        $locationId = $location['id'];
+                        $name = $location['name'];
+                        $address = $location['address'];
+                        $website = $location['website'];
+                        $price = $location['price'];
+                        $gift_id = $location['gift_id'];
+                    }
+                }
+
                 echo "<p class='user-form-instructions'>Use the form below to edit the location to buy " . $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
                       <form class='user-form' action='library/edit-location.php' method='post'>
                           <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required><br>
+                          <input type='text' id='name' name='name' required value='$name'><br>
                           <label for='address'>Address (optional):</label>
-                          <input type='text' id='address' name='address'><br>
+                          <input type='text' id='address' name='address' value='$address'><br>
                           <label for='website'>Website URL (optional):</label>
-                          <input type='url' id='website' name='website'><br>
+                          <input type='url' id='website' name='website' value='$website'><br>
                           <label for='price'>Price (optional): $</label>
-                          <input type='number' id='price' name='price'><br>
+                          <input type='number' id='price' name='price' value='$price'><br>
                           <input type='submit' value='Edit Location'>
-                          <input type='hidden' name='giftid' value='$giftId'>
+                          <input type='hidden' name='locationid' value='$locationId'>
+                          <input type='hidden' name='giftid' value='$gift_id'>
                       </form>";
             } else {
                 echo "<p class='user-form-instructions'>Use the form below to add a new location to buy " . $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>

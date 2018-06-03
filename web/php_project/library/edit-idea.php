@@ -1,27 +1,23 @@
 <?php
-    // require 'connection.php';
-    // require 'functions.php';
+    require 'connection.php';
+    require 'functions.php';
 
-    // session_start();
+    session_start();
 
-    // $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    // if(isset($_POST['family'])) {
-    //     $isFamily = TRUE;
-    // } else {
-    //     $isFamily = FALSE;
-    // }
-    // $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
-    // $personId = $_POST['personid'];
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $notes = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+    $giftId = $_POST['giftid'];
+    $eventId = $_POST['eventid'];
 
-    // $rowsUpdated = updatePerson($name, $isFamily, $address, $personId);
-    // if($rowsUpdated != 0) {
-    //     $_SESSION['successMessage'] = "<p id='success-message'>Person successfully updated.</p>";
-    //     $people = getPeopleList($_SESSION['user_id']);
-    //     $_SESSION['peopleInfo'] = $people;
-    //     $peopleList = buildPeopleList($people);
-    //     $_SESSION['peopleList'] = $peopleList;
-    // } else {
-    //     $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update person. Please try again.</p>";
-    // }
-    // header('Location: ../dashboard.php');
+    $rowsUpdated = updateGiftIdea($name, $notes, $giftId);
+    if($rowsUpdated != 0) {
+        $_SESSION['successMessage'] = "<p id='success-message'>Gift idea successfully updated.</p>";
+        $giftInfo = getGiftIdeasByEventId($eventId);
+        $_SESSION['giftInfo'] = $giftInfo;
+        $giftIdeasList = buildGiftIdeasList($giftIdeasInfo);
+        $_SESSION['giftIdeasList'] = $giftIdeasList;
+    } else {
+        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update gift idea. Please try again.</p>";
+    }
+    header('Location: ../view-event.php');
 ?>

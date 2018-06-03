@@ -368,4 +368,32 @@
         $stmt->closeCursor();
         return $rowsUpdated;         
     }
+
+    function updateGiftIdea($name, $notes, $giftId) {
+        $db = dbConnect();
+        $sql = 'UPDATE ideas SET name=:name, notes=:notes WHERE id=:giftId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':notes', $date, PDO::PARAM_STR);
+        $stmt->bindValue(':giftId', $giftId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsUpdated = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsUpdated;         
+    }
+
+    function updateLocation($name, $address, $website, $price, $locationId) {
+        $db = dbConnect();
+        $sql = 'UPDATE locations SET name=:name, address=:address, website=:website, price=:price WHERE id=:locationId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':address', $address, PDO::PARAM_STR);
+        $stmt->bindValue(':website', $website, PDO::PARAM_STR);
+        $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+        $stmt->bindValue(':locationId', $locationId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsUpdated = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsUpdated;         
+    }
 ?>

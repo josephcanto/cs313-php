@@ -25,5 +25,5 @@
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update event. Please try again.</p>";
     }
-    header('Location: ../dashboard.php');
+    header('Location: ../view-person.php');
 ?>
