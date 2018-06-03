@@ -5,6 +5,7 @@
 
 html {
     background-color: yellowgreen;
+    overflow-x: hidden;
 }
 
 body {
