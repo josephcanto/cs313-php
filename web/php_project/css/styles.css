@@ -273,10 +273,6 @@ a:active {
     color: #000;
 }
 
-.notice {
-    margin-left: 20px; 
-}
-
 #success-message {
     color: green;
 }

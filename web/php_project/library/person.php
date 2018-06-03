@@ -16,7 +16,7 @@
         $_SESSION['eventsInfoList'] = $eventsInfoList;
         header('Location: ../view-person.php');
     } else {
-        $_SESSION['errorMessage'] = "<p class='notice'>Oops, something went wrong on our end.</p>";
+        $_SESSION['errorMessage'] = "<p id='error-message'>Oops, something went wrong on our end.</p>";
         header('Location: ../dashboard.php');
     }
 ?>
