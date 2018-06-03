@@ -262,6 +262,10 @@ a:active {
     color: #000;
 }
 
+.people-list-heading {
+    margin: 10px 0 0 0;
+}
+
 .people-list {
     color: #000;
 }
