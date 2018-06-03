@@ -54,7 +54,7 @@
                           <label for='name'>Name:</label>
                           <input type='text' id='name' name='name' required><br>
                           <label for='notes'>Notes (optional): </label>
-                          <textarea id='notes' name='notes' rows='4' cols='50'></textarea><br>
+                          <textarea id='notes' name='notes' rows='4' cols='35'></textarea><br>
                           <input type='submit' value='Add Gift Idea'>
                           <input type='hidden' name='eventid' value='$eventId'>
                       </form>";
@@ -64,7 +64,7 @@
                           <label for='name'>Name:</label>
                           <input type='text' id='name' name='name' required><br>
                           <label for='notes'>Notes (optional): </label>
-                          <textarea id='notes' name='notes' rows='4' cols='50'></textarea><br>
+                          <textarea id='notes' name='notes' rows='4' cols='35'></textarea><br>
                           <input type='submit' value='Add Gift Idea'>
                           <input type='hidden' name='eventid' value='$eventId'>
                       </form>";
