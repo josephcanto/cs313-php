@@ -35,6 +35,8 @@
                 }
                 if(isset($_SESSION['personId'])) {
                     $personId = $_SESSION['personId'];
+                } else {
+                    $personId = htmlspecialchars($_GET['id']);
                 }
             ?>
         </h2>
