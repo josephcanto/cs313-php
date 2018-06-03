@@ -46,9 +46,9 @@
             <input type='date' id='date' name='date' required><br>
             <label for='frequency'>Frequency:</label>
             <select id='frequency' name='frequency' required>
-                <option value="yearly" selected="selected">Yearly</option>
-                <option value="monthly">Monthly</option>
-                <option value="daily">Daily</option>
+                <option value="Yearly" selected="selected">Yearly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="One-time">One-time</option>
             </select><br>
             <label for='reminder'>Reminder (choose a date (optional)):</label>
             <input type='date' id='reminder' name='reminder'><br>
