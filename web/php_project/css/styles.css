@@ -322,10 +322,6 @@ a:active {
         width: 100px;
     }
 
-    section {
-        height: 500px;
-    }
-
     #banner {
         background-position-y: center;
         background-attachment: fixed;
@@ -334,11 +330,10 @@ a:active {
 
     h1 {
         font-size: 36pt;
-        margin: -70px 0 50px 0;
     }
 
     #comic {
-        padding: 5px;
+        padding: 50px;
     }
 
     .comic-strip {
@@ -346,16 +341,16 @@ a:active {
     }
     
     #testimonials-container {
-        padding: 5px 15px 5px 15px;
+        padding: 0;
+        margin: 0 0 150px 0;
     }
 
     h2 {
-        margin: -60px 0 30px 0;
         font-size: 24pt;
     }
 
     .testimonial {
-        margin: 0 20px;
+        margin: 0 0 75px 0;
     }
 
     #registration {
