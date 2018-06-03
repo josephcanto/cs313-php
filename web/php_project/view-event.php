@@ -55,7 +55,7 @@
                           <input type='text' id='name' name='name' required><br>
                           <label for='notes'>Notes (optional): </label>
                           <textarea id='notes' name='notes' rows='4' cols='37'></textarea><br>
-                          <input type='submit' value='Add Gift Idea'>
+                          <input type='submit' value='Edit Gift Idea'>
                           <input type='hidden' name='eventid' value='$eventId'>
                       </form>";
             } else {

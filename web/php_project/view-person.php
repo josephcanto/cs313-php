@@ -62,7 +62,7 @@
                           </select><br>
                           <label for='reminder'>Reminder (choose a date (optional)):</label>
                           <input type='date' id='reminder' name='reminder'><br>
-                          <input type='submit' value='Add Event'>
+                          <input type='submit' value='Edit Event'>
                           <input type='hidden' name='personid' value='$personId'>
                       </form>";
             } else {

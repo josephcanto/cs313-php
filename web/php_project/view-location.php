@@ -60,7 +60,7 @@
                           <input type='url' id='website' name='website'><br>
                           <label for='price'>Price (optional): $</label>
                           <input type='number' id='price' name='price'><br>
-                          <input type='submit' value='Add Location'>
+                          <input type='submit' value='Edit Location'>
                           <input type='hidden' name='giftid' value='$giftId'>
                       </form>";
             } else {
