@@ -4,9 +4,7 @@
         header('Location: index.php');
     }
     if(isset($_SESSION['peopleInfo'])) {
-        foreach($people as $person) {
-            var_dump($person['id']);
-            var_dump($_GET['personid']);
+        foreach($_SESSION['peopleInfo'] as $person) {
             if(isset($_GET['personid'])) {
                 if($person['id'] == $_GET['personid']) {
                     $personId = $person['id'];
@@ -21,10 +19,6 @@
         } else {
             $isFamily = "";
         }
-        var_dump($personId);
-        var_dump($name);
-        var_dump($isFamily);
-        var_dump($address);
     }
 ?>
 <!DOCTYPE html>
