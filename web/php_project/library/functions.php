@@ -189,7 +189,11 @@
             foreach($giftInfo as $idea) {
                 $ideasList .= "<ul class='gift-info-list'>";
                 $ideasList .= "<li>Gift Idea: " . $idea['name'] . "</li>";
-                $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
+                if(isset($idea['notes'])) {
+                    $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
+                } else {
+                    $ideasList .= "<li>Notes: No notes have been entered for this gift idea.</li>";
+                }
                 $ideasList .= "</ul>";
                 $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a>";
             }
