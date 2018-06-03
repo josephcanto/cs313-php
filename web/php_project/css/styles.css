@@ -279,12 +279,10 @@ a:active {
 
 #success-message {
     color: green;
-    margin-left: 20px;
 }
 
 #error-message {
     color: red;
-    margin-left: 20px;
 }
 
 .person-link:link, .person-link:visited,

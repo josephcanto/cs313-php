@@ -90,11 +90,22 @@
             foreach($people as $person) {
                 if($person['is_family']) {
                     // add the person to the list of family members if they are family, and increase the number of family members added by 1
-                    $family .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
+                    $family .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    if($person['address'] != "") {
+                        $family .= $person['address'];
+                    } else {
+                        $family .= "No address has been entered for this individual.";
+                    }
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
-                    $friends .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>" . $person['address'] . "</li></ul></li>";
+                    $friends .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    if($person['address'] != "") {
+                        $friends .= $person['address'];
+                    } else {
+                        $friends .= "No address has been entered for this individual.";
+                    }
+                    $friends .= "</li></ul></li>";
                     $numFriends++;
                 }
             }
