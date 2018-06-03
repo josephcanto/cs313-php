@@ -269,7 +269,7 @@
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->bindValue(':date', $date, PDO::PARAM_STR);
         $stmt->bindValue(':frequency', $frequency, PDO::PARAM_STR);
-        $stmt->bindValue(':reminder', $reminder, PDO::PARAM_INT);
+        $stmt->bindValue(':reminder', $reminder, PDO::PARAM_STR);
         $stmt->bindValue(':person_id', $personId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
