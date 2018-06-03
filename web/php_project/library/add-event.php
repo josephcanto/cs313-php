@@ -13,6 +13,7 @@
         $reminder = NULL;
     }
     $personId = $_POST['personid'];
+    $_SESSION['personId'] = $personId;
 
     $rowsChanged = addEvent($name, $date, $frequency, $reminder, $personId);
     if($rowsChanged != 0) {

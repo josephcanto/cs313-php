@@ -35,8 +35,6 @@
                 }
                 if(isset($_SESSION['personId'])) {
                     $personId = $_SESSION['personId'];
-                } else {
-                    $personId = htmlspecialchars($_GET['id']);
                 }
             ?>
         </h2>
@@ -60,6 +58,8 @@
         <?php
             if(isset($_SESSION['eventsInfoList'])) {
                 echo $_SESSION['eventsInfoList'];
+            } else {
+                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p>";
             }
         ?>
     </main>
