@@ -45,9 +45,9 @@
         </form>
         <?php
             if(isset($_SESSION['peopleList'])) {
-                echo $_SESSION['peopleList'];
+                echo $_SESSION['peopleList'] . "<br>";
             } else {
-                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2>";
+                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br>";
             }
         ?>
     </main>
