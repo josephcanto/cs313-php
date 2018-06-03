@@ -43,7 +43,7 @@
                         <label for='address'>Address (optional):</label>
                         <input type='text' id='address' name='address'><br>
                         <input type='submit' value='Edit Person'>
-                        <input type='hidden' name='userid' value='<?php echo $userId; ?>'>
+                        <input type='hidden' name='userid' value='$userId'>
                     </form>";
             } else {
                 echo "<p class='user-form-instructions'>Use the form below to add a new person to your list.</p>
@@ -55,7 +55,7 @@
                     <label for='address'>Address (optional):</label>
                     <input type='text' id='address' name='address'><br>
                     <input type='submit' value='Add Person'>
-                    <input type='hidden' name='userid' value='<?php echo $userId; ?>'>
+                    <input type='hidden' name='userid' value='$userId'>
                 </form>";
             }
         

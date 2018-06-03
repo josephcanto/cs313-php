@@ -9,9 +9,9 @@
 
     $rowsChanged = deleteData($tableName, $itemId);
     if($rowsChanged != 0) {
-        $_SESSION['successMessage'] = "<p id='success-message'>Successfully deleted record from your $tableName.</p>";
+        $_SESSION['successMessage'] = "<p id='success-message'>Successfully deleted record.</p>";
     } else {
-        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to delete record from your $tableName. Please try again.</p>";
+        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to delete record. Please try again.</p>";
     }
     
     switch($tableName) {
