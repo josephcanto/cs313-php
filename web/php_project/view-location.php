@@ -51,12 +51,12 @@
         <form class='user-form' action='library/add-location.php' method='post'>
             <label for='name'>Name:</label>
             <input type='text' id='name' name='name' required><br>
-            <label for='address'>Address:</label>
+            <label for='address'>Address (optional):</label>
             <input type='text' id='address' name='address'><br>
-            <label for='website'>Website URL:</label>
+            <label for='website'>Website URL (optional):</label>
             <input type='url' id='website' name='website'><br>
-            <label for='price'>Price: $</label>
-            <input type='number' id='price' name='price' required><br>
+            <label for='price'>Price (optional): $</label>
+            <input type='number' id='price' name='price'><br>
             <input type='submit' value='Add Location'>
             <input type='hidden' name='giftid' value='<?php echo $giftId; ?>'>
         </form>
