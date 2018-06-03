@@ -50,8 +50,8 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                foreach($_SESSION['locationInfo'] as $location) {
-                    if($_GET['locationid'] = $location['id']) {
+                foreach($_SESSION['locationsInfo'] as $location) {
+                    if($_GET['locationid'] == $location['id']) {
                         $locationId = $location['id'];
                         $name = $location['name'];
                         $address = $location['address'];

@@ -18,6 +18,7 @@
     if($rowsChanged != 0) {
         $_SESSION['successMessage'] = "<p id='success-message'>New location successfully added.</p>";
         $locationsInfo = getLocationsByGiftId($giftId);
+        $_SESSION['locationsInfo'] = $locationsInfo;
         $locationsList = buildLocationsList($locationsInfo);
         $_SESSION['locationsList'] = $locationsList;
     } else {

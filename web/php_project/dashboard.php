@@ -3,23 +3,6 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
-    if(isset($_SESSION['peopleInfo'])) {
-        foreach($_SESSION['peopleInfo'] as $person) {
-            if(isset($_GET['personid'])) {
-                if($person['id'] == $_GET['personid']) {
-                    $personId = $person['id'];
-                    $name = $person['name'];
-                    $isFamily = $person['is_family'];
-                    $address = $person['address'];
-                }
-            }
-        }
-        if($isFamily) {
-            $isFamily = "checked";
-        } else {
-            $isFamily = "";
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +33,24 @@
             if(isset($_SESSION['user_id'])) {
                 $userId = $_SESSION['user_id'];
             }
+            
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
+                foreach($_SESSION['peopleInfo'] as $person) {
+                    if(isset($_GET['personid'])) {
+                        if($person['id'] == $_GET['personid']) {
+                            $personId = $person['id'];
+                            $name = $person['name'];
+                            $isFamily = $person['is_family'];
+                            $address = $person['address'];
+                        }
+                    }
+                }
+                if($isFamily) {
+                    $isFamily = "checked";
+                } else {
+                    $isFamily = "";
+                }
+
                 echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
                     <form class='user-form' action='library/edit-person.php' method='post'>
                         <label for='name'>Name:</label>
