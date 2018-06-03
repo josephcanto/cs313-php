@@ -14,10 +14,7 @@
         $eventsInfoList = buildEventsInfoList($personInfo); 
         if(!empty($eventsInfoList)) {
             $_SESSION['eventsInfoList'] = $eventsInfoList;
-        } 
-        header('Location: ../view-person.php');
-    } else {
-        $_SESSION['errorMessage'] = "<p id='error-message'>Oops, something went wrong on our end.</p>";
-        header('Location: ../dashboard.php');
+        }
     }
+    header('Location: ../view-person.php');
 ?>

@@ -11,12 +11,9 @@
     if(!empty($locationInfo)) {
         $_SESSION['locationInfo'] = $locationInfo;
         $locationsList = buildLocationsList($locationInfo);
+        if(!empty($locationsList)) {
+            $_SESSION['locationsList'] = $locationsList;
+        }
     }
-    if(!empty($locationsList)) {
-        $_SESSION['locationsList'] = $locationsList;
-        header('Location: ../view-location.php');
-    } else {
-        $_SESSION['errorMessage'] = "<p class='notice'>Oops, something went wrong on our end.</p>";
-        header('Location: ../dashboard.php');
-    }
+    header('Location: ../view-location.php');
 ?>
