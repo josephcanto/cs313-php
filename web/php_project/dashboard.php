@@ -26,7 +26,7 @@
                 $userId = $_SESSION['user_id'];
             }
         ?>
-        <h2 class='user-form-heading'>Use the form below to add a new person to your list.</h2>
+        <p class='user-form-instructions'>Use the form below to add a new person to your list.</p>
         <form class='user-form' action='library/add-person.php' method='post'>
             <label for='name'>Name:</label>
             <input type='text' id='name' name='name' required><br>
