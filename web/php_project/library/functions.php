@@ -245,9 +245,9 @@
                     $locationsList .= "<li>Price: Not specified</li>";
                 }
                 $locationsList .= "</ul>";
-                $locationsList .= "<p class='edit-delete-links'>";
-                $locationsList .= "<a href='edit-location.php?locationid='" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
-                $locationsList .= "<a href='delete-data.php?name=locations&id='" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
+                $locationsList .= "<p class='modify-links-container'>";
+                $locationsList .= "<a class='modify-links' href='edit-location.php?locationid=" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
+                $locationsList .= "<a class='modify-links' href='delete-data.php?name=locations&id=" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
                 $locationsList .= "</p>";
             }
         }

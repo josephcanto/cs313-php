@@ -309,6 +309,14 @@ a:active {
     margin: 10px 0;
 }
 
+.modify-links-container {
+    margin-left: 10px;
+}
+
+.modify-links:link {
+    color: yellowgreen;
+}
+
 @media screen and (min-width: 768px) {
     main {
         max-width: 80%;
