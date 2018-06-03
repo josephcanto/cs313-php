@@ -260,4 +260,20 @@
         $stmt->closeCursor();
         return $rowsChanged;
      }
+
+     function addEvent($name, $date, $frequency, $reminder, $personId) {
+        $db = dbConnect();
+        $sql = 'INSERT INTO events (name, date, frequency, reminder, person_id)
+                VALUES (:name, :date, :frequency, :reminder, :person_id)';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':date', $date, PDO::PARAM_DATE);
+        $stmt->bindValue(':frequency', $frequency, PDO::PARAM_STR);
+        $stmt->bindValue(':reminder', $reminder, PDO::PARAM_INT);
+        $stmt->bindValue(':person_id', $personId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsChanged = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsChanged;
+     }
 ?>

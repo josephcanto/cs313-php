@@ -9,11 +9,12 @@
     $_SESSION['personName'] = $personName['name'];
     $personInfo = getEventsInfoByPersonId($personId);
     if(!empty($personInfo)) {
+        $_SESSION['personId'] = $personId;
         $_SESSION['personInfo'] = $personInfo;
-        $eventsInfoList = buildEventsInfoList($personInfo);
-    }
-    if(!empty($eventsInfoList)) {
-        $_SESSION['eventsInfoList'] = $eventsInfoList;
+        $eventsInfoList = buildEventsInfoList($personInfo); 
+        if(!empty($eventsInfoList)) {
+            $_SESSION['eventsInfoList'] = $eventsInfoList;
+        } 
         header('Location: ../view-person.php');
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Oops, something went wrong on our end.</p>";

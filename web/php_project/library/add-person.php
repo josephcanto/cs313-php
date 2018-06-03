@@ -20,7 +20,7 @@
         $peopleList = buildPeopleList($people);
         $_SESSION['peopleList'] = $peopleList;
     } else {
-        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to new add person. Please try again.</p>";
+        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new person. Please try again.</p>";
     }
     header('Location: ../dashboard.php');
 ?>

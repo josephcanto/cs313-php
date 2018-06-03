@@ -33,8 +33,28 @@
                 if(isset($_SESSION['personName'])) {
                     echo $_SESSION['personName'];
                 }
+                if(isset($_SESSION['personId'])) {
+                    $personId = $_SESSION['personId'];
+                }
             ?>
         </h2>
+        <p class='user-form-instructions'>Use the form below to add a new event for <?php echo $_SESSION['personName']; ?>.</p>
+        <form class='user-form' action='library/add-event.php' method='post'>
+            <label for='name'>Name:</label>
+            <input type='text' id='name' name='name' required><br>
+            <label for='date'>Date: </label>
+            <input type='date' id='date' name='date' required><br>
+            <label for='frequency'>Frequency:</label>
+            <select id='frequency' name='frequency' required>
+                <option value="yearly" selected="selected">Yearly</option>
+                <option value="monthly">Monthly</option>
+                <option value="daily">Daily</option>
+            </select><br>
+            <label for='reminder'>Reminder (# of days before (optional)):</label>
+            <input type='number' id='reminder' name='reminder'><br>
+            <input type='submit' value='Add Event'>
+            <input type='hidden' name='personid' value='<?php echo $personId; ?>'>
+        </form>
         <?php
             if(isset($_SESSION['eventsInfoList'])) {
                 echo $_SESSION['eventsInfoList'];
