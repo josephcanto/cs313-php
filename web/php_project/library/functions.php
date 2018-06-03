@@ -283,7 +283,7 @@
                 VALUES (:name, :notes, :event_id)';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-        $stmt->bindValue(':notes', $date, PDO::PARAM_STR);
+        $stmt->bindValue(':notes', $notes, PDO::PARAM_STR);
         $stmt->bindValue(':event_id', $eventId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
