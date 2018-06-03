@@ -56,7 +56,7 @@
             <input type='hidden' name='eventid' value='<?php echo $eventId; ?>'>
         </form>
         <?php
-            if(isset($_SESSION['giftIdeasList'])) {
+            if($_SESSION['giftIdeasList'] != NULL) {
                 echo $_SESSION['giftIdeasList'];
             } else {
                 echo "<p>Looks like you haven't added any gift ideas for " . $_SESSION['personName'] . "'s" . $_SESSION['eventName'] . " yet.</p>";

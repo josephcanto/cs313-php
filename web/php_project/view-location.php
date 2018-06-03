@@ -61,7 +61,7 @@
             <input type='hidden' name='giftid' value='<?php echo $giftId; ?>'>
         </form>
         <?php
-            if(isset($_SESSION['locationsList'])) {
+            if($_SESSION['locationsList'] != NULL) {
                 echo $_SESSION['locationsList'];
             } else {
                 echo "<p>Looks like you haven't added any locations to buy " . $_SESSION['giftName'] . " yet.</p>";
