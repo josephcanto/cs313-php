@@ -108,6 +108,7 @@ section {
 #banner {
     background-image: url('../images/banner.jpg');
     background-size: cover;
+    min-height: 250px;
 }
 
 #action-button {
@@ -142,10 +143,11 @@ h1 {
 .comic-strip {
     width: 350px;
     height: 250px;
+    margin: 2px 0;
 }
 
 #testimonials-container {
-    padding: 5px 10px;
+    padding: 5px 10px 75px 10px;
     background-color: #777;
 }
 
@@ -335,7 +337,7 @@ a:active {
     }
     
     #testimonials-container {
-        padding: 5px 15px;
+        padding: 5px 15px 5px 15px;
     }
 
     h2 {
