@@ -90,13 +90,13 @@
             foreach($people as $person) {
                 if($person['is_family']) {
                     // add the person to the list of family members if they are family, and increase the number of family members added by 1
-                    $family .= "<ul class='people-list'><li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    $family .= "<p class='people-list'><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a>: ";
                     if($person['address'] != "") {
                         $family .= $person['address'];
                     } else {
                         $family .= "No address has been entered for this individual.";
                     }
-                    $family .= "</li></ul></li></ul>";
+                    $family .= "</p>";
                     $family .= "<p class='modify-links-container'>";
                     $family .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
                     $family .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
@@ -104,13 +104,13 @@
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
-                    $friends .= "<ul class='people-list'><li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    $friends .= "<p class='people-list'><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a>: ";
                     if($person['address'] != "") {
                         $friends .= $person['address'];
                     } else {
                         $friends .= "No address has been entered for this individual.";
                     }
-                    $friends .= "</li></ul></li></ul>";
+                    $friends .= "</p>";
                     $friends .= "<p class='modify-links-container'>";
                     $friends .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
                     $friends .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
