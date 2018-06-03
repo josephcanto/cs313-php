@@ -3,12 +3,6 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
-    if(isset($_SESSION['errorMessage'])) {
-        unset($_SESSION['errorMessage']);
-    }
-    if(isset($_SESSION['successMessage'])) {
-        unset($_SESSION['successMessage']);
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,11 +38,13 @@
                     unset($_SESSION['errorMessage']);
                 }
                 echo $_SESSION['successMessage'];
+                unset($_SESSION['successMessage']);
             } elseif(isset($_SESSION['errorMessage'])) {
                 if(isset($_SESSION['successMessage'])) {
                     unset($_SESSION['successMessage']);
                 }
                 echo $_SESSION['errorMessage'];
+                unset($_SESSION['errorMessage']);
             }
         ?>
         <p class='user-form-instructions'>Use the form below to add a new event for <?php echo $_SESSION['personName']; ?>.</p>

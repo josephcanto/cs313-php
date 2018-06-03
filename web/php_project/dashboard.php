@@ -25,8 +25,10 @@
                     unset($_SESSION['errorMessage']);
                 }
                 echo $_SESSION['successMessage'];
+                unset($_SESSION['successMessage']);
             } elseif(isset($_SESSION['errorMessage'])) {
                 echo $_SESSION['errorMessage'];
+                unset($_SESSION['errorMessage']);
             }
             if(isset($_SESSION['user_id'])) {
                 $userId = $_SESSION['user_id'];

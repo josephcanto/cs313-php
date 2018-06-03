@@ -40,11 +40,13 @@
                     unset($_SESSION['errorMessage']);
                 }
                 echo $_SESSION['successMessage'];
+                unset($_SESSION['successMessage']);
             } elseif(isset($_SESSION['errorMessage'])) {
                 if(isset($_SESSION['successMessage'])) {
                     unset($_SESSION['successMessage']);
                 }
                 echo $_SESSION['errorMessage'];
+                unset($_SESSION['errorMessage']);
             }
         ?>
         <p class='user-form-instructions'>Use the form below to add a new location to buy <?php echo $_SESSION['giftName']; ?> for <?php echo $_SESSION['personName']; ?>'s <?php echo $_SESSION['eventName']; ?>.</p>
