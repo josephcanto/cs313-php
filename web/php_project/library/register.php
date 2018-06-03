@@ -20,6 +20,8 @@
         $result = registerUser($valUserEmail, $user_password, $firstname, $lastname);
         if($result == 1) {
             $_SESSION['loggedIn'] = TRUE;
+            $result = getUserIdByEmail($valUserEmail);
+            $_SESSION['user_id'] = $result['id'];
             header('Location: ../dashboard.php');
         }
         else {

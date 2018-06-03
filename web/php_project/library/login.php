@@ -14,6 +14,7 @@
         if(isset($firstname) && $passwordCheck) {
             $_SESSION['loggedIn'] = TRUE;
             $_SESSION['firstname'] = $firstname;
+            $_SESSION['user_id'] = $userInfo['id'];
 
             $people = getPeopleList($userInfo['id']);
             $peopleList = buildPeopleList($people);

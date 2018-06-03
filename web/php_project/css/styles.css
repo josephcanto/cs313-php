@@ -272,6 +272,19 @@ a:active {
     font-size: 10pt;
 }
 
+.user-form-heading {
+    color: black;
+}
+
+.user-form {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.user-form > label {
+    margin: 10px 0;
+}
+
 @media screen and (min-width: 768px) {
     main {
         max-width: 80%;

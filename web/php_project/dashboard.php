@@ -22,16 +22,20 @@
             if(isset($_SESSION['errorMessage'])) {
                 echo $_SESSION['errorMessage'];
             }
+            if(isset($_SESSION['user_id'])) {
+                $userId = $_SESSION['user_id'];
+            }
         ?>
         <h2 class='user-form-heading'>Use the form below to add a new person to your list.</h2>
         <form class='user-form' action='library/add-person.php' method='post'>
             <label for='name'>Name:</label>
             <input type='text' id='name' name='name' required><br>
             <label for='family'>Family member?</label>
-            <input type='checkbox' id='family' name='family' required><br>
+            <input type='checkbox' id='family' name='family'><br>
             <label for='address'>Address (optional):</label>
             <input type='text' id='address' name='address'><br>
             <input type='submit' value='Add Person'>
+            <input type='hidden' name='userid' value='<?php echo $userId; ?>'>
         </form>
         <?php
             if(isset($_SESSION['peopleList'])) {
