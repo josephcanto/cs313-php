@@ -48,16 +48,17 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                foreach($_SESSION['eventsInfoList'] as $event) {
-                    if($_GET['eventid'] = $event['id']) {
-                        $eventId = $event['id'];
-                        $name = $event['name'];
-                        $date = $event['date'];
-                        $frequency = $event['frequency'];
-                        $reminder = $event['reminder'];
-                        $person_id = $event['person_id'];
-                    }
-                }
+                var_dump($_SESSION['eventsInfoList']);
+                // foreach($_SESSION['eventsInfoList'] as $event) {
+                //     if($_GET['eventid'] = $event['id']) {
+                //         $eventId = $event['id'];
+                //         $name = $event['name'];
+                //         $date = $event['date'];
+                //         $frequency = $event['frequency'];
+                //         $reminder = $event['reminder'];
+                //         $person_id = $event['person_id'];
+                //     }
+                // }
 
                 echo "<p class='user-form-instructions'>Use the form below to edit " . $_SESSION['personName'] . "'s $name event.</p>
                       <form class='user-form' action='library/edit-event.php' method='post'>
