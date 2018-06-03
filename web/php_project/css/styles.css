@@ -377,3 +377,9 @@ a:active {
         justify-content: center;
     }
 }
+
+@media screen and (min-width: 1300px) {
+    .testimonial {
+        margin: 0 3em 30px 3em;
+    }
+}
