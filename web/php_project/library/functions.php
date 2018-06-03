@@ -245,6 +245,10 @@
                     $locationsList .= "<li>Price: Not specified</li>";
                 }
                 $locationsList .= "</ul>";
+                $locationsList .= "<p class='edit-delete-links'>";
+                $locationsList .= "<a href='edit-location.php?locationid='" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
+                $locationsList .= "<a href='delete-data.php?name=locations&id='" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
+                $locationsList .= "</p>";
             }
         }
         return $locationsList;
@@ -309,5 +313,17 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;        
+     }
+
+     function deleteData($tableName, $itemId) {
+        $db = dbConnect();
+        $sql = 'DELETE FROM tableName=:tableName WHERE id=:itemId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':tableName', $tableName, PDO::PARAM_STR);
+        $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsChanged = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsChanged;          
      }
 ?>
