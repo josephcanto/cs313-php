@@ -8,7 +8,7 @@
     if(isset($_POST['notes'])) {
         $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
     } else {
-        $notes = "";
+        $notes = "No notes have been added for this gift idea.";
     }
     $eventId = $_POST['eventid'];
     $_SESSION['eventid'] = $eventid;
