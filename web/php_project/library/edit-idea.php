@@ -14,7 +14,7 @@
         $_SESSION['successMessage'] = "<p id='success-message'>Gift idea successfully updated.</p>";
         $giftInfo = getGiftIdeasByEventId($eventId);
         $_SESSION['giftInfo'] = $giftInfo;
-        $giftIdeasList = buildGiftIdeasList($giftIdeasInfo);
+        $giftIdeasList = buildGiftIdeasList($giftInfo);
         $_SESSION['giftIdeasList'] = $giftIdeasList;
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update gift idea. Please try again.</p>";
