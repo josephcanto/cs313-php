@@ -19,13 +19,13 @@
             header('Location: ../dashboard.php');
             break;
         case 'events':
-            header('Location: view-person.php');
+            header('Location: ../view-person.php');
             break;
         case 'ideas':
-            header('Location: view-event.php');
+            header('Location: ../view-event.php');
             break;
         case 'locations':
-            header('Location: view-location.php');
+            header('Location: ../view-location.php');
             break;
     }
 ?>

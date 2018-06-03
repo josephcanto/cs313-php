@@ -246,8 +246,8 @@
                 }
                 $locationsList .= "</ul>";
                 $locationsList .= "<p class='modify-links-container'>";
-                $locationsList .= "<a class='modify-links' href='edit-location.php?locationid=" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
-                $locationsList .= "<a class='modify-links' href='delete-data.php?name=locations&id=" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
+                $locationsList .= "<a class='modify-links' href='library/edit-location.php?locationid=" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
+                $locationsList .= "<a class='modify-links' href='library/delete-data.php?name=locations&id=" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
                 $locationsList .= "</p>";
             }
         }
@@ -317,7 +317,7 @@
 
      function deleteData($tableName, $itemId) {
         $db = dbConnect();
-        $sql = 'DELETE FROM tableName=:tableName WHERE id=:itemId';
+        $sql = 'DELETE FROM :tableName WHERE id=:itemId';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':tableName', $tableName, PDO::PARAM_STR);
         $stmt->bindValue(':itemId', $itemId, PDO::PARAM_INT);
