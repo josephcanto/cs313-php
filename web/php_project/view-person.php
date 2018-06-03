@@ -48,22 +48,44 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                echo "<p class='user-form-instructions'>Use the form below to edit the event for " . $_SESSION['personName'] . ".</p>
+                foreach($_SESSION['eventsInfoList'] as $event) {
+                    if($_GET['eventid'] = $event['id']) {
+                        $eventId = $event['id'];
+                        $name = $event['name'];
+                        $date = $event['date'];
+                        $frequency = $event['frequency'];
+                        $reminder = $event['reminder'];
+                        $person_id = $event['person_id'];
+                    }
+                }
+
+                echo "<p class='user-form-instructions'>Use the form below to edit " . $_SESSION['personName'] . "'s $name event.</p>
                       <form class='user-form' action='library/edit-event.php' method='post'>
                           <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required><br>
+                          <input type='text' id='name' name='name' required value='$name'><br>
                           <label for='date'>Date: </label>
-                          <input type='date' id='date' name='date' required><br>
+                          <input type='date' id='date' name='date' required value='$date'><br>
                           <label for='frequency'>Frequency:</label>
-                          <select id='frequency' name='frequency' required>
-                              <option value='Yearly' selected='selected'>Yearly</option>
-                              <option value='Monthly'>Monthly</option>
-                              <option value='One-time'>One-time</option>
-                          </select><br>
+                          <select id='frequency' name='frequency' required>";
+                          if($frequency == 'Yearly') {
+                              echo "<option value='Yearly' selected='selected'>Yearly</option>
+                                    <option value='Monthly'>Monthly</option>
+                                    <option value='One-time'>One-time</option>";
+                          } elseif($frequency == 'Monthly') {
+                            echo "<option value='Yearly'>Yearly</option>
+                                  <option value='Monthly' selected='selected'>Monthly</option>
+                                  <option value='One-time'>One-time</option>";
+                          } else {
+                            echo "<option value='Yearly'>Yearly</option>
+                                  <option value='Monthly'>Monthly</option>
+                                  <option value='One-time' selected='selected'>One-time</option>";
+                          }
+                    echo "</select><br>
                           <label for='reminder'>Reminder (choose a date (optional)):</label>
-                          <input type='date' id='reminder' name='reminder'><br>
+                          <input type='date' id='reminder' name='reminder' value='$reminder'><br>
                           <input type='submit' value='Edit Event'>
-                          <input type='hidden' name='personid' value='$personId'>
+                          <input type='hidden' name='eventid' value='$eventId'>
+                          <input type='hidden' name='personid' value='$person_id'>
                       </form>";
             } else {
                 echo "<p class='user-form-instructions'>Use the form below to add a new event for " . $_SESSION['personName'] . ".</p>

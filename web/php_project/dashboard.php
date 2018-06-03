@@ -51,7 +51,7 @@
                 $userId = $_SESSION['user_id'];
             }
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                echo "<p class='user-form-instructions'>Use the form below to edit this person's record.</p>
+                echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
                     <form class='user-form' action='library/edit-person.php' method='post'>
                         <label for='name'>Name:</label>
                         <input type='text' id='name' name='name' required value='$name'><br>

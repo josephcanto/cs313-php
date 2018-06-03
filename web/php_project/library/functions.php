@@ -199,7 +199,7 @@
             foreach($giftInfo as $idea) {
                 $ideasList .= "<ul class='gift-info-list'>";
                 $ideasList .= "<li>Gift Idea: " . $idea['name'] . "</li>";
-                if(isset($idea['notes'])) {
+                if(!empty($idea['notes'])) {
                     $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
                 } else {
                     $ideasList .= "<li>Notes: No notes have been entered for this gift idea.</li>";
@@ -281,9 +281,9 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;
-     }
+    }
 
-     function addEvent($name, $date, $frequency, $reminder, $personId) {
+    function addEvent($name, $date, $frequency, $reminder, $personId) {
         $db = dbConnect();
         $sql = 'INSERT INTO events (name, date, frequency, reminder, person_id)
                 VALUES (:name, :date, :frequency, :reminder, :person_id)';
@@ -297,9 +297,9 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;
-     }
+    }
 
-     function addGiftIdea($name, $notes, $eventId) {
+    function addGiftIdea($name, $notes, $eventId) {
         $db = dbConnect();
         $sql = 'INSERT INTO ideas (name, notes, event_id)
                 VALUES (:name, :notes, :event_id)';
@@ -311,9 +311,9 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;
-     }
+    }
 
-     function addLocation($name, $address, $website, $price, $giftId) {
+    function addLocation($name, $address, $website, $price, $giftId) {
         $db = dbConnect();
         $sql = 'INSERT INTO locations (name, address, website, price, gift_id)
                 VALUES (:name, :address, :website, :price, :gift_id)';
@@ -327,9 +327,9 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;        
-     }
+    }
 
-     function deleteData($tableName, $itemId) {
+    function deleteData($tableName, $itemId) {
         $db = dbConnect();
         $sql = 'DELETE FROM ' . $tableName . ' WHERE id=:itemId';
         $stmt = $db->prepare($sql);
@@ -338,9 +338,9 @@
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsChanged;          
-     }
+    }
 
-     function updatePerson($name, $isFamily, $address, $personId) {
+    function updatePerson($name, $isFamily, $address, $personId) {
         $db = dbConnect();
         $sql = 'UPDATE people SET name=:name, is_family=:isFamily, address=:address WHERE id=:personId';
         $stmt = $db->prepare($sql);
@@ -352,5 +352,20 @@
         $rowsUpdated = $stmt->rowCount();
         $stmt->closeCursor();
         return $rowsUpdated; 
-     }
+    }
+
+    function updateEvent($name, $date, $frequency, $reminder, $eventId) {
+        $db = dbConnect();
+        $sql = 'UPDATE events SET name=:name, date=:date, frequency=:frequency, reminder=:reminder WHERE id=:eventId';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':date', $date, PDO::PARAM_STR);
+        $stmt->bindValue(':frequency', $frequency, PDO::PARAM_STR);
+        $stmt->bindValue(':reminder', $reminder, PDO::PARAM_STR);
+        $stmt->bindValue(':eventId', $eventId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsUpdated = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsUpdated;         
+    }
 ?>
