@@ -16,6 +16,9 @@
     
     switch($tableName) {
         case 'people':
+            $people = getPeopleList($_SESSION['user_id']);
+            $peopleList = buildPeopleList($people);
+            $_SESSION['peopleList'] = $peopleList;
             header('Location: ../dashboard.php');
             break;
         case 'events':
