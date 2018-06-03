@@ -8,9 +8,9 @@
     $date = $_POST['date'];
     $frequency = $_POST['frequency'];
     if(isset($_POST['reminder'])) {
-        $reminder = filter_input(INPUT_POST, 'reminder', FILTER_SANITIZE_NUMBER_INT);
+        $reminder = $_POST['reminder'];
     } else {
-        $reminder = "";
+        $reminder = NULL;
     }
     $personId = $_POST['personid'];
 

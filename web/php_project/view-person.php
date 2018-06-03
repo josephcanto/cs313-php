@@ -50,8 +50,8 @@
                 <option value="monthly">Monthly</option>
                 <option value="daily">Daily</option>
             </select><br>
-            <label for='reminder'>Reminder (# of days before (optional)):</label>
-            <input type='number' id='reminder' name='reminder'><br>
+            <label for='reminder'>Reminder (choose a date (optional)):</label>
+            <input type='date' id='reminder' name='reminder'><br>
             <input type='submit' value='Add Event'>
             <input type='hidden' name='personid' value='<?php echo $personId; ?>'>
         </form>
