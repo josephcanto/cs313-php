@@ -280,6 +280,7 @@ a:active {
 .user-form {
     background-color: #ccc;
     padding: 10px;
+    width: 100%;
 }
 
 .user-form > label {
@@ -362,5 +363,9 @@ a:active {
 
     h4 {
         font-size: 13pt;
+    }
+
+    .user-form {
+        width: 50%;
     }
 }
