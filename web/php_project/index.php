@@ -50,17 +50,21 @@
                 </div>
             </div>
         </section><!-- end of section 'testimonials' -->
-        <section id='registration'>
-            <h3>Register today, and start impressing everyone with your awesome gift ideas! Never forget another special occasion again!</h3>
-            <?php if(isset($_SESSION['error'])) echo "<p id='error-message' style='color: red;'>" . $_SESSION['error'] . "</p>"; ?>
-            <form id='registration-form' action='library/register.php' method='post'>
-                <input type='text' name='firstname' placeholder='First name'>
-                <input type='text' name='lastname' placeholder='Last name'>
-                <input type='email' name='emailaddress' placeholder='Email'>
-                <input type='password' name='newpassword' placeholder='Password'>
-                <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
-            </form>
-        </section><!-- end of section 'registration' -->
+        <?php 
+            if(!isset($_SESSION['loggedIn'])) {
+                echo "<section id='registration'>
+                          <h3>Register today, and start impressing everyone with your awesome gift ideas! Never forget another special occasion again!</h3>";
+                if(isset($_SESSION['errorMessage'])) echo $_SESSION['errorMessage'];
+                    echo "<form id='registration-form' action='library/register.php' method='post'>
+                              <input type='text' name='firstname' placeholder='First name'>
+                              <input type='text' name='lastname' placeholder='Last name'>
+                              <input type='email' name='emailaddress' placeholder='Email'>
+                              <input type='password' name='newpassword' placeholder='Password'>
+                              <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
+                          </form>
+                      </section><!-- end of section 'registration' -->";
+            }
+        ?>
     </main>
     <?php require 'modules/footer.php'; ?>
 </body>
