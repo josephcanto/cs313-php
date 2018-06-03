@@ -11,14 +11,14 @@
     $giftId = $_POST['giftid'];
     $_SESSION['giftId'] = $giftId;
 
-    // $rowsChanged = addLocation($name, $address, $website, $price, $giftId);
-    // if($rowsChanged != 0) {
-    //     $_SESSION['successMessage'] = "<p id='success-message'>New location successfully added.</p>";
-    //     $locationsInfo = getLocationsByGiftId($giftId);
-    //     $locationsList = buildLocationsList($locationsInfo);
-    //     $_SESSION['locationsList'] = $locationsList;
-    // } else {
-    //     $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new location. Please try again.</p>";
-    // }
-    // header('Location: ../view-location.php');
+    $rowsChanged = addLocation($name, $address, $website, $price, $giftId);
+    if($rowsChanged != 0) {
+        $_SESSION['successMessage'] = "<p id='success-message'>New location successfully added.</p>";
+        $locationsInfo = getLocationsByGiftId($giftId);
+        $locationsList = buildLocationsList($locationsInfo);
+        $_SESSION['locationsList'] = $locationsList;
+    } else {
+        $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new location. Please try again.</p>";
+    }
+    header('Location: ../view-location.php');
 ?>
