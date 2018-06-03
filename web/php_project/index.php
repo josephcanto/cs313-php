@@ -14,7 +14,13 @@
     <?php require 'modules/header.php'; ?>
     <main>
         <section id='banner'>
-            <a id='action-button' href='#registration' title='Click here to proceed to the registration form'>Create Account</a>
+            <?php
+                if(isset($_SESSION['loggedIn'])) {
+                    echo "<a id='action-button' href='dashboard.php' title='Click here to go to your dashboard page'>Go To Dashboard</a>";
+                } else {
+                    echo "<a id='action-button' href='#registration' title='Click here to proceed to the registration form'>Create Account</a>";
+                }
+            ?>
         </section><!-- end of section 'banner' -->
         <section id='comic'>
             <h1>For-gift &amp; Forget</h1>
