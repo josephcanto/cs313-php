@@ -235,7 +235,7 @@
                     $locationsList .= "<li>Address: Not specified</li>";
                 }
                 if(!empty($location['website'])) {
-                    $locationsList .= "<li>Website: <a class='store-website-link' target='_blank' href='http://www." . $location['website'] . "' title='Click here to go to " . $location['website'] . "'>" . $location['website'] . "</a></li>";
+                    $locationsList .= "<li>Website: <a class='store-website-link' target='_blank' href='" . $location['website'] . "' title='Click here to go to " . $location['website'] . "'>" . $location['website'] . "</a></li>";
                 } else {
                     $locationsList .= "<li>Website: Not specified</li>";
                 }
