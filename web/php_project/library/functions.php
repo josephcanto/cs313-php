@@ -100,7 +100,7 @@
                     $family .= "<p class='modify-links-container'>";
                     $family .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
                     $family .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
-                    $family .= "</p>";
+                    $family .= "</p><br>";
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
@@ -114,7 +114,7 @@
                     $friends .= "<p class='modify-links-container'>";
                     $friends .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
                     $friends .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
-                    $friends .= "</p>";
+                    $friends .= "</p><br>";
                     $numFriends++;
                 }
             }
