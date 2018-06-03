@@ -8,9 +8,9 @@
     $_SESSION['giftId'] = $giftId;
     $giftName = getNameByGiftId($giftId);
     $_SESSION['giftName'] = $giftName['name'];
-    $locationInfo = getLocationsByGiftId($giftId);
-    $_SESSION['locationInfo'] = $locationInfo;
-    $locationsList = buildLocationsList($locationInfo);
+    $locationsInfo = getLocationsByGiftId($giftId);
+    $_SESSION['locationsInfo'] = $locationsInfo;
+    $locationsList = buildLocationsList($locationsInfo);
     $_SESSION['locationsList'] = $locationsList;
     header('Location: ../view-location.php');
 ?>
