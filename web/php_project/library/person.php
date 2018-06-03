@@ -8,8 +8,8 @@
     $personName = getNameByPersonId($personId);
     $_SESSION['personName'] = $personName['name'];
     $personInfo = getEventsInfoByPersonId($personId);
+    $_SESSION['personId'] = $personId;
     if(!empty($personInfo)) {
-        $_SESSION['personId'] = $personId;
         $_SESSION['personInfo'] = $personInfo;
         $eventsInfoList = buildEventsInfoList($personInfo); 
         if(!empty($eventsInfoList)) {
