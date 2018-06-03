@@ -69,7 +69,7 @@
                           <input type='text' id='address' name='address' value='$address'><br>
                           <label for='website'>Website URL (optional):</label>
                           <input type='url' id='website' name='website' value='$website'><br>
-                          <label for='price'>Price (optional): $</label>
+                          <label for='price'>Price (optional -- whole numbers only): $</label>
                           <input type='number' id='price' name='price' value='$price'><br>
                           <input type='submit' value='Edit Location'>
                           <input type='hidden' name='locationid' value='$locationId'>
@@ -84,7 +84,7 @@
                           <input type='text' id='address' name='address'><br>
                           <label for='website'>Website URL (optional):</label>
                           <input type='url' id='website' name='website'><br>
-                          <label for='price'>Price (optional): $</label>
+                          <label for='price'>Price (optional -- whole numbers only): $</label>
                           <input type='number' id='price' name='price'><br>
                           <input type='submit' value='Add Location'>
                           <input type='hidden' name='giftid' value='$giftId'>

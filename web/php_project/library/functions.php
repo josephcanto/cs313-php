@@ -321,7 +321,7 @@
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->bindValue(':address', $address, PDO::PARAM_STR);
         $stmt->bindValue(':website', $website, PDO::PARAM_STR);
-        $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+        $stmt->bindValue(':price', $price, PDO::PARAM_INT);
         $stmt->bindValue(':gift_id', $giftId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
@@ -389,7 +389,7 @@
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->bindValue(':address', $address, PDO::PARAM_STR);
         $stmt->bindValue(':website', $website, PDO::PARAM_STR);
-        $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+        $stmt->bindValue(':price', $price, PDO::PARAM_INT);
         $stmt->bindValue(':locationId', $locationId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsUpdated = $stmt->rowCount();

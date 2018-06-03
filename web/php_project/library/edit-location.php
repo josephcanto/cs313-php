@@ -9,7 +9,7 @@
     $website = filter_input(INPUT_POST, 'website', FILTER_VALIDATE_URL);
     $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_INT);
     if($price == "") {
-        $price = "0.00";
+        $price = "0";
     }
     $locationId = $_POST['locationid'];
     $giftId = $_POST['giftid'];
