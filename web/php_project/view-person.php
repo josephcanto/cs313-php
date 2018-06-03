@@ -3,6 +3,12 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
+    if(isset($_SESSION['errorMessage'])) {
+        unset($_SESSION['errorMessage']);
+    }
+    if(isset($_SESSION['successMessage'])) {
+        unset($_SESSION['successMessage']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
