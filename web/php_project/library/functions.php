@@ -206,7 +206,7 @@
                 }
                 $ideasList .= "</ul>";
                 $ideasList .= "<p class='modify-links-container'>";
-                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a> |";
+                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a> | ";
                 $ideasList .= "<a class='modify-links' href='view-event.php?action=edit&ideaid=" . $idea['id'] . "' title='Click here to edit this gift idea'>Edit</a> | ";
                 $ideasList .= "<a class='modify-links' href='library/delete-data.php?name=ideas&id=" . $idea['id'] . "' title='Click here to delete this gift idea'>Delete</a>";
                 $ideasList .= "</p>";
