@@ -29,11 +29,42 @@
                 if(isset($_SESSION['giftName'])) {
                     echo $_SESSION['giftName'] . " for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'];
                 }
+                if(isset($_SESSION['giftId'])) {
+                    $giftId = $_SESSION['giftId'];
+                }
             ?>
         </h2>
+        <?php 
+            if(isset($_SESSION['successMessage'])) {
+                if(isset($_SESSION['errorMessage'])) {
+                    unset($_SESSION['errorMessage']);
+                }
+                echo $_SESSION['successMessage'];
+            } elseif(isset($_SESSION['errorMessage'])) {
+                if(isset($_SESSION['successMessage'])) {
+                    unset($_SESSION['successMessage']);
+                }
+                echo $_SESSION['errorMessage'];
+            }
+        ?>
+        <p class='user-form-instructions'>Use the form below to add a new location to buy <?php echo $_SESSION['giftName']; ?> for <?php echo $_SESSION['personName']; ?>'s <?php echo $_SESSION['eventName']; ?>.</p>
+        <form class='user-form' action='library/add-location.php' method='post'>
+            <label for='name'>Name:</label>
+            <input type='text' id='name' name='name' required><br>
+            <label for='address'>Address:</label>
+            <input type='text' id='address' name='address'><br>
+            <label for='website'>Website URL:</label>
+            <input type='text' id='website' name='website'><br>
+            <label for='price'>Price: $</label>
+            <input type='number' id='price' name='price' min='0.00' step='0.01' max='1000000.00' required><br>
+            <input type='submit' value='Add Location'>
+            <input type='hidden' name='giftid' value='<?php echo $giftId; ?>'>
+        </form>
         <?php
             if(isset($_SESSION['locationsList'])) {
                 echo $_SESSION['locationsList'];
+            } else {
+                echo "<p>Looks like you haven't added any locations to buy " . $_SESSION['giftName'] . " yet.</p>";
             }
         ?>
     </main>

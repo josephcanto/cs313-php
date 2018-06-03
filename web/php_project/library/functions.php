@@ -290,4 +290,20 @@
         $stmt->closeCursor();
         return $rowsChanged;
      }
+
+     function addLocation($name, $address, $website, $price, $giftId) {
+        $db = dbConnect();
+        $sql = 'INSERT INTO locations (name, address, website, price, gift_id)
+                VALUES (:name, :address, :website, :price, :gift_id)';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':address', $address, PDO::PARAM_STR);
+        $stmt->bindValue(':website', $website, PDO::PARAM_STR);
+        $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+        $stmt->bindValue(':gift_id', $giftId, PDO::PARAM_INT);
+        $stmt->execute();
+        $rowsChanged = $stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowsChanged;        
+     }
 ?>
