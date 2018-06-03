@@ -20,7 +20,12 @@
     <main id='dashboard-page'>
         <h1 id='dashboard-heading'>For-gift &amp; Forget Dashboard</h1>
         <?php
-            if(isset($_SESSION['errorMessage'])) {
+            if(isset($_SESSION['successMessage'])) {
+                if(isset($_SESSION['errorMessage'])) {
+                    unset($_SESSION['errorMessage']);
+                }
+                echo $_SESSION['successMessage'];
+            } elseif(isset($_SESSION['errorMessage'])) {
                 echo $_SESSION['errorMessage'];
             }
             if(isset($_SESSION['user_id'])) {

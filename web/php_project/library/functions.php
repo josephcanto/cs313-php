@@ -234,15 +234,15 @@
         return $locationsList;
     }
 
-    function addPerson($name, $isFamily, $address){
+    function addPerson($name, $isFamily, $address, $userId){
         $db = dbConnect();
         $sql = 'INSERT INTO people (name, is_family, address, user_id)
-                VALUES (:name, :is_family, :address, :user_id)';
+                VALUES (:name, :isFamily, :address, :user_id)';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-        $stmt->bindValue(':password', $password, PDO::PARAM_STR);
-        $stmt->bindValue(':firstname', $firstname, PDO::PARAM_STR);
-        $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
+        $stmt->bindValue(':isFamily', $isFamily, PDO::PARAM_BOOL);
+        $stmt->bindValue(':address', $address, PDO::PARAM_STR);
+        $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();

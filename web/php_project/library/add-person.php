@@ -13,9 +13,11 @@
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
     $userId = $_POST['userid'];
 
-    // here for testing purposes
-    var_dump($name);
-    var_dump($isFamily);
-    var_dump($address);
-    var_dump($userId);
+    $rowsChanged = addPerson($name, $isFamily, $address, $userId);
+    if($rowsChanged != 0) {
+        $_SESSION['successMessage'] = "<p>New person successfully added.</p>";
+    } else {
+        $_SESSION['errorMessage'] = "<p>Failed to new add person. Please try again.</p>";
+    }
+    header('Location: ../dashboard.php');
 ?>
