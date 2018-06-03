@@ -28,11 +28,25 @@
                 if(isset($_SESSION['eventName'])) {
                     echo $_SESSION['personName'] . "'s " . $_SESSION['eventName'];
                 }
+                if(isset($_SESSION['eventId'])) {
+                    $eventId = $_SESSION['eventId'];
+                }
             ?>
         </h2>
+        <p class='user-form-instructions'>Use the form below to add a new gift idea for <?php echo $_SESSION['personName']; ?>'s <?php echo $_SESSION['eventName']; ?>.</p>
+        <form class='user-form' action='library/add-idea.php' method='post'>
+            <label for='name'>Name:</label>
+            <input type='text' id='name' name='name' required><br>
+            <label for='notes'>Notes (optional): </label>
+            <textarea id='notes' name='notes' rows='4' cols='50'></textarea><br>
+            <input type='submit' value='Add Gift Idea'>
+            <input type='hidden' name='eventid' value='<?php echo $eventId; ?>'>
+        </form>
         <?php
             if(isset($_SESSION['giftIdeasList'])) {
                 echo $_SESSION['giftIdeasList'];
+            } else {
+                echo "<p>Looks like you haven't added any gift ideas for " . $_SESSION['personName'] . "'s" . $_SESSION['eventName'] . " yet.</p>";
             }
         ?>
     </main>
