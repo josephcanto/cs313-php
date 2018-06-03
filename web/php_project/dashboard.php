@@ -3,7 +3,7 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
-    var_dump($_SESSION);
+    var_dump($_SESSION['peopleInfo']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

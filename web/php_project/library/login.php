@@ -17,6 +17,7 @@
             $_SESSION['user_id'] = $userInfo['id'];
 
             $people = getPeopleList($userInfo['id']);
+            $_SESSION['peopleInfo'] = $people;
             $peopleList = buildPeopleList($people);
             $_SESSION['peopleList'] = $peopleList;
 
