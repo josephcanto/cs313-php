@@ -83,35 +83,41 @@
 
     function buildPeopleList($people) {
         if(!empty($people)) {
-            $family = "<h2 class='people-list-heading'>Family</h2><ul class='people-list'>";
-            $friends = "<h2 class='people-list-heading'>Friends</h2><ul class='people-list'>";
+            $family = "<h2 class='people-list-heading'>Family</h2>";
+            $friends = "<h2 class='people-list-heading'>Friends</h2>";
             $numFamily = 0;
             $numFriends = 0;
             foreach($people as $person) {
                 if($person['is_family']) {
                     // add the person to the list of family members if they are family, and increase the number of family members added by 1
-                    $family .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    $family .= "<ul class='people-list'><li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
                     if($person['address'] != "") {
                         $family .= $person['address'];
                     } else {
                         $family .= "No address has been entered for this individual.";
                     }
-                    $family .= "</li></ul></li>";
+                    $family .= "</li></ul></li></ul>";
+                    $family .= "<p class='modify-links-container'>";
+                    $family .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
+                    $family .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
+                    $family .= "</p>";
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
-                    $friends .= "<li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
+                    $friends .= "<ul class='people-list'><li><a class='person-link' href='library/person.php?id=" . $person['id'] . "' title='Click here to view more information for " . $person['name'] . "'>" . $person['name'] . "</a><ul><li>";
                     if($person['address'] != "") {
                         $friends .= $person['address'];
                     } else {
                         $friends .= "No address has been entered for this individual.";
                     }
-                    $friends .= "</li></ul></li>";
+                    $friends .= "</li></ul></li></ul>";
+                    $friends .= "<p class='modify-links-container'>";
+                    $friends .= "<a class='modify-links' href='dashboard.php?action=edit&personid=" . $person['id'] . "' title='Click here to edit the information for this person'>Edit</a> | ";
+                    $friends .= "<a class='modify-links' href='library/delete-data.php?name=people&id=" . $person['id'] . "' title='Click here to delete this person'>Delete</a>";
+                    $friends .= "</p>";
                     $numFriends++;
                 }
             }
-            $family .= "</ul>";
-            $friends .= "</ul>";
             if($numFamily != 0 && $numFriends != 0) {
                 $peopleList = $family . $friends;
             } elseif($numFamily != 0 && $numFriends == 0) {
@@ -155,7 +161,11 @@
                 $eventsList .= "<li>Frequency of event: " . $event['frequency'] . "</li>";
                 $eventsList .= "<li>You will be reminded on: " . $event['reminder'] . "</li>";
                 $eventsList .= "</ul>";
-                $eventsList .= "<a class='event-link' href='library/event.php?eventid=" . $event['id'] . "' title='View your gift ideas for this event'>View My Gift Ideas</a>";
+                $eventsList .= "<p class='modify-links-container'>";
+                $eventsList .= "<a class='event-link' href='library/event.php?eventid=" . $event['id'] . "' title='View your gift ideas for this event'>View My Gift Ideas</a> | ";
+                $eventsList .= "<a class='modify-links' href='view-person.php?action=edit&eventid=" . $event['id'] . "' title='Click here to edit this event'>Edit</a> | ";
+                $eventsList .= "<a class='modify-links' href='library/delete-data.php?name=events&id=" . $event['id'] . "' title='Click here to delete this event'>Delete</a>";
+                $eventsList .= "</p>";
             }
         }
         return $eventsList;
@@ -195,7 +205,11 @@
                     $ideasList .= "<li>Notes: No notes have been entered for this gift idea.</li>";
                 }
                 $ideasList .= "</ul>";
-                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a>";
+                $ideasList .= "<p class='modify-links-container'>";
+                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a> |";
+                $ideasList .= "<a class='modify-links' href='view-event.php?action=edit&ideaid=" . $idea['id'] . "' title='Click here to edit this gift idea'>Edit</a> | ";
+                $ideasList .= "<a class='modify-links' href='library/delete-data.php?name=ideas&id=" . $idea['id'] . "' title='Click here to delete this gift idea'>Delete</a>";
+                $ideasList .= "</p>";
             }
         }
         return $ideasList;
@@ -246,7 +260,7 @@
                 }
                 $locationsList .= "</ul>";
                 $locationsList .= "<p class='modify-links-container'>";
-                $locationsList .= "<a class='modify-links' href='library/edit-location.php?locationid=" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
+                $locationsList .= "<a class='modify-links' href='view-location.php?action=edit&locationid=" . $location['id'] . "' title='Click here to edit this location'>Edit</a> | ";
                 $locationsList .= "<a class='modify-links' href='library/delete-data.php?name=locations&id=" . $location['id'] . "' title='Click here to delete this location'>Delete</a>";
                 $locationsList .= "</p>";
             }
