@@ -64,7 +64,7 @@
         </form>
         <?php
             if($_SESSION['locationsList'] != NULL) {
-                echo $_SESSION['locationsList'] . "<br>";
+                echo $_SESSION['locationsList'] . "<br><br>";
             } else {
                 echo "<p>Looks like you haven't added any locations to buy " . $_SESSION['giftName'] . " yet.</p><br><br><br><br>";
             }

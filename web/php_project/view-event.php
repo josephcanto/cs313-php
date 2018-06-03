@@ -59,7 +59,7 @@
         </form>
         <?php
             if($_SESSION['giftIdeasList'] != NULL) {
-                echo $_SESSION['giftIdeasList'] . "<br>";
+                echo $_SESSION['giftIdeasList'] . "<br><br>";
             } else {
                 echo "<p>Looks like you haven't added any gift ideas for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . " yet.</p><br><br><br><br>";
             }
