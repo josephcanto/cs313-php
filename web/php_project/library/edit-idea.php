@@ -5,7 +5,7 @@
     session_start();
 
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $notes = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+    $notes = filter_input(INPUT_POST, 'notes', FILTER_SANITIZE_STRING);
     $giftId = $_POST['giftid'];
     $eventId = $_POST['eventid'];
 

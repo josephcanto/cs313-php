@@ -194,25 +194,25 @@
     }
 
     function buildGiftIdeasList($giftInfo) {
-        $ideasList = "";
+        $giftIdeasList = "";
         if(isset($giftInfo)) {
-            foreach($giftInfo as $idea) {
-                $ideasList .= "<ul class='gift-info-list'>";
-                $ideasList .= "<li>Gift Idea: " . $idea['name'] . "</li>";
-                if(!empty($idea['notes'])) {
-                    $ideasList .= "<li>Notes: " . $idea['notes'] . "</li>";
+            foreach($giftInfo as $giftIdea) {
+                $giftIdeasList .= "<ul class='gift-info-list'>";
+                $giftIdeasList .= "<li>Gift Idea: " . $giftIdea['name'] . "</li>";
+                if(!empty($giftIdea['notes'])) {
+                    $giftIdeasList .= "<li>Notes: " . $giftIdea['notes'] . "</li>";
                 } else {
-                    $ideasList .= "<li>Notes: No notes have been entered for this gift idea.</li>";
+                    $giftIdeasList .= "<li>Notes: No notes have been entered for this gift idea.</li>";
                 }
-                $ideasList .= "</ul>";
-                $ideasList .= "<p class='modify-links-container'>";
-                $ideasList .= "<a class='location-link' href='library/location.php?giftid=" . $idea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a> | ";
-                $ideasList .= "<a class='modify-links' href='view-event.php?action=edit&ideaid=" . $idea['id'] . "' title='Click here to edit this gift idea'>Edit</a> | ";
-                $ideasList .= "<a class='modify-links' href='library/delete-data.php?name=ideas&id=" . $idea['id'] . "' title='Click here to delete this gift idea'>Delete</a>";
-                $ideasList .= "</p>";
+                $giftIdeasList .= "</ul>";
+                $giftIdeasList .= "<p class='modify-links-container'>";
+                $giftIdeasList .= "<a class='location-link' href='library/location.php?giftid=" . $giftIdea['id'] . "' title='View the locations and prices you have entered for this gift idea'>View Locations and Prices</a> | ";
+                $giftIdeasList .= "<a class='modify-links' href='view-event.php?action=edit&giftid=" . $giftIdea['id'] . "' title='Click here to edit this gift idea'>Edit</a> | ";
+                $giftIdeasList .= "<a class='modify-links' href='library/delete-data.php?name=ideas&id=" . $giftIdea['id'] . "' title='Click here to delete this gift idea'>Delete</a>";
+                $giftIdeasList .= "</p>";
             }
         }
-        return $ideasList;
+        return $giftIdeasList;
     }
 
     function getNameByGiftId($giftId) {
