@@ -354,13 +354,12 @@ a:active {
         font-size: 24pt;
     }
 
-    #testimonials {
-        flex-flow: row nowrap;
-        justify-content: center;
-    }
-
     .testimonial {
         margin: 0 20px;
+    }
+
+    #registration {
+        padding: 20px;
     }
 
     #create-account-btn {
@@ -378,5 +377,12 @@ a:active {
 
     .user-form {
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #testimonials {
+        flex-flow: row nowrap;
+        justify-content: center;
     }
 }
