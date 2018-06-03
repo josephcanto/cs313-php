@@ -7,7 +7,7 @@
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
     $website = filter_input(INPUT_POST, 'website', FILTER_SANITIZE_STRING);
-    $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT);
+    $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_INT);
     $giftId = $_POST['giftid'];
     $_SESSION['giftId'] = $giftId;
 
