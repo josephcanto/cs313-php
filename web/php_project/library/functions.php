@@ -96,6 +96,7 @@
                     } else {
                         $family .= "No address has been entered for this individual.";
                     }
+                    $family .= "</li></ul></li>";
                     $numFamily++;
                 } else {
                     // add the person to the list of friends if they aren't family, and increase the number of friends added by 1
