@@ -253,6 +253,10 @@ a:active {
     padding: 75px 30px; 
 }
 
+#dashboard-heading {
+    color: #000;
+}
+
 .people-list-heading, 
 #person-name,
 #event-name,
