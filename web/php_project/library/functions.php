@@ -345,7 +345,7 @@
         $db = dbConnect();
         $sql = 'UPDATE people SET name=:name, is_family=:isFamily, address=:address WHERE id=:personId';
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(':name', $name, PDO::PARAM_INT);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->bindValue(':isFamily', $isFamily, PDO::PARAM_BOOL);
         $stmt->bindValue(':address', $address, PDO::PARAM_STR);
         $stmt->bindValue(':personId', $personId, PDO::PARAM_INT);
