@@ -3,6 +3,8 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
+    $passwordHash = password_hash('cs313', PASSWORD_DEFAULT);
+    var_dump($passwordHash);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +81,7 @@
             if(isset($_SESSION['peopleList'])) {
                 echo $_SESSION['peopleList'] . "<br><br>";
             } else {
-                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br>";
+                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br><br>";
             }
         ?>
     </main>

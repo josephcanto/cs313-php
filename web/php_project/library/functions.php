@@ -40,7 +40,8 @@
         $stmt->execute();
         $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-        if($password == $userInfo['password']){
+        $hashCheck = password_verify($password, $userInfo['password']);
+        if($hashCheck){
             return TRUE;
         }
         else {
