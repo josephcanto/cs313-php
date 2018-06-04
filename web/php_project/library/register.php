@@ -10,6 +10,7 @@
         $sanUserEmail = filter_input(INPUT_POST, 'emailaddress', FILTER_SANITIZE_EMAIL);
         $valUserEmail = filter_var($sanUserEmail, FILTER_VALIDATE_EMAIL);
         $user_password = filter_input(INPUT_POST, 'newpassword', FILTER_SANITIZE_STRING);
+        $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
         $_SESSION['firstname'] = $firstname;
 
         $emailCheck = checkExistingEmail($valUserEmail);
@@ -17,7 +18,7 @@
             $_SESSION['error'] = 'Email address already exists in our system. Try a different one, or, log in above.';
         }
 
-        $result = registerUser($valUserEmail, $user_password, $firstname, $lastname);
+        $result = registerUser($valUserEmail, $passwordHash, $firstname, $lastname);
         if($result == 1) {
             $_SESSION['loggedIn'] = TRUE;
             $result = getUserIdByEmail($valUserEmail);
