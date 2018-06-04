@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+    $passwordHash = password_hash('cs313', PASSWORD_DEFAULT);
+    var_dump($passwordHash); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

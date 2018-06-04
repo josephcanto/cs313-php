@@ -3,8 +3,6 @@
     if(!isset($_SESSION['loggedIn'])) {
         header('Location: index.php');
     }
-    $passwordHash = password_hash('cs313', PASSWORD_DEFAULT);
-    var_dump($passwordHash);
 ?>
 <!DOCTYPE html>
 <html lang="en">
