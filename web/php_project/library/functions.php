@@ -338,7 +338,7 @@
         $stmt->execute();
         $rowsChanged = $stmt->rowCount();
         $stmt->closeCursor();
-        return $rowsChanged;          
+        return $rowsChanged;
     }
 
     function updatePerson($name, $isFamily, $address, $personId) {
