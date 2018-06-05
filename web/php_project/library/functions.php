@@ -41,7 +41,7 @@
         $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         $hashCheck = password_verify($password, $userInfo['password']);
-        if($hashCheck){
+        if($hashCheck) {
             return TRUE;
         }
         else {
