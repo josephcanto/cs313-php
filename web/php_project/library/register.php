@@ -16,6 +16,7 @@
         var_dump($confirm_password);
         $comparisonResult = $user_password == $confirm_password;
         var_dump($comparisonResult);
+    }
         // if($user_password != $confirm_password) {
         //     $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
         //     header('Location: ../index.php#registration');
