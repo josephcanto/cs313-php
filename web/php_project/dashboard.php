@@ -32,7 +32,7 @@
             }
 
             if(!isset($_SESSION['peopleList'])) {
-                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br><br><br>";
+                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2>";
             }
 
             if(isset($_SESSION['user_id'])) {
