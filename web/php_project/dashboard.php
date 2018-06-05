@@ -30,6 +30,11 @@
                 echo $_SESSION['errorMessage'];
                 unset($_SESSION['errorMessage']);
             }
+
+            if(!isset($_SESSION['peopleList'])) {
+                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br><br><br>";
+            }
+
             if(isset($_SESSION['user_id'])) {
                 $userId = $_SESSION['user_id'];
             }
@@ -79,7 +84,7 @@
             if(isset($_SESSION['peopleList'])) {
                 echo $_SESSION['peopleList'] . "<br><br>";
             } else {
-                echo "<h2 class='people-list-heading'>Looks like you haven't added anyone yet!</h2><br><br><br><br><br>";
+                echo "<br><br><br><br><br>";
             }
         ?>
     </main>
