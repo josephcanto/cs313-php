@@ -23,6 +23,7 @@
             $_SESSION['loggedIn'] = TRUE;
             $result = getUserIdByEmail($valUserEmail);
             $_SESSION['user_id'] = $result['id'];
+            $_SESSION['successMessage'] = "<p id='success-message'>Account created successfully. Welcome!</p>";
             header('Location: ../dashboard.php');
         }
         else {
