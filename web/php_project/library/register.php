@@ -14,13 +14,13 @@
 
         var_dump($user_password);
         var_dump($confirm_password);
-        $comparisonResult = $user_password == $confirm_password;
-        var_dump($comparisonResult);
+        if($user_password != $confirm_password) {
+            $comparisonResult = $user_password == $confirm_password;
+            var_dump($comparisonResult);
+            // $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
+            // header('Location: ../index.php#registration');
+        }
     }
-        // if($user_password != $confirm_password) {
-        //     $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
-        //     header('Location: ../index.php#registration');
-        // }
     //     $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
     //     $_SESSION['firstname'] = $firstname;
 
