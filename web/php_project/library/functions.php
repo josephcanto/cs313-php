@@ -40,13 +40,7 @@
         $stmt->execute();
         $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-        $hashCheck = password_verify($password, $userInfo['password']);
-        if($hashCheck) {
-            return TRUE;
-        }
-        else {
-            return FALSE;
-        }
+        return password_verify($password, $userInfo['password']);
     }
 
     function getUserInfoByEmail($email) {
