@@ -11,10 +11,17 @@
         $valUserEmail = filter_var($sanUserEmail, FILTER_VALIDATE_EMAIL);
         $user_password = filter_input(INPUT_POST, 'newpassword', FILTER_SANITIZE_STRING);
         $confirm_password = filter_input(INPUT_POST, 'confirmpassword', FILTER_SANITIZE_STRING);
+
+        if(empty($firstname) || empty($lastname) || empty($sanUserEmail) || empty($user_password) || empty($confirm_password)) {
+            $_SESSION['errorMessage'] = "<p id='error-message'>Please fill out all form fields.</p>";
+            header('Location: ../index.php#registration');            
+        }
+
         if($user_password != $confirm_password) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
             header('Location: ../index.php#registration');
         }
+        
         $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
         $_SESSION['firstname'] = $firstname;
 

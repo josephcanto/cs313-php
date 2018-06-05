@@ -59,11 +59,11 @@
                     unset($_SESSION['errorMessage']);
                 }  
                     echo "<form id='registration-form' action='library/register.php' method='post'>
-                              <input type='text' name='firstname' placeholder='First name'>
-                              <input type='text' name='lastname' placeholder='Last name'>
-                              <input type='email' name='emailaddress' placeholder='Email'>
-                              <input type='password' name='newpassword' placeholder='Password'>
-                              <input type='password' name='confirmpassword' placeholder='Confirm Password'>
+                              <input type='text' name='firstname' placeholder='First name' required>
+                              <input type='text' name='lastname' placeholder='Last name' required>
+                              <input type='email' name='emailaddress' placeholder='Email' required>
+                              <input type='password' name='newpassword' placeholder='Password' required>
+                              <input type='password' name='confirmpassword' placeholder='Confirm Password' required>
                               <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
                           </form>
                       </section><!-- end of section 'registration' -->";

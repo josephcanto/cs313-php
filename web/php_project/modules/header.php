@@ -8,8 +8,8 @@
             } else {
                 echo "
                     <form id='login-form' action='library/login.php' method='post'>
-                        <input type='email' name='email' placeholder='Email'>
-                        <input type='password' name='password' placeholder='Password'>
+                        <input type='email' name='email' placeholder='Email' required>
+                        <input type='password' name='password' placeholder='Password' required>
                         <input type='submit' id='login-btn' value='Log In'>
                     </form>
                 ";
