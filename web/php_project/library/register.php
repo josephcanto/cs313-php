@@ -15,29 +15,28 @@
             $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
             header('Location: ../index.php#registration');
         }
+        $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
+        $_SESSION['firstname'] = $firstname;
+
+        $emailCheck = checkExistingEmail($valUserEmail);
+        if($emailCheck == 0) {
+            $_SESSION['errorMessage'] = "<p id='error-message'>Email address already exists in our system. Try a different one, or, log in above.</p>";
+        }
+
+        $result = registerUser($valUserEmail, $passwordHash, $firstname, $lastname);
+        if($result == 1) {
+            $_SESSION['loggedIn'] = TRUE;
+            $result = getUserIdByEmail($valUserEmail);
+            $_SESSION['user_id'] = $result['id'];
+            $_SESSION['successMessage'] = "<p id='success-message'>Account created successfully. Welcome!</p>";
+            header('Location: ../dashboard.php');
+        }
+        else {
+            $_SESSION['errorMessage'] = "<p id='error-message'>Error. Registration failed. Please try again.</p>";
+            header('Location: ../index.php#registration');
+        }
+    } else {
+        $_SESSION['errorMessage'] ="<p id='error-message'>Error. You are already logged in with another account.</p>";
+        header('Location: ../index.php#registration');
     }
-    //     $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
-    //     $_SESSION['firstname'] = $firstname;
-
-    //     $emailCheck = checkExistingEmail($valUserEmail);
-    //     if($emailCheck == 0) {
-    //         $_SESSION['errorMessage'] = "<p id='error-message'>Email address already exists in our system. Try a different one, or, log in above.</p>";
-    //     }
-
-    //     $result = registerUser($valUserEmail, $passwordHash, $firstname, $lastname);
-    //     if($result == 1) {
-    //         $_SESSION['loggedIn'] = TRUE;
-    //         $result = getUserIdByEmail($valUserEmail);
-    //         $_SESSION['user_id'] = $result['id'];
-    //         $_SESSION['successMessage'] = "<p id='success-message'>Account created successfully. Welcome!</p>";
-    //         header('Location: ../dashboard.php');
-    //     }
-    //     else {
-    //         $_SESSION['errorMessage'] = "<p id='error-message'>Error. Registration failed. Please try again.</p>";
-    //         header('Location: ../index.php#registration');
-    //     }
-    // } else {
-    //     $_SESSION['errorMessage'] ="<p id='error-message'>Error. You are already logged in with another account.</p>";
-    //     header('Location: ../index.php#registration');
-    // }
 ?>
