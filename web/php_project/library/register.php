@@ -11,14 +11,9 @@
         $valUserEmail = filter_var($sanUserEmail, FILTER_VALIDATE_EMAIL);
         $user_password = filter_input(INPUT_POST, 'newpassword', FILTER_SANITIZE_STRING);
         $confirm_password = filter_input(INPUT_POST, 'confirmpassword', FILTER_SANITIZE_STRING);
-
-        var_dump($user_password);
-        var_dump($confirm_password);
         if($user_password != $confirm_password) {
-            $comparisonResult = $user_password == $confirm_password;
-            var_dump($comparisonResult);
-            // $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
-            // header('Location: ../index.php#registration');
+            $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
+            header('Location: ../index.php#registration');
         }
     }
     //     $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
