@@ -27,6 +27,7 @@
         }
         else {
             $_SESSION['errorMessage'] = "<p id='error-message'>Error. Registration failed. Please try again.</p>";
+            header('Location: ../index.php#registration');
         }
     } else {
         $_SESSION['errorMessage'] ="<p id='error-message'>Error. You are already logged in with another account.</p>";

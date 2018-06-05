@@ -54,7 +54,10 @@
             if(!isset($_SESSION['loggedIn'])) {
                 echo "<section id='registration'>
                           <h3>Register today, and start impressing everyone with your awesome gift ideas! Never forget another special occasion again!</h3>";
-                if(isset($_SESSION['errorMessage'])) echo $_SESSION['errorMessage'];
+                if(isset($_SESSION['errorMessage'])) {
+                    echo $_SESSION['errorMessage'];
+                    unset($_SESSION['errorMessage']);
+                }  
                     echo "<form id='registration-form' action='library/register.php' method='post'>
                               <input type='text' name='firstname' placeholder='First name'>
                               <input type='text' name='lastname' placeholder='Last name'>
