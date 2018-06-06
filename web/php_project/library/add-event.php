@@ -19,6 +19,7 @@
     if($rowsChanged != 0) {
         $_SESSION['successMessage'] = "<p id='success-message'>New event successfully added.</p>";
         $events = getEventsInfoByPersonId($personId);
+        $_SESSION['eventsInfo'] = $events;
         $eventsList = buildEventsInfoList($events);
         $_SESSION['eventsInfoList'] = $eventsList;
     } else {

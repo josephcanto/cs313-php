@@ -17,6 +17,7 @@
     if($rowsChanged != 0) {
         $_SESSION['successMessage'] = "<p id='success-message'>New person successfully added.</p>";
         $people = getPeopleList($_SESSION['user_id']);
+        $_SESSION['peopleInfo'] = $people;
         $peopleList = buildPeopleList($people);
         $_SESSION['peopleList'] = $peopleList;
     } else {

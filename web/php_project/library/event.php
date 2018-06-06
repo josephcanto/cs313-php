@@ -9,7 +9,7 @@
     $eventName = getNameByEventId($eventId);
     $_SESSION['eventName'] = $eventName['name'];
     $giftInfo = getGiftIdeasByEventId($eventId);
-    $_SESSION['giftInfo'] = $giftInfo;
+    $_SESSION['giftsInfo'] = $giftInfo;
     $giftIdeasList = buildGiftIdeasList($giftInfo);
     $_SESSION['giftIdeasList'] = $giftIdeasList;
     header('Location: ../view-event.php');

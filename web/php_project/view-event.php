@@ -50,7 +50,7 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                foreach($_SESSION['giftInfo'] as $giftIdea) {
+                foreach($_SESSION['giftsInfo'] as $giftIdea) {
                     if($_GET['giftid'] == $giftIdea['id']) {
                         $giftId = $giftIdea['id'];
                         $name = $giftIdea['name'];
