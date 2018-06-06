@@ -23,7 +23,10 @@
 
             $eventsInfo = [];
             foreach($people as $person) {
-                array_push($eventsInfo, getEventsInfoByPersonId($person['id']));
+                $eventsList = getEventsInfoByPersonId($person['id']);
+                if(count($eventsList) > 0) {
+                    array_push($eventsInfo, $eventsList);
+                }
             }
             var_dump($eventsInfo);
             
