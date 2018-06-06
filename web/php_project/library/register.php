@@ -18,7 +18,7 @@
             exit;
         }
 
-        if(!preg_match('(?=.*?\d).{7,}', $user_password)) {
+        if(!preg_match('/(?=.*?\d).{7,}/', $user_password)) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Entered password does not meet requirements.</p>";
             $_SESSION['first_name'] = $firstname;
             $_SESSION['last_name'] = $lastname;
