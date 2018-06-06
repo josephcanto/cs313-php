@@ -63,8 +63,8 @@
                               <input type='text' name='firstname' placeholder='First name' required>
                               <input type='text' name='lastname' placeholder='Last name' required>
                               <input type='email' name='emailaddress' placeholder='Email' required>
-                              <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compare();' required>
-                              <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compare();' required>
+                              <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compareInputs();' required>
+                              <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compareInputs();' required>
                               <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above' disabled>
                           </form>
                       </section><!-- end of section 'registration' -->";
@@ -79,8 +79,8 @@
                     <input type='text' name='firstname' placeholder='First name' required value='$firstname'>
                     <input type='text' name='lastname' placeholder='Last name' required value='$lastname'>
                     <input type='email' name='emailaddress' placeholder='Email' required value='$email'>
-                    <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compare();' required>
-                    <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compare();' required>
+                    <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compareInputs();' required>
+                    <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compareInputs();' required>
                     <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above' disabled>
                 </form>
             </section><!-- end of section 'registration' -->";
@@ -90,15 +90,23 @@
     </main>
     <?php require 'modules/footer.php'; ?>
     <script>
-        function compare() {
-            if(document.getElementById('password').value == document.getElementById('confirmpassword').value) {
-                document.getElementById('create-account-btn').disabled = false;
-                document.getElementById('password').style.border = "2px solid #2ECC71";
-                document.getElementById('confirmpassword').style.border = "2px solid #2ECC71";
+        function compareInputs() {
+            var create_account_btn = document.getElementById('create-account-btn');
+            var password_input = document.getElementById('password');
+            var confirm_input = document.getElementById('confirmpassword');
+
+            if(
+                password_input.value == confirm_input.value &&
+                password_input.value.match(/(?=.*?\d).{7,}/) &&
+                confirm_input.value.match(/(?=.*?\d).{7,})/)
+            ) {
+                create_account_btn.disabled = false;
+                password_input.style.border = "2px solid #2ECC71";
+                confirm_input.style.border = "2px solid #2ECC71";
             } else {
-                document.getElementById('create-account-btn').disabled = true;
-                document.getElementById('password').style.border = "2px solid #CB4335";
-                document.getElementById('confirmpassword').style.border = "2px solid #CB4335";
+                create_account_btn.disabled = true;
+                password_input.style.border = "2px solid #CB4335";
+                confirm_input.style.border = "2px solid #CB4335";
             }
         }
     </script>
