@@ -21,14 +21,21 @@
             $peopleList = buildPeopleList($people);
             $_SESSION['peopleList'] = $peopleList;
 
-            header('Location: ../dashboard.php');
-            exit;
-        } else {
-            header('Location: ../index.php');
+            $eventsInfo = [];
+            foreach($people as $person) {
+                array_push($eventsInfo, getEventsInfoByPersonId($person['id']));
+            }
+            var_dump($eventsInfo);
+            
+            // header('Location: ../dashboard.php');
             exit;
         }
-    } else {
-        header('Location: ../index.php');
-        exit;
+    //     } else {
+    //         header('Location: ../index.php');
+    //         exit;
+    //     }
+    // } else {
+    //     header('Location: ../index.php');
+    //     exit;
     }
 ?>

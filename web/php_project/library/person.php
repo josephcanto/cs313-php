@@ -7,10 +7,10 @@
     $personId = htmlspecialchars($_GET['id']);
     $personName = getNameByPersonId($personId);
     $_SESSION['personName'] = $personName['name'];
-    $personInfo = getEventsInfoByPersonId($personId);
+    $eventsInfo = getEventsInfoByPersonId($personId);
     $_SESSION['personId'] = $personId;
-    $_SESSION['eventsInfo'] = $personInfo;
-    $eventsInfoList = buildEventsInfoList($personInfo); 
+    $_SESSION['eventsInfo'] = $eventsInfo;
+    $eventsInfoList = buildEventsInfoList($eventsInfo); 
     $_SESSION['eventsInfoList'] = $eventsInfoList;
     header('Location: ../view-person.php');
     exit;
