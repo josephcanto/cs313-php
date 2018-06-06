@@ -20,4 +20,5 @@
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update gift idea. Please try again.</p>";
     }
     header('Location: ../view-event.php');
+    exit;
 ?>

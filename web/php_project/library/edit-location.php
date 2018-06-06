@@ -25,4 +25,5 @@
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update location. Please try again.</p>";
     }
     header('Location: ../view-location.php');
+    exit;
 ?>

@@ -22,10 +22,13 @@
             $_SESSION['peopleList'] = $peopleList;
 
             header('Location: ../dashboard.php');
+            exit;
         } else {
             header('Location: ../index.php');
+            exit;
         }
     } else {
         header('Location: ../index.php');
+        exit;
     }
 ?>

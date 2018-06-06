@@ -13,4 +13,5 @@
     $locationsList = buildLocationsList($locationsInfo);
     $_SESSION['locationsList'] = $locationsList;
     header('Location: ../view-location.php');
+    exit;
 ?>

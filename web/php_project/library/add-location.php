@@ -25,4 +25,5 @@
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new location. Please try again.</p>";
     }
     header('Location: ../view-location.php');
+    exit;
 ?>

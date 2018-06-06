@@ -14,14 +14,16 @@
 
         if(empty($firstname) || empty($lastname) || empty($sanUserEmail) || empty($user_password) || empty($confirm_password)) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Please fill out all form fields.</p>";
-            header('Location: ../index.php#registration');            
+            header('Location: ../index.php#registration');
+            exit;
         }
 
         if($user_password != $confirm_password) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
             header('Location: ../index.php#registration');
+            exit;
         }
-        
+
         $passwordHash = password_hash($user_password, PASSWORD_DEFAULT);
         $_SESSION['firstname'] = $firstname;
 
@@ -37,13 +39,16 @@
             $_SESSION['user_id'] = $result['id'];
             $_SESSION['successMessage'] = "<p id='success-message'>Account created successfully. Welcome!</p>";
             header('Location: ../dashboard.php');
+            exit;
         }
         else {
             $_SESSION['errorMessage'] = "<p id='error-message'>Error. Registration failed. Please try again.</p>";
             header('Location: ../index.php#registration');
+            exit;
         }
     } else {
         $_SESSION['errorMessage'] ="<p id='error-message'>Error. You are already logged in with another account.</p>";
         header('Location: ../index.php#registration');
+        exit;
     }
 ?>

@@ -23,4 +23,5 @@
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new person. Please try again.</p>";
     }
     header('Location: ../dashboard.php');
+    exit;
 ?>

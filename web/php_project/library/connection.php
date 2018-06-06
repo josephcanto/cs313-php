@@ -15,6 +15,7 @@
             return $dbConn;
         } catch (PDOException $ex) {
             header('location: index.php');
+            exit;
         }
     }
     dbConnect();

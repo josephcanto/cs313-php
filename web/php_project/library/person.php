@@ -13,4 +13,5 @@
     $eventsInfoList = buildEventsInfoList($personInfo); 
     $_SESSION['eventsInfoList'] = $eventsInfoList;
     header('Location: ../view-person.php');
+    exit;
 ?>

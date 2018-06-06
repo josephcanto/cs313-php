@@ -25,4 +25,5 @@
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new event. Please try again.</p>";
     }
     header('Location: ../view-person.php');
+    exit;
 ?>

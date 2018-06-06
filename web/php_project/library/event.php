@@ -13,4 +13,5 @@
     $giftIdeasList = buildGiftIdeasList($giftInfo);
     $_SESSION['giftIdeasList'] = $giftIdeasList;
     header('Location: ../view-event.php');
+    exit;
 ?>
