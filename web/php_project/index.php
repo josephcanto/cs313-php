@@ -63,9 +63,9 @@
                               <input type='text' name='firstname' placeholder='First name' required>
                               <input type='text' name='lastname' placeholder='Last name' required>
                               <input type='email' name='emailaddress' placeholder='Email' required>
-                              <input type='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' required>
-                              <input type='password' name='confirmpassword' placeholder='Confirm Password' required>
-                              <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
+                              <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compare();' required>
+                              <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compare();' required>
+                              <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above' disabled>
                           </form>
                       </section><!-- end of section 'registration' -->";
                 } else {
@@ -79,9 +79,9 @@
                     <input type='text' name='firstname' placeholder='First name' required value='$firstname'>
                     <input type='text' name='lastname' placeholder='Last name' required value='$lastname'>
                     <input type='email' name='emailaddress' placeholder='Email' required value='$email'>
-                    <input type='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' required>
-                    <input type='password' name='confirmpassword' placeholder='Confirm Password' required>
-                    <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
+                    <input type='password' id='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' onchange='compare();' required>
+                    <input type='password' id='confirmpassword' name='confirmpassword' placeholder='Confirm Password' onchange='compare();' required>
+                    <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above' disabled>
                 </form>
             </section><!-- end of section 'registration' -->";
                 }
@@ -89,5 +89,14 @@
         ?>
     </main>
     <?php require 'modules/footer.php'; ?>
+    <script>
+        function compare() {
+            if(document.getElementById('password').value == document.getElementById('confirmpassword').value) {
+                document.getElementById('create-account-btn').disabled = false;
+            } else {
+                document.getElementById('create-account-btn').disabled = true;
+            }
+        }
+    </script>
 </body>
 </html>
