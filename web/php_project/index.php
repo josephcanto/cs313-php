@@ -97,7 +97,7 @@
             
             if(
                 password_input.value == confirm_input.value &&
-                (/(?=.*?\d).{7,}/).test(password_input_value) &&
+                (/(?=.*?\d).{7,}/).test(password_input.value) &&
                 (/(?=.*?\d).{7,}/).test(confirm_input.value)
             ) {
                 create_account_btn.disabled = false;
