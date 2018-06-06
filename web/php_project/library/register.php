@@ -20,6 +20,9 @@
 
         if(!preg_match('(?=.*?\d).{7,}', $user_password)) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Entered password does not meet requirements.</p>";
+            $_SESSION['first_name'] = $firstname;
+            $_SESSION['last_name'] = $lastname;
+            $_SESSION['user_email'] = $valUserEmail;
             header('Location: ../index.php#registration');
             exit;
         }
