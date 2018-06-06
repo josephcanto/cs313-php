@@ -97,8 +97,8 @@
             
             if(
                 password_input.value == confirm_input.value &&
-                password_input.value.match(/(?=.*?\d).{7,}/) &&
-                confirm_input.value.match(/(?=.*?\d).{7,})/)
+                (/(?=.*?\d).{7,}/).test(password_input_value) &&
+                (/(?=.*?\d).{7,}/).test(confirm_input.value)
             ) {
                 create_account_btn.disabled = false;
                 password_input.style.border = "2px solid #2ECC71";
