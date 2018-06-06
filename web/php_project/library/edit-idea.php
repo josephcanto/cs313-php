@@ -12,9 +12,9 @@
     $rowsUpdated = updateGiftIdea($name, $notes, $giftId);
     if($rowsUpdated != 0) {
         $_SESSION['successMessage'] = "<p id='success-message'>Gift idea successfully updated.</p>";
-        $giftInfo = getGiftIdeasByEventId($eventId);
-        $_SESSION['giftInfo'] = $giftInfo;
-        $giftIdeasList = buildGiftIdeasList($giftInfo);
+        $giftsInfo = getGiftIdeasByEventId($eventId);
+        $_SESSION['giftsInfo'] = $giftsInfo;
+        $giftIdeasList = buildGiftIdeasList($giftsInfo);
         $_SESSION['giftIdeasList'] = $giftIdeasList;
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update gift idea. Please try again.</p>";

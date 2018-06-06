@@ -49,7 +49,7 @@
             }
 
             if(isset($_GET['action']) && $_GET['action'] == 'edit') {
-                foreach($_SESSION['personInfo'] as $event) {
+                foreach($_SESSION['eventsInfo'] as $event) {
                     if($_GET['eventid'] == $event['id']) {
                         $eventId = $event['id'];
                         $name = $event['name'];
