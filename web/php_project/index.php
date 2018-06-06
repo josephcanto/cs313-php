@@ -76,7 +76,7 @@
                     <input type='text' name='firstname' placeholder='First name' required value='$firstname'>
                     <input type='text' name='lastname' placeholder='Last name' required value='$lastname'>
                     <input type='email' name='emailaddress' placeholder='Email' required value='$email'>
-                    <input type='password' name='newpassword' placeholder='Password' required>
+                    <input type='password' name='newpassword' placeholder='Password' title='Passwords must contain at least 7 characters, with at least 1 of the characters being a number' pattern='(?=.*?\d).{7,}' required>
                     <input type='password' name='confirmpassword' placeholder='Confirm Password' required>
                     <input type='submit' id='create-account-btn' value='Create Account' title='Click here to create your account after filling out the form fields above'>
                 </form>

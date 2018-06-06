@@ -18,6 +18,12 @@
             exit;
         }
 
+        if(!preg_match('(?=.*?\d).{7,}', $user_password)) {
+            $_SESSION['errorMessage'] = "<p id='error-message'>Entered password does not meet requirements.</p>";
+            header('Location: ../index.php#registration');
+            exit;
+        }
+
         if($user_password != $confirm_password) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
             $_SESSION['first_name'] = $firstname;
