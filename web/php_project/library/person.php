@@ -9,7 +9,7 @@
     $_SESSION['personName'] = $personName['name'];
     $personInfo = getEventsInfoByPersonId($personId);
     $_SESSION['personId'] = $personId;
-    $_SESSION['personInfo'] = $personInfo;
+    $_SESSION['eventsInfo'] = $personInfo;
     $eventsInfoList = buildEventsInfoList($personInfo); 
     $_SESSION['eventsInfoList'] = $eventsInfoList;
     header('Location: ../view-person.php');
