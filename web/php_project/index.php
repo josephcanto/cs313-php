@@ -94,7 +94,10 @@
             var create_account_btn = document.getElementById('create-account-btn');
             var password_input = document.getElementById('password');
             var confirm_input = document.getElementById('confirmpassword');
-
+            alert(password_input.value);
+            alert(confirm_input.value);
+            alert(password_input.value.match(/(?=.*?\d).{7,}/));
+            alert(confirm_input.value.match(/(?=.*?\d).{7,})/));
             if(
                 password_input.value == confirm_input.value &&
                 password_input.value.match(/(?=.*?\d).{7,}/) &&
