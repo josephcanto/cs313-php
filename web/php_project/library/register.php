@@ -20,6 +20,9 @@
 
         if($user_password != $confirm_password) {
             $_SESSION['errorMessage'] = "<p id='error-message'>Passwords do not match. Please try again.</p>";
+            $_SESSION['first_name'] = $firstname;
+            $_SESSION['last_name'] = $lastname;
+            $_SESSION['user_email'] = $valUserEmail;
             header('Location: ../index.php#registration');
             exit;
         }
