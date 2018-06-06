@@ -93,10 +93,12 @@
         function compare() {
             if(document.getElementById('password').value == document.getElementById('confirmpassword').value) {
                 document.getElementById('create-account-btn').disabled = false;
-                document.getElementById('create-account-btn').style.border = "2px solid #2ECC71";
+                document.getElementById('password').style.border = "2px solid #2ECC71";
+                document.getElementById('confirmpassword').style.border = "2px solid #2ECC71";
             } else {
                 document.getElementById('create-account-btn').disabled = true;
-                document.getElementById('create-account-btn').style.border = "2px solid #CB4335";
+                document.getElementById('password').style.border = "2px solid #CB4335";
+                document.getElementById('confirmpassword').style.border = "2px solid #CB4335";
             }
         }
     </script>
