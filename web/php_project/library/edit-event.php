@@ -22,6 +22,11 @@
         $_SESSION['eventsInfo'] = $events;
         $eventsList = buildEventsInfoList($events);
         $_SESSION['eventsInfoList'] = $eventsList;
+        $people = getPeopleList($_SESSION['user_id']);
+        $remindersList = buildRemindersList($people);
+        if(!empty($remindersList)) {
+            $_SESSION['remindersList'] = $remindersList;
+        }
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update event. Please try again.</p>";
     }

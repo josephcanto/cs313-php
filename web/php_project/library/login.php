@@ -21,24 +21,19 @@
             $peopleList = buildPeopleList($people);
             $_SESSION['peopleList'] = $peopleList;
 
-            $eventsInfo = [];
-            foreach($people as $person) {
-                $eventsList = getEventsInfoByPersonId($person['id']);
-                if(count($eventsList) > 0) {
-                    array_push($eventsInfo, $eventsList);
-                }
+            $remindersList = buildRemindersList($people);
+            if(!empty($remindersList)) {
+                $_SESSION['remindersList'] = $remindersList;
             }
-            var_dump($eventsInfo);
             
-            // header('Location: ../dashboard.php');
+            header('Location: ../dashboard.php');
+            exit;
+        } else {
+            header('Location: ../index.php');
             exit;
         }
-    //     } else {
-    //         header('Location: ../index.php');
-    //         exit;
-    //     }
-    // } else {
-    //     header('Location: ../index.php');
-    //     exit;
+    } else {
+        header('Location: ../index.php');
+        exit;
     }
 ?>

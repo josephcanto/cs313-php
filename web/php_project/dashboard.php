@@ -21,6 +21,10 @@
     <main id='dashboard-page'>
         <h1 id='dashboard-heading'>For-gift &amp; Forget Dashboard <?php if(isset($_GET['action']) && $_GET['action'] == 'edit') echo "- Edit Mode"; ?></h1>
         <?php
+            if(isset($_SESSION['remindersList'])) {
+                echo $_SESSION['remindersList'];
+            }
+
             if(isset($_SESSION['successMessage'])) {
                 if(isset($_SESSION['errorMessage'])) {
                     unset($_SESSION['errorMessage']);

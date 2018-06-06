@@ -20,6 +20,10 @@
         $_SESSION['peopleInfo'] = $people;
         $peopleList = buildPeopleList($people);
         $_SESSION['peopleList'] = $peopleList;
+        $remindersList = buildRemindersList($people);
+        if(!empty($remindersList)) {
+            $_SESSION['remindersList'] = $remindersList;
+        }
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to update person. Please try again.</p>";
     }

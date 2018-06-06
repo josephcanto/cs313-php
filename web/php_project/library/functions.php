@@ -391,4 +391,46 @@
         $stmt->closeCursor();
         return $rowsUpdated;         
     }
+
+    function buildRemindersList($people) {
+        $eventSets = [];
+        $remindersList = "";
+        foreach($people as $person) {
+            $eventsList = getEventsInfoByPersonId($person['id']);
+            if(count($eventsList) > 0) {
+                array_push($eventSets, $eventsList);
+            }
+        }
+        if(count($eventSets) > 0) {
+            $remindersList .= "<ul id='reminders-list'>";
+            foreach($eventSets as $set) {
+                foreach($set as $event) {
+                    if(!empty($event['reminder'])) {
+                        $remindersList .= buildReminders($event['name'], $event['date'], $event['reminder'], $event['person_id']);
+                    }
+                }
+            }
+            $remindersList .= "</ul>";
+        }
+        return $remindersList;
+    }
+
+    function buildReminders($eventName, $eventDate, $reminderDate, $personId) {
+        $currentDate = date('Y-m-d H:i:s');
+        $reminderDays = ceil(($eventDate - $reminderDate)/86400000);
+        $daysLeft = ceil(($eventDate - $currentDate)/86400000);
+        $reminders = "";
+        $personInfo = getNameByPersonId($personId);
+        $personName = $personInfo['name'];
+        if($daysLeft <= $reminderDays){
+          if($daysLeft == 1) {
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is just " . $daysLeft . " day away!</li>";
+          } else if($daysLeft == 0) {
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today!</li>";
+          } else if($daysLeft > 0) {
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is coming up in " . $daysLeft . " days!</li>";
+          }
+        }
+        return $reminders;
+    }
 ?>
