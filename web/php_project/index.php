@@ -72,6 +72,9 @@
                     $firstname = $_SESSION['first_name'];
                     $lastname = $_SESSION['last_name'];
                     $email = $_SESSION['user_email'];
+                    unset($_SESSION['first_name']);
+                    unset($_SESSION['last_name']);
+                    unset($_SESSION['user_email']);
                     echo "<form id='registration-form' action='library/register.php' method='post'>
                     <input type='text' name='firstname' placeholder='First name' required value='$firstname'>
                     <input type='text' name='lastname' placeholder='Last name' required value='$lastname'>
