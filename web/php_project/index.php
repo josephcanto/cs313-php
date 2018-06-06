@@ -94,7 +94,6 @@
             var create_account_btn = document.getElementById('create-account-btn');
             var password_input = document.getElementById('password');
             var confirm_input = document.getElementById('confirmpassword');
-            alert(typeof(password_input.value));
             
             if(
                 password_input.value == confirm_input.value &&
