@@ -402,7 +402,7 @@
             }
         }
         if(count($eventSets) > 0) {
-            $remindersList .= "<ul id='reminders-list'>";
+            $remindersList .= "<h3 id='reminders-heading'>Reminders</h3><ul id='reminders-list'>";
             foreach($eventSets as $set) {
                 foreach($set as $event) {
                     if(!empty($event['reminder'])) {
@@ -425,9 +425,9 @@
         if($daysLeft <= $reminderDays){
           if($daysLeft == 1) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is just " . $daysLeft . " day away!</li>";
-          } else if($daysLeft == 0) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today!</li>";
-          } else if($daysLeft > 0) {
+          } elseif($daysLeft == 0) {
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today! Reminder Days: " . $reminderDays . " | Days Left: " . $daysLeft . "</li>";
+          } elseif($daysLeft > 0) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is coming up in " . $daysLeft . " days!</li>";
           }
         }
