@@ -416,6 +416,7 @@
     }
 
     function buildReminders($eventName, $eventDate, $reminderDate, $personId) {
+        date_default_timezone_set('America/Boise');
         $currentDate = date('Y-m-d H:i:s');
         $reminderDays = ceil(($eventDate - $reminderDate)/86400000);
         $daysLeft = ceil(($eventDate - $currentDate)/86400000);
@@ -426,7 +427,7 @@
           if($daysLeft == 1) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is just " . $daysLeft . " day away!</li>";
           } elseif($daysLeft == 0) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today! Reminder Days: " . $reminderDays . " | Days Left: " . $daysLeft . "| Current Date: " . $currentDate . "</li>";
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today! Reminder Days: " . $reminderDays . " | Days Left: " . $daysLeft . " | Current Date: " . $currentDate . "</li>";
           } elseif($daysLeft > 0) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is coming up in " . $daysLeft . " days!</li>";
           }
