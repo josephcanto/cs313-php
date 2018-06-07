@@ -423,6 +423,7 @@
         $currentDate = date('Y-m-d H:i:s');
         $eventDate = strtotime($eventDate);
         $reminderDate = strtotime($reminderDate);
+        $currentDate = strtotime($currentDate);
         $reminderDays = ceil(($eventDate - $reminderDate)/86400);
         $daysLeft = ceil(($eventDate - $currentDate)/86400);
         $reminders = "";
