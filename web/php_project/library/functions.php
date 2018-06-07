@@ -426,7 +426,7 @@
           if($daysLeft == 1) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is just " . $daysLeft . " day away!</li>";
           } elseif($daysLeft == 0) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today! Reminder Days: " . $reminderDays . " | Days Left: " . $daysLeft . "</li>";
+            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today! Reminder Days: " . $reminderDays . " | Days Left: " . $daysLeft . "| Current Date: " . $currentDate . "</li>";
           } elseif($daysLeft > 0) {
             $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is coming up in " . $daysLeft . " days!</li>";
           }
