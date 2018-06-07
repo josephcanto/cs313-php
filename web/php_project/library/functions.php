@@ -431,11 +431,11 @@
         $personName = $personInfo['name'];
         if($daysLeft <= $reminderDays && $reminderDays >= 0){
           if($daysLeft == 1) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is just " . $daysLeft . " day away!</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Tomorrow</strong> (" . $eventDate . ")</li>";
           } elseif($daysLeft == 0) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is today!</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Today</strong> (" . $eventDate . ")</li>";
           } elseif($daysLeft > 0) {
-            $reminders .= "<li class='reminder'>Don't forget, " . $personName . "'s " . $eventName . " is coming up in " . $daysLeft . " days!</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - In " . $daysLeft . " Days (" . $eventDate . ")</li>";
           }
         }
         return $reminders;
