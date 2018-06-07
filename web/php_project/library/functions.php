@@ -412,6 +412,9 @@
             }
             $remindersList .= "</ul>";
         }
+        if(strlen($remindersList) < 90) {
+            return "";
+        }
         return $remindersList;
     }
 
