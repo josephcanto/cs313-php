@@ -137,7 +137,7 @@
 
     function getEventsInfoByPersonId($personId) {
         $db = dbConnect();
-        $sql = 'SELECT id, name, date, frequency, reminder, person_id FROM events WHERE person_id = :personId ORDER BY date ASC';
+        $sql = 'SELECT id, name, date, frequency, reminder, person_id FROM events WHERE person_id = :personId ORDER BY date';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':personId', $personId, PDO::PARAM_INT);
         $stmt->execute();
