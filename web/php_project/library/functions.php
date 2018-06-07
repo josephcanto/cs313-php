@@ -429,14 +429,13 @@
         $reminders = "";
         $personInfo = getNameByPersonId($personId);
         $personName = $personInfo['name'];
-        $eventDateStr = date_format($eventDate, "F j, Y");
         if($daysLeft <= $reminderDays && $reminderDays >= 0){
           if($daysLeft == 1) {
-            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Tomorrow</strong> (" . $eventDateStr . ")</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Tomorrow</strong> (" . $eventDate . ")</li>";
           } elseif($daysLeft == 0) {
-            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Today</strong> (" . $eventDateStr . ")</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Today</strong> (" . $eventDate . ")</li>";
           } elseif($daysLeft > 1) {
-            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - In " . $daysLeft . " Days (" . $eventDateStr . ")</li>";
+            $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - In " . $daysLeft . " Days (" . $eventDate . ")</li>";
           }
         }
         return $reminders;
