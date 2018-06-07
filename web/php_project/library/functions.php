@@ -429,6 +429,7 @@
         $reminders = "";
         $personInfo = getNameByPersonId($personId);
         $personName = $personInfo['name'];
+        $eventDateStr = date_format($eventDate, "F j, Y");
         if($daysLeft <= $reminderDays && $reminderDays >= 0){
           if($daysLeft == 1) {
             $reminders .= "<li class='reminder'>" . $personName . "'s " . $eventName . " - <strong>Tomorrow</strong> (" . $eventDate . ")</li>";
