@@ -23,7 +23,7 @@
         $eventsList = buildEventsInfoList($events);
         $_SESSION['eventsInfoList'] = $eventsList;
 
-        $people = getPeopleList($userInfo['id']);
+        $people = getPeopleList($_SESSION['user_id']);
         $peopleList = buildPeopleList($people);
         $remindersList = buildRemindersList($people);
         if(!empty($remindersList)) {
