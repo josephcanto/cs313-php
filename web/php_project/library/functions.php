@@ -421,11 +421,11 @@
     function buildReminders($eventName, $eventDate, $reminderDate, $personId) {
         date_default_timezone_set('America/Boise');
         $currentDate = date('Y-m-d H:i:s');
-        $eventDate = strtotime($eventDate);
-        $reminderDate = strtotime($reminderDate);
-        $currentDate = strtotime($currentDate);
-        $reminderDays = ceil(($eventDate - $reminderDate)/86400);
-        $daysLeft = ceil(($eventDate - $currentDate)/86400);
+        $eventDateVal = strtotime($eventDate);
+        $reminderDateVal = strtotime($reminderDate);
+        $currentDateVal = strtotime($currentDate);
+        $reminderDays = ceil(($eventDateVal - $reminderDateVal)/86400);
+        $daysLeft = ceil(($eventDateVal - $currentDateVal)/86400);
         $reminders = "";
         $personInfo = getNameByPersonId($personId);
         $personName = $personInfo['name'];
