@@ -22,6 +22,13 @@
         $_SESSION['eventsInfo'] = $events;
         $eventsList = buildEventsInfoList($events);
         $_SESSION['eventsInfoList'] = $eventsList;
+
+        $people = getPeopleList($userInfo['id']);
+        $peopleList = buildPeopleList($people);
+        $remindersList = buildRemindersList($people);
+        if(!empty($remindersList)) {
+            $_SESSION['remindersList'] = $remindersList;
+        }
     } else {
         $_SESSION['errorMessage'] = "<p id='error-message'>Failed to add new event. Please try again.</p>";
     }
