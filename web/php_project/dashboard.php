@@ -151,11 +151,13 @@
         function toggleDropdown() {
             var element = document.getElementById('form-dropdown');
             if(element.style.height == '0') {
+                element.style.overflowY = 'visible';
                 element.style.height = '232px';
                 element.style.width = '261px';
                 element.style.padding = '2px 5px';
                 element.style.borderWidth = '0 1px 1px 1px';
             } else {
+                element.style.overflowY = 'hidden';
                 element.style.height = '0';
                 element.style.width = '0';
                 element.style.padding = '0';
