@@ -112,7 +112,7 @@
             //     </form>";
             // }
 
-            echo "<div onclick='toggleDropdown()'>
+            echo "<div id='dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
                 </div>
                 <div id='form-dropdown'>
