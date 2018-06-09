@@ -61,7 +61,7 @@
                     $isFamily = "";
                 }
 
-                echo "<div id='form-dropdown' onclick='toggleDropdown(e)'>
+                echo "<div id='form-dropdown' onclick='toggleDropdown(event)'>
                         <span id='dropdown-label'>Edit $name's Record</span>
                         <p class='user-form-instructions'>
                         Use the form below to edit $name's record.
@@ -110,7 +110,7 @@
             //     </form>";
             // }
 
-            echo "<div id='form-dropdown' onclick='toggleDropdown(e)'>
+            echo "<div id='form-dropdown' onclick='toggleDropdown(event)'>
                     <span id='dropdown-label'>Add Person</span>
                     <p class='user-form-instructions'>
                     Use the form below to add a new person to your list.
