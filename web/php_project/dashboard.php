@@ -147,7 +147,7 @@
         function toggleDropdown() {
             var element = document.getElementById('form-dropdown');
             if(element.style.height == '30px') {
-                element.style.height = '250px';
+                element.style.height = '253px';
                 element.style.overflowY = 'visible';
             } else {
                 element.style.height = '30px';
