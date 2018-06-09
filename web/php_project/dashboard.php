@@ -61,7 +61,10 @@
                     $isFamily = "";
                 }
 
-                echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
+                echo "<p class='user-form-instructions'>
+                        Use the form below to edit $name's record.
+                        <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
                     <form class='user-form' action='library/edit-person.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
@@ -104,7 +107,11 @@
             //     </form>";
             // }
 
-            echo "<form class='user-form' action='library/add-person.php' method='post'>
+            echo "<p class='user-form-instructions'>
+                    Use the form below to add a new person to your list.
+                    <br><small><em>Required fields are marked with a *</em></small>
+                </p>
+                    <form class='user-form' action='library/add-person.php' method='post'>
                     <div id='form-container'>
                         <div id='form-labels'>
                             <label for='name'>Name:*</label><br>

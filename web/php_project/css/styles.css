@@ -258,23 +258,6 @@ a:active {
     color: #000;
 }
 
-#form-container {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-#form-labels {
-    text-align: right;
-}
-
-#form-inputs {
-    text-align: left;
-}
-
-#submit-btn {
-    margin-bottom: 0;
-}
-
 .people-list-heading {
     font-size: 18pt;
     margin: 10px 0 0 0;
@@ -322,11 +305,30 @@ a:active {
 .user-form {
     background-color: #ccc;
     padding: 10px;
+    min-width: 240px;
+    max-width: 370px;
     width: 100%;
 }
 
 .user-form > label {
-    margin: 10px 0;
+    line-height: 20px;
+}
+
+#form-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#form-labels {
+    text-align: right;
+}
+
+#form-inputs {
+    text-align: left;
+}
+
+#submit-btn {
+    margin-bottom: 0;
 }
 
 .modify-links {
