@@ -309,10 +309,6 @@ a:active {
     text-align: right;
 }
 
-.user-form > label {
-    line-height: 30px;
-}
-
 #form-container {
     display: flex;
     flex-flow: row nowrap;
@@ -320,6 +316,10 @@ a:active {
 
 #form-labels {
     text-align: right;
+}
+
+#form-labels label {
+    line-height: 30px;
 }
 
 #form-inputs {
