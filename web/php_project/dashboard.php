@@ -61,12 +61,14 @@
                     $isFamily = "";
                 }
 
-                echo "<div id='form-dropdown' onclick='toggleDropdown()'>
+                echo "<div onclick='toggleDropdown()'>
                         <span id='dropdown-label' onclick='toggleDropdown()'>Edit $name's Record</span>
+                    </div>
+                    <div id='form-dropdown'>
                         <p class='user-form-instructions'>
-                        Use the form below to edit $name's record.
-                        <br><small><em>Required fields are marked with a *</em></small>
-                    </p>
+                            Use the form below to edit $name's record.
+                            <br><small><em>Required fields are marked with a *</em></small>
+                        </p>
                     <form class='user-form' action='library/edit-person.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
@@ -112,6 +114,8 @@
 
             echo "<div id='form-dropdown' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
+                </div>
+                <<div id='form-dropdown'>
                     <p class='user-form-instructions'>
                     Use the form below to add a new person to your list.
                     <br><small><em>Required fields are marked with a *</em></small>
