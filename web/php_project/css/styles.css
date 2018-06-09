@@ -297,6 +297,14 @@ a:active {
     font-size: 10pt;
 }
 
+#form-dropdown {
+    height: 30px;
+    overflow-y: hidden;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    transition: height 500ms ease-out;
+}
+
 .user-form-instructions {
     color: black;
     margin: 10px 0;

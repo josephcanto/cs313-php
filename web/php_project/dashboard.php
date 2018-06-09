@@ -61,7 +61,9 @@
                     $isFamily = "";
                 }
 
-                echo "<p class='user-form-instructions'>
+                echo "<div id='form-dropdown' onclick='toggleDropdown()'>
+                        <span id='dropdown-label'>Edit $name's Record</span>
+                        <p class='user-form-instructions'>
                         Use the form below to edit $name's record.
                         <br><small><em>Required fields are marked with a *</em></small>
                     </p>
@@ -80,7 +82,8 @@
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Person'>
                         <input type='hidden' name='personid' value='$personId'>
-                    </form>";
+                    </form>
+                    </div>";
 
                 // echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
                 //     <form class='user-form' action='library/edit-person.php' method='post'>
@@ -107,7 +110,9 @@
             //     </form>";
             // }
 
-            echo "<p class='user-form-instructions'>
+            echo "<div id='form-dropdown' onclick='toggleDropdown()'>
+                    <span id='dropdown-label'>Add Person</span>
+                    <p class='user-form-instructions'>
                     Use the form below to add a new person to your list.
                     <br><small><em>Required fields are marked with a *</em></small>
                 </p>
@@ -137,5 +142,14 @@
         ?>
     </main>
     <?php require 'modules/footer.php'; ?>
+    <script>
+        function toggleDropdown() {
+            if(this.style.height == '30px') {
+                this.style.height = '230px';
+            } else {
+                this.style.height = '30px';
+            }
+        }
+    </script>
 </body>
 </html>
