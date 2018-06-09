@@ -131,7 +131,8 @@
                     </div>
                     <input type='submit' value='Add Person' style='margin-bottom: 0;'>
                     <input type='hidden' name='userid' value='$userId'>
-                </form>";
+                </form>
+                </div>";
             }
         
             if(isset($_SESSION['peopleList'])) {
