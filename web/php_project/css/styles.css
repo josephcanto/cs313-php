@@ -311,12 +311,13 @@ a:active {
 }
 
 .user-form > label {
-    line-height: 20px;
+    line-height: 30px;
 }
 
 #form-container {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 #form-labels {
@@ -325,6 +326,7 @@ a:active {
 
 #form-inputs {
     text-align: left;
+    margin-bottom: 10px;
 }
 
 #submit-btn {
