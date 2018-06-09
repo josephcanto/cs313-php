@@ -155,11 +155,13 @@
                 element.style.overflowY = 'visible';
                 element.style.width = '261px';
                 element.style.padding = '2px 5px';
+                element.style.border = '1px solid #ccc';
             } else {
                 element.style.height = '0px';
                 element.style.overflowY = 'hidden';
                 element.style.width = '0px';
                 element.style.padding = '0px';
+                element.style.border = '0px solid #ccc';
             }
         }
     </script>
