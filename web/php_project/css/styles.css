@@ -308,6 +308,7 @@ a:active {
     min-width: 240px;
     max-width: 370px;
     width: 100%;
+    text-align: right;
 }
 
 .user-form > label {
@@ -330,10 +331,6 @@ a:active {
 
 #name, #address, #family {
     margin-bottom: 10px;
-}
-
-#submit-btn {
-    text-align: right;
 }
 
 .modify-links {
