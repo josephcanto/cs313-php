@@ -302,7 +302,7 @@ a:active {
     overflow-y: hidden;
     border: 1px solid #ccc;
     padding: 2px 5px;
-    transition: height 500ms ease-out;
+    transition: height 250ms ease-out;
     cursor: pointer;
     width: 260px;
 }

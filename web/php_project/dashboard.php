@@ -61,8 +61,8 @@
                     $isFamily = "";
                 }
 
-                echo "<div id='form-dropdown' onclick='toggleDropdown(event)'>
-                        <span id='dropdown-label'>Edit $name's Record</span>
+                echo "<div id='form-dropdown' onclick='toggleDropdown()'>
+                        <span id='dropdown-label' onclick='toggleDropdown()'>Edit $name's Record</span>
                         <p class='user-form-instructions'>
                         Use the form below to edit $name's record.
                         <br><small><em>Required fields are marked with a *</em></small>
@@ -110,7 +110,7 @@
             //     </form>";
             // }
 
-            echo "<div id='form-dropdown' onclick='toggleDropdown(event)'>
+            echo "<div id='form-dropdown' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
                     <p class='user-form-instructions'>
                     Use the form below to add a new person to your list.
@@ -144,10 +144,10 @@
     </main>
     <?php require 'modules/footer.php'; ?>
     <script>
-        function toggleDropdown(e) {
-            var element = e.target;
+        function toggleDropdown() {
+            var element = document.getElementById('form-dropdown');
             if(element.style.height == '30px') {
-                element.style.height = '230px';
+                element.style.height = '250px';
                 element.style.overflowY = 'visible';
             } else {
                 element.style.height = '30px';
