@@ -327,8 +327,12 @@ a:active {
     padding-left: 10px;
 }
 
-#name, #address, #family {
+#name, #address {
     margin-bottom: 10px;
+}
+
+#family {
+    margin: 0 0 10px 0;
 }
 
 .modify-links {
