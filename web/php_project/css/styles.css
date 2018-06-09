@@ -297,14 +297,21 @@ a:active {
     font-size: 10pt;
 }
 
-#form-dropdown {
-    height: 30px;
-    overflow-y: hidden;
+#dropdown-module, #form-dropdown {
     border: 1px solid #ccc;
     padding: 2px 5px;
-    transition: height 250ms ease-out;
-    cursor: pointer;
     width: 261px;
+}
+
+#dropdown-module {
+    height: 30px;
+    cursor: pointer;
+}
+
+#form-dropdown {
+    height: 0px;
+    overflow-y: hidden;
+    transition: height 250ms ease-out;
 }
 
 .user-form-instructions {

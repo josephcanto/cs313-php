@@ -61,7 +61,7 @@
                     $isFamily = "";
                 }
 
-                echo "<div onclick='toggleDropdown()'>
+                echo "<div id='dropdown-module' onclick='toggleDropdown()'>
                         <span id='dropdown-label' onclick='toggleDropdown()'>Edit $name's Record</span>
                     </div>
                     <div id='form-dropdown'>
@@ -112,10 +112,10 @@
             //     </form>";
             // }
 
-            echo "<div id='form-dropdown' onclick='toggleDropdown()'>
+            echo "<div onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
                 </div>
-                <<div id='form-dropdown'>
+                <div id='form-dropdown'>
                     <p class='user-form-instructions'>
                     Use the form below to add a new person to your list.
                     <br><small><em>Required fields are marked with a *</em></small>
@@ -150,11 +150,11 @@
     <script>
         function toggleDropdown() {
             var element = document.getElementById('form-dropdown');
-            if(element.style.height == '30px') {
-                element.style.height = '253px';
+            if(element.style.height == '0px') {
+                element.style.height = '223px';
                 element.style.overflowY = 'visible';
             } else {
-                element.style.height = '30px';
+                element.style.height = '0px';
                 element.style.overflowY = 'hidden';
             }
         }
