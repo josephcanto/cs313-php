@@ -147,8 +147,10 @@
         function toggleDropdown() {
             if(this.style.height == '30px') {
                 this.style.height = '230px';
+                this.style.overflow-y = 'visible';
             } else {
                 this.style.height = '30px';
+                this.style.overflow-y = 'hidden';
             }
         }
     </script>
