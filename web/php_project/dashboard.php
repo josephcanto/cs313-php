@@ -144,15 +144,14 @@
     </main>
     <?php require 'modules/footer.php'; ?>
     <script>
-        function toggleDropdown(e) {
-            var element = e.target;
-            alert(e.target);
+        function toggleDropdown() {
+            var element = document.getElementById('form-dropdown');
             if(element.style.height == '30px') {
                 element.style.height = '230px';
-                element.style.overflow-y = 'visible';
+                element.style.overflowY = 'visible';
             } else {
                 element.style.height = '30px';
-                element.style.overflow-y = 'hidden';
+                element.style.overflowY = 'hidden';
             }
         }
     </script>
