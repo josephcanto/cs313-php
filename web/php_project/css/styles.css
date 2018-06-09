@@ -298,9 +298,7 @@ a:active {
 }
 
 #dropdown-module {
-    border-width: 1px 1px 0 1px;
-    border-style: solid;
-    border-color: #ccc;
+    border: 1px solid #ccc;
     padding: 2px 5px;
     width: 261px;
     height: 30px;
@@ -309,7 +307,8 @@ a:active {
 
 #form-dropdown {
     height: 0px;
-    overflow-y: hidden;
+    border-style: solid;
+    border-color: #ccc;
     transition: height 250ms ease-out;
 }
 

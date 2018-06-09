@@ -150,18 +150,16 @@
     <script>
         function toggleDropdown() {
             var element = document.getElementById('form-dropdown');
-            if(element.style.height == '0px') {
-                element.style.height = '230px';
-                element.style.overflowY = 'visible';
+            if(element.style.height == '0') {
+                element.style.height = '232px';
                 element.style.width = '261px';
                 element.style.padding = '2px 5px';
-                element.style.border = '1px solid #ccc';
+                element.style.borderWidth = '0 1px 1px 1px';
             } else {
-                element.style.height = '0px';
-                element.style.overflowY = 'hidden';
-                element.style.width = '0px';
-                element.style.padding = '0px';
-                element.style.border = '0px solid #ccc';
+                element.style.height = '0';
+                element.style.width = '0';
+                element.style.padding = '0';
+                element.style.borderWidth = '0';
             }
         }
     </script>
