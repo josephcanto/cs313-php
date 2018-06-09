@@ -298,7 +298,9 @@ a:active {
 }
 
 #dropdown-module {
-    border: 1px solid #ccc;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #ccc;
     padding: 2px 5px;
     width: 261px;
     height: 30px;
