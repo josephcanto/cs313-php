@@ -67,7 +67,7 @@
 
     function getPeopleList($userId) {
         $db = dbConnect();
-        $sql = 'SELECT id, name, is_family, address FROM people WHERE user_id = :userId';
+        $sql = 'SELECT id, name, is_family, address FROM people WHERE user_id = :userId ORDER BY name';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
         $stmt->execute();
@@ -179,7 +179,7 @@
 
     function getGiftIdeasByEventId($eventId) {
         $db = dbConnect();
-        $sql = 'SELECT id, name, notes, event_id FROM ideas WHERE event_id = :eventId';
+        $sql = 'SELECT id, name, notes, event_id FROM ideas WHERE event_id = :eventId ORDER BY name';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':eventId', $eventId, PDO::PARAM_INT);
         $stmt->execute();
@@ -223,7 +223,7 @@
 
     function getLocationsByGiftId($giftId) {
         $db = dbConnect();
-        $sql = 'SELECT id, name, address, website, price, gift_id FROM locations WHERE gift_id = :giftId';
+        $sql = 'SELECT id, name, address, website, price, gift_id FROM locations WHERE gift_id = :giftId ORDER BY name';
         $stmt = $db->prepare($sql);
         $stmt->bindValue(':giftId', $giftId, PDO::PARAM_INT);
         $stmt->execute();
