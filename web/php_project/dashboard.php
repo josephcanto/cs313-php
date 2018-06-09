@@ -146,6 +146,7 @@
     <script>
         function toggleDropdown(e) {
             var element = e.target;
+            alert(e.target);
             if(element.style.height == '30px') {
                 element.style.height = '230px';
                 element.style.overflow-y = 'visible';
