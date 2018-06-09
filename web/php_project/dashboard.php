@@ -69,7 +69,7 @@
                             Use the form below to edit $name's record.
                             <br><small><em>Required fields are marked with a *</em></small>
                         </p>
-                    <form class='user-form' action='library/edit-person.php' method='post'>
+                    <form id='add-person-form' class='user-form' action='library/edit-person.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
                                 <label for='name'>Name:*</label><br>
