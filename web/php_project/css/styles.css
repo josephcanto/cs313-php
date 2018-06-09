@@ -258,6 +258,23 @@ a:active {
     color: #000;
 }
 
+#form-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#form-labels {
+    text-align: right;
+}
+
+#form-inputs {
+    text-align: left;
+}
+
+#submit-btn {
+    margin-bottom: 0;
+}
+
 .people-list-heading {
     font-size: 18pt;
     margin: 10px 0 0 0;

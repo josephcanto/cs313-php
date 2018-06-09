@@ -63,25 +63,61 @@
 
                 echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
                     <form class='user-form' action='library/edit-person.php' method='post'>
-                        <label for='name'>Name:</label>
-                        <input type='text' id='name' name='name' required value='$name'><br>
-                        <label for='family'>Family member?</label>
-                        <input type='checkbox' id='family' name='family' $isFamily><br>
-                        <label for='address'>Address (optional):</label>
-                        <input type='text' id='address' name='address' value='$address'><br>
-                        <input type='submit' value='Edit Person'>
+                        <div id='form-container'>
+                            <div id='form-labels'>
+                                <label for='name'>Name:*</label><br>
+                                <label for='address'>Address:</label><br>
+                                <label for='family'>Family?*</label>
+                            </div>
+                            <div id='form-inputs'>
+                                <input type='text' id='name' name='name' required value='$name'><br>
+                                <input type='text' id='address' name='address' value='$address'><br>
+                                <input type='checkbox' id='family' name='family' $isFamily>
+                            </div>
+                        </div>
+                        <input type='submit' id='submit-btn' value='Edit Person'>
                         <input type='hidden' name='personid' value='$personId'>
                     </form>";
+
+                // echo "<p class='user-form-instructions'>Use the form below to edit $name's record.</p>
+                //     <form class='user-form' action='library/edit-person.php' method='post'>
+                //         <label for='name'>Name:</label>
+                //         <input type='text' id='name' name='name' required value='$name'><br>
+                //         <label for='family'>Family member?</label>
+                //         <input type='checkbox' id='family' name='family' $isFamily><br>
+                //         <label for='address'>Address (optional):</label>
+                //         <input type='text' id='address' name='address' value='$address'><br>
+                //         <input type='submit' value='Edit Person'>
+                //         <input type='hidden' name='personid' value='$personId'>
+                //     </form>";
             } else {
-                echo "<p class='user-form-instructions'>Use the form below to add a new person to your list.</p>
-                <form class='user-form' action='library/add-person.php' method='post'>
-                    <label for='name'>Name:</label>
-                    <input type='text' id='name' name='name' required><br>
-                    <label for='family'>Family member?</label>
-                    <input type='checkbox' id='family' name='family'><br>
-                    <label for='address'>Address (optional):</label>
-                    <input type='text' id='address' name='address'><br>
-                    <input type='submit' value='Add Person'>
+            //     echo "<p class='user-form-instructions'>Use the form below to add a new person to your list.</p>
+            //     <form class='user-form' action='library/add-person.php' method='post'>
+            //         <label for='name'>Name:</label>
+            //         <input type='text' id='name' name='name' required><br>
+            //         <label for='family'>Family member?</label>
+            //         <input type='checkbox' id='family' name='family'><br>
+            //         <label for='address'>Address (optional):</label>
+            //         <input type='text' id='address' name='address'><br>
+            //         <input type='submit' value='Add Person'>
+            //         <input type='hidden' name='userid' value='$userId'>
+            //     </form>";
+            // }
+
+            echo "<form class='user-form' action='library/add-person.php' method='post'>
+                    <div id='form-container'>
+                        <div id='form-labels'>
+                            <label for='name'>Name:*</label><br>
+                            <label for='address'>Address:</label><br>
+                            <label for='family'>Family?*</label>
+                        </div>
+                        <div id='form-inputs'>
+                            <input type='text' id='name' name='name' required><br>
+                            <input type='text' id='address' name='address'><br>
+                            <input type='checkbox' id='family' name='family'>
+                        </div>
+                    </div>
+                    <input type='submit' value='Add Person' style='margin-bottom: 0;'>
                     <input type='hidden' name='userid' value='$userId'>
                 </form>";
             }
