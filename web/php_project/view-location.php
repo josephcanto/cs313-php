@@ -100,5 +100,6 @@
         ?>
     </main>
     <?php require 'modules/footer.php'; ?>
+    <script src='js/dropdown.js'></script>
 </body>
 </html>

@@ -330,6 +330,10 @@ a:active {
     width: 275px;
 }
 
+#gift-dropdown-module, #gift-form {
+    width: 290px;
+}
+
 #form-container {
     display: flex;
     flex-flow: row nowrap;

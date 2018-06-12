@@ -59,26 +59,56 @@
                     }
                 }
 
-                echo "<p class='user-form-instructions'>Use the form below to edit the gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
-                      <form class='user-form' action='library/edit-idea.php' method='post'>
-                          <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required value='$name'><br>
-                          <label for='notes'>Notes (optional): </label>
-                          <textarea id='notes' name='notes' rows='4' cols='37'>$notes</textarea><br>
-                          <input type='submit' value='Edit Gift Idea'>
-                          <input type='hidden' name='giftid' value='$giftId'>
-                          <input type='hidden' name='eventid' value='$event_id'>
-                      </form>";
+                echo 
+                "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
+                    <span id='dropdown-label' onclick='toggleDropdown()'>Edit Gift Idea</span>
+                </div>
+                <div class='form-dropdown' id='gift-form'>
+                    <p class='user-form-instructions'>
+                        Use the form below to edit the gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".
+                        <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
+                    <form action='library/edit-idea.php' method='post'>
+                        <div id='form-container'>
+                            <div id='form-labels'>
+                                <label for='name'>Name:</label>
+                                <label for='notes'>Notes:</label>
+                            </div>
+                            <div id='form-inputs'>
+                                <input type='text' id='name' name='name' required value='$name'><br>
+                                <textarea id='notes' name='notes' rows='4' cols='30'>$notes</textarea>
+                            </div>
+                        </div>
+                        <input type='submit' id='submit-btn' value='Edit Gift Idea'>
+                        <input type='hidden' name='giftid' value='$giftId'>
+                        <input type='hidden' name='eventid' value='$event_id'>
+                    </form>
+                </div>";
             } else {
-                echo "<p class='user-form-instructions'>Use the form below to add a new gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".</p>
-                      <form class='user-form' action='library/add-idea.php' method='post'>
-                          <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required><br>
-                          <label for='notes'>Notes (optional): </label>
-                          <textarea id='notes' name='notes' rows='4' cols='37'></textarea><br>
-                          <input type='submit' value='Add Gift Idea'>
-                          <input type='hidden' name='eventid' value='$eventId'>
-                      </form>";
+                echo 
+                "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
+                    <span id='dropdown-label' onclick='toggleDropdown()'>Add Gift Idea</span>
+                </div>
+                <div class='form-dropdown' id='gift-form'>
+                    <p class='user-form-instructions'>
+                        Use the form below to add a new gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".
+                        <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
+                    <form action='library/add-idea.php' method='post'>
+                        <div id='form-container'>
+                            <div id='form-labels'>
+                                <label for='name'>Name:</label>
+                                <label for='notes'>Notes:</label>
+                            </div>
+                            <div id='form-inputs'>
+                                <input type='text' id='name' name='name' required><br>
+                                <textarea id='notes' name='notes' rows='4' cols='30'></textarea>
+                            </div>
+                        </div>
+                        <input type='submit' value='Add Gift Idea'>
+                        <input type='hidden' name='eventid' value='$eventId'>
+                    </form>
+                </div>";
             }
 
             if($_SESSION['giftIdeasList'] != NULL) {
@@ -89,5 +119,6 @@
         ?>
     </main>
     <?php require 'modules/footer.php'; ?>
+    <script src='js/dropdown.js'></script>
 </body>
 </html>
