@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Gift Idea'>
-                        <a href='view-event.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                        <a href='view-event.php'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='giftid' value='$giftId'>
                         <input type='hidden' name='eventid' value='$event_id'>
                     </form>
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Add Gift Idea'>
-                        <a href='view-event.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                        <a href='view-event.php'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='eventid' value='$eventId'>
                     </form>
                 </div>";

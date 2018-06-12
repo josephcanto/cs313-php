@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Person'>
-                        <a href='dashboard.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                        <a href='dashboard.php'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='personid' value='$personId'>
                     </form>
                 </div>";
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <input type='submit' value='Add Person''>
-                    <a href='dashboard.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                    <a href='dashboard.php'><button type='button'>Cancel</button></a>
                     <input type='hidden' name='userid' value='$userId'>
                     </form>
                 </div>";

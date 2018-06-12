@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Edit Location'>
-                        <a href='view-location.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                        <a href='view-location.php'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='locationid' value='$locationId'>
                         <input type='hidden' name='giftid' value='$gift_id'>
                     </form>
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Add Location'>
-                        <a href='view-location.php' title='Cancel edit'><button type='button'>Cancel</button></a>
+                        <a href='view-location.php'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='giftid' value='$giftId'>
                     </form>
                 </div>";
