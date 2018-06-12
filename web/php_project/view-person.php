@@ -61,7 +61,7 @@
                 }
 
                 echo 
-                "<div id='dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Edit Event</span>
                 </div>
                 <div class='form-dropdown' id='event-form'>
@@ -109,7 +109,7 @@
                 </div>";
             } else {
                 echo 
-                "<div id='dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Event</span>
                 </div>
                 <div class='form-dropdown' id='event-form'>

@@ -297,10 +297,9 @@ a:active {
     font-size: 10pt;
 }
 
-#dropdown-module {
+.dropdown-module {
     border: 1px solid #ccc;
     padding: 2px 5px;
-    width: 261px;
     height: 30px;
     cursor: pointer;
 }
@@ -323,11 +322,11 @@ a:active {
     padding: 10px;
 }
 
-#person-form {
+#person-dropdown-module, #person-form {
     width: 261px;
 }
 
-#event-form {
+#event-dropdown-module, #event-form {
     width: 275px;
 }
 
