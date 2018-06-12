@@ -89,23 +89,37 @@
                           <input type='hidden' name='personid' value='$person_id'>
                       </form>";
             } else {
-                echo "<p class='user-form-instructions'>Use the form below to add a new event for " . $_SESSION['personName'] . ".</p>
-                     <form class='user-form' action='library/add-event.php' method='post'>
-                            <label for='name'>Name:</label>
-                            <input type='text' id='name' name='name' required><br>
-                            <label for='date'>Date: </label>
-                            <input type='date' id='date' name='date' required><br>
-                            <label for='frequency'>Frequency:</label>
-                            <select id='frequency' name='frequency' required>
-                                <option value='Yearly' selected='selected'>Yearly</option>
-                                <option value='Monthly'>Monthly</option>
-                                <option value='One-time'>One-time</option>
-                            </select><br>
-                            <label for='reminder'>Reminder (choose a date (optional)):</label>
-                            <input type='date' id='reminder' name='reminder'><br>
-                            <input type='submit' value='Add Event'>
-                            <input type='hidden' name='personid' value='$personId'>
-                      </form>";
+                echo "<div id='dropdown-module' onclick='toggleDropdown()'>
+                        <span id='dropdown-label'>Add Event</span>
+                    </div>
+                    <div id='form-dropdown'>
+                        <p class='user-form-instructions'>
+                          Use the form below to add a new event for " . $_SESSION['personName'] . ".
+                          <br><small><em>Required fields are marked with a *</em></small>
+                        </p>
+                        <form class='user-form' action='library/add-event.php' method='post'>
+                        <div id='form-container'>
+                            <div id='form-labels'>
+                                <label for='name'>Name:</label>
+                                <label for='date'>Date: </label>
+                                <label for='frequency'>Frequency:</label>
+                                <label for='reminder'>Reminder (choose a date (optional)):</label>
+                            </div>
+                            <div id='form-inputs'>
+                                <input type='text' id='name' name='name' required><br>
+                                <input type='date' id='date' name='date' required><br>
+                                <select id='frequency' name='frequency' required>
+                                    <option value='Yearly' selected='selected'>Yearly</option>
+                                    <option value='Monthly'>Monthly</option>
+                                    <option value='One-time'>One-time</option>
+                                </select><br>
+                                <input type='date' id='reminder' name='reminder'><br>
+                            </div>
+                        </div>
+                        <input type='submit' value='Add Event'>
+                        <input type='hidden' name='personid' value='$personId'>
+                        </form>
+                    </div>";
             }
 
             if($_SESSION['eventsInfoList'] != NULL) {
@@ -116,5 +130,6 @@
         ?>
     </main>
     <?php require 'modules/footer.php'; ?>
+    <script src='js/dropdown.js'></script>
 </body>
 </html>
