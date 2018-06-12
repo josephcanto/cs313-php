@@ -334,6 +334,10 @@ a:active {
     width: 290px;
 }
 
+#location-dropdown-module, #location-form {
+    width: 275px;
+}
+
 #form-container {
     display: flex;
     flex-flow: row nowrap;
