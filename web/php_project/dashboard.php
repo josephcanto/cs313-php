@@ -81,7 +81,7 @@
                             <div id='form-inputs'>
                                 <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
                                 <input class='input-styles' type='text' id='address' name='address' value='$address'><br>
-                                <input class='input-styles' type='checkbox' id='family' name='family' $isFamily>
+                                <input type='checkbox' id='family' name='family' $isFamily>
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Person'>
@@ -110,7 +110,7 @@
                         <div id='form-inputs'>
                             <input class='input-styles' type='text' id='name' name='name' required><br>
                             <input class='input-styles' type='text' id='address' name='address'><br>
-                            <input class='input-styles' type='checkbox' id='family' name='family'>
+                            <input type='checkbox' id='family' name='family'>
                         </div>
                     </div>
                     <input type='submit' value='Add Person''>
