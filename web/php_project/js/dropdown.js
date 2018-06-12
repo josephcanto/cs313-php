@@ -1,5 +1,5 @@
 function toggleDropdown() {
-    var element = document.getElementById('form-dropdown');
+    var element = document.getElementsByClassName('form-dropdown')[0];
     if(element.style.height == '0px') {
         element.style.overflowY = 'visible';
         element.style.height = 'auto';
