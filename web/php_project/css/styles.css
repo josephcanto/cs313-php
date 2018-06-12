@@ -305,11 +305,11 @@ a:active {
 }
 
 .form-dropdown {
-    height: 0px;
-    width: 261px;
+    height: auto;
+    max-height: 0px;
     overflow-y: hidden;
     border-color: #ccc;
-    transition: height 250ms ease-out;
+    transition: max-height 250ms ease-in;
 }
 
 .user-form-instructions {
