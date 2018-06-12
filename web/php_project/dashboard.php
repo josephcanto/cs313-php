@@ -64,6 +64,7 @@
                 echo 
                 "<div class='dropdown-module' id='person-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Edit $name's Record</span>
+                    <span class='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='person-form'>
                     <p class='user-form-instructions'>
@@ -91,6 +92,7 @@
                 echo
                 "<div class='dropdown-module' id='person-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
+                    <span class='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='person-form'>
                     <p class='user-form-instructions'>

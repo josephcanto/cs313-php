@@ -302,13 +302,13 @@ a:active {
     padding: 2px 5px;
     height: 30px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
-.dropdown-module::after {
-    content: '';
+.down-arrow {
     border: solid black;
     border-width: 0 1.5px 1.5px 0;
-    display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
 }
@@ -343,24 +343,12 @@ a:active {
     width: 285px;
 }
 
-#event-dropdown-module::after {
-    margin-left: 60%;
-}
-
 #gift-dropdown-module, #gift-form {
     width: 305px;
 }
 
-#gift-dropdown-module::after {
-    margin-left: 60%;
-}
-
 #location-dropdown-module, #location-form {
     width: 295px;
-}
-
-#location-dropdown-module::after {
-    margin-left: 60%;
 }
 
 #form-container {
