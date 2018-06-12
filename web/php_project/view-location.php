@@ -75,9 +75,9 @@
                     <form class='user-form' action='library/edit-location.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
-                                <label for='address'>Address:</label>
-                                <label for='website'>Website URL:</label>
+                                <label for='name'>Name:*</label><br>
+                                <label for='address'>Address:</label><br>
+                                <label for='website'>Website URL:</label><br>
                                 <label for='price'>Price: $</label>
                             </div>
                             <div id='form-inputs'>
@@ -107,9 +107,9 @@
                     <form class='user-form' action='library/add-location.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
-                                <label for='address'>Address:</label>
-                                <label for='website'>Website URL:</label>
+                                <label for='name'>Name:*</label><br>
+                                <label for='address'>Address:</label><br>
+                                <label for='website'>Website URL:</label><br>
                                 <label for='price'>Price: $</label>
                             </div>
                             <div id='form-inputs'>
