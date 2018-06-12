@@ -147,9 +147,9 @@
             }
 
             if($_SESSION['eventsInfoList'] != NULL) {
-                echo $_SESSION['eventsInfoList'] . "<br><br>";
+                echo $_SESSION['eventsInfoList'] . "<br><br><br><br><br><br><br><br><br><br>";
             } else {
-                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p><br><br><br><br><br><br><br>";
+                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br>";
             }
         ?>
     </main>

@@ -116,9 +116,9 @@
             }
 
             if($_SESSION['giftIdeasList'] != NULL) {
-                echo $_SESSION['giftIdeasList'] . "<br><br>";
+                echo $_SESSION['giftIdeasList'] . "<br><br><br><br><br><br><br>";
             } else {
-                echo "<p>Looks like you haven't added any gift ideas for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . " yet.</p><br><br><br><br><br><br><br><br>";
+                echo "<p>Looks like you haven't added any gift ideas for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br><br>";
             }
         ?>
     </main>
