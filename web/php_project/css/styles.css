@@ -309,7 +309,7 @@ a:active {
     max-height: 0px;
     overflow-y: hidden;
     border-color: #ccc;
-    transition: max-height 250ms ease-in, border-width 250ms ease-in;
+    transition: max-height 250ms ease-in, border-width 250ms ease-in, padding 250ms ease-in;
 }
 
 .user-form-instructions {
