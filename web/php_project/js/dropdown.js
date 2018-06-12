@@ -3,7 +3,7 @@ function toggleDropdown() {
     if(element.style.height == '0px') {
         element.style.overflowY = 'visible';
         element.style.height = 'auto';
-        element.style.padding = '2px 5px';
+        element.style.padding = '5px';
         element.style.borderWidth = '0px 1px 1px 1px';
         element.style.borderStyle = 'solid';
     } else {

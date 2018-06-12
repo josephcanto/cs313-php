@@ -324,7 +324,7 @@ a:active {
 }
 
 #person-form {
-    width: 250px;
+    width: 261px;
 }
 
 #event-form {
@@ -336,10 +336,6 @@ a:active {
     flex-flow: row nowrap;
     text-align: right;
 }
-
-/* #form-labels {
-    text-align: right;
-} */
 
 #form-labels label {
     line-height: 30px;
