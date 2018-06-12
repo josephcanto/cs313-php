@@ -68,7 +68,7 @@
                         Use the form below to edit the gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".
                         <br><small><em>Required fields are marked with a *</em></small>
                     </p>
-                    <form action='library/edit-idea.php' method='post'>
+                    <form class='user-form' action='library/edit-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
                                 <label for='name'>Name:*</label>
@@ -94,7 +94,7 @@
                         Use the form below to add a new gift idea for " . $_SESSION['personName'] . "'s " . $_SESSION['eventName'] . ".
                         <br><small><em>Required fields are marked with a *</em></small>
                     </p>
-                    <form action='library/add-idea.php' method='post'>
+                    <form class='user-form' action='library/add-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
                                 <label for='name'>Name:*</label>
