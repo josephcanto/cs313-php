@@ -137,9 +137,9 @@ h1 {
     color: #fff;
 }
 
-#intro-paragraph {
+.intro-paragraph {
     color: #fff;
-    padding: 15px;
+    padding: 0 15px 15px 15px;
 }
 
 #comic {
