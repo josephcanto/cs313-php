@@ -60,44 +60,64 @@
                     }
                 }
 
-                echo "<p class='user-form-instructions'>Use the form below to edit " . $_SESSION['personName'] . "'s $name event.</p>
-                      <form class='user-form' action='library/edit-event.php' method='post'>
-                          <label for='name'>Name:</label>
-                          <input type='text' id='name' name='name' required value='$name'><br>
-                          <label for='date'>Date: </label>
-                          <input type='date' id='date' name='date' required value='$date'><br>
-                          <label for='frequency'>Frequency:</label>
-                          <select id='frequency' name='frequency' required>";
-                          if($frequency == 'Yearly') {
-                              echo "<option value='Yearly' selected='selected'>Yearly</option>
+                echo 
+                "<div id='dropdown-module' onclick='toggleDropdown()'>
+                    <span id='dropdown-label'>Edit Event</span>
+                </div>
+                <div id='form-dropdown'>
+                    <p class='user-form-instructions'>
+                        Use the form below to edit " . $_SESSION['personName'] . "'s $name event.
+                        <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
+                    <form class='user-form' action='library/edit-event.php' method='post'>
+                        <div id='form-container'>
+                            <div id='form-labels'>
+                                <label for='name'>Name:</label>
+                                <label for='date'>Date:</label>
+                                <label for='frequency'>Frequency:</label>
+                                <label for='reminder'>Reminder:</label>
+                            </div>
+                            <div id='form-inputs'>
+                                <input type='text' id='name' name='name' required value='$name'><br>
+                                <input type='date' id='date' name='date' required value='$date'><br>
+                                <select id='frequency' name='frequency' required>";
+                                if($frequency == 'Yearly') {
+                                    echo 
+                                    "<option value='Yearly' selected='selected'>Yearly</option>
                                     <option value='Monthly'>Monthly</option>
                                     <option value='One-time'>One-time</option>";
-                          } elseif($frequency == 'Monthly') {
-                            echo "<option value='Yearly'>Yearly</option>
-                                  <option value='Monthly' selected='selected'>Monthly</option>
-                                  <option value='One-time'>One-time</option>";
-                          } else {
-                            echo "<option value='Yearly'>Yearly</option>
-                                  <option value='Monthly'>Monthly</option>
-                                  <option value='One-time' selected='selected'>One-time</option>";
-                          }
-                    echo "</select><br>
-                          <label for='reminder'>Reminder (choose a date (optional)):</label>
-                          <input type='date' id='reminder' name='reminder' value='$reminder'><br>
-                          <input type='submit' value='Edit Event'>
-                          <input type='hidden' name='eventid' value='$eventId'>
-                          <input type='hidden' name='personid' value='$person_id'>
-                      </form>";
+                                } elseif($frequency == 'Monthly') {
+                                    echo 
+                                    "<option value='Yearly'>Yearly</option>
+                                    <option value='Monthly' selected='selected'>Monthly</option>
+                                    <option value='One-time'>One-time</option>";
+                                } else {
+                                    echo 
+                                    "<option value='Yearly'>Yearly</option>
+                                    <option value='Monthly'>Monthly</option>
+                                    <option value='One-time' selected='selected'>One-time</option>";
+                                }
+                                echo
+                                "</select><br>
+                                <input type='date' id='reminder' name='reminder' value='$reminder'><br>
+                            </div>
+                        </div>
+                        <input type='submit' value='Edit Event'>
+                        <input type='hidden' name='eventid' value='$eventId'>
+                        <input type='hidden' name='personid' value='$person_id'>
+                    </form>
+                </div>";
             } else {
-                echo "<div id='dropdown-module' onclick='toggleDropdown()'>
-                        <span id='dropdown-label'>Add Event</span>
-                    </div>
-                    <div id='form-dropdown'>
-                        <p class='user-form-instructions'>
-                          Use the form below to add a new event for " . $_SESSION['personName'] . ".
-                          <br><small><em>Required fields are marked with a *</em></small>
-                        </p>
-                        <form class='user-form' action='library/add-event.php' method='post'>
+                echo 
+                "<div id='dropdown-module' onclick='toggleDropdown()'>
+                    <span id='dropdown-label'>Add Event</span>
+                </div>
+                <div id='form-dropdown'>
+                    <p class='user-form-instructions'>
+                        Use the form below to add a new event for " . $_SESSION['personName'] . ".
+                        <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
+                    <form class='user-form' action='library/add-event.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
                                 <label for='name'>Name:</label>
@@ -118,8 +138,8 @@
                         </div>
                         <input type='submit' value='Add Event'>
                         <input type='hidden' name='personid' value='$personId'>
-                        </form>
-                    </div>";
+                    </form>
+                </div>";
             }
 
             if($_SESSION['eventsInfoList'] != NULL) {

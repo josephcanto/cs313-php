@@ -347,7 +347,7 @@ a:active {
     padding-left: 10px;
 }
 
-#name, #address {
+#name, #address, #date, #frequency, #reminder {
     margin-bottom: 10px;
 }
 
