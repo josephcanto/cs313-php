@@ -78,9 +78,9 @@
                                 <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required value='$name'><br>
-                                <input type='date' id='date' name='date' required value='$date'><br>
-                                <select id='frequency' name='frequency' required>";
+                                <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
+                                <input class='input-styles' type='date' id='date' name='date' required value='$date'><br>
+                                <select class='input-styles' id='frequency' name='frequency' required>";
                                 if($frequency == 'Yearly') {
                                     echo 
                                     "<option value='Yearly' selected='selected'>Yearly</option>
