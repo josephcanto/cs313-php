@@ -117,9 +117,9 @@
                 </div>
                 <div id='form-dropdown'>
                     <p class='user-form-instructions'>
-                    Use the form below to add a new person to your list.
-                    <br><small><em>Required fields are marked with a *</em></small>
-                </p>
+                      Use the form below to add a new person to your list.
+                      <br><small><em>Required fields are marked with a *</em></small>
+                    </p>
                     <form id='add-person-form' class='user-form' action='library/add-person.php' method='post'>
                     <div id='form-container'>
                         <div id='form-labels'>
@@ -135,7 +135,7 @@
                     </div>
                     <input type='submit' value='Add Person' style='margin-bottom: 0;'>
                     <input type='hidden' name='userid' value='$userId'>
-                </form>
+                    </form>
                 </div>";
             }
         

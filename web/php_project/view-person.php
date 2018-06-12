@@ -101,9 +101,9 @@
                         <div id='form-container'>
                             <div id='form-labels'>
                                 <label for='name'>Name:</label>
-                                <label for='date'>Date: </label>
+                                <label for='date'>Date:</label>
                                 <label for='frequency'>Frequency:</label>
-                                <label for='reminder'>Reminder (choose a date (optional)):</label>
+                                <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
                                 <input type='text' id='name' name='name' required><br>
