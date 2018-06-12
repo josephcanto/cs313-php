@@ -93,7 +93,7 @@
                 </div>";
             } else {
                 echo 
-                "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='location-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Location</span>
                 </div>
                 <div class='form-dropdown' id='location-form'>
