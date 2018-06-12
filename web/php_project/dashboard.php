@@ -76,7 +76,7 @@
                             <div id='form-labels'>
                                 <label for='name'>Name:*</label><br>
                                 <label for='address'>Address:</label><br>
-                                <label for='family'>Family?*</label>
+                                <label for='family'>Family?</label>
                             </div>
                             <div id='form-inputs'>
                                 <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
@@ -105,7 +105,7 @@
                         <div id='form-labels'>
                             <label for='name'>Name:*</label><br>
                             <label for='address'>Address:</label><br>
-                            <label for='family'>Family?*</label>
+                            <label for='family'>Family?</label>
                         </div>
                         <div id='form-inputs'>
                             <input class='input-styles' type='text' id='name' name='name' required><br>
