@@ -313,6 +313,7 @@ a:active {
     height: 0;
     padding: 4px;
     transform: rotate(45deg);
+    transition: transform 250ms ease-in;
 }
 
 .form-dropdown {
