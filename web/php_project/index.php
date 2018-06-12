@@ -25,9 +25,9 @@
         <section id='comic'>
             <h1>For-gift &amp; Forget</h1>
             <div id='comic-images'>
-                <img class='comic-strip' src='images/comic_1.png' alt='A digital drawing of a person thinking with a thought bubble with a lightbulb inside of it'>
+                <img class='comic-strip' src='images/lightbulb.png' alt='A digital drawing of a lightbulb'>
                 <img class='comic-strip' src='images/comic_2.png' alt='A digital drawing of a smartphone with the for-gift &amp; forget app open on the screen'>
-                <img class='comic-strip' src='images/comic_3.png' alt='A digital drawing of a person giving another person a gift on his birthday'>
+                <img class='comic-strip' src='images/gift_giving.png' alt='A digital drawing of a person giving a gift'>
             </div>
         </section><!-- end of section 'comic' -->
         <section id='testimonials-container'>
@@ -35,17 +35,17 @@
             <div id='testimonials'>
                 <div class='testimonial'>
                     <h4>John M.</h4>
-                    <img class='person-image' src='images/person_icon.jpg' alt='A picture of a man smiling'>
+                    <img class='person-image' src='images/person_icon.jpg' alt='An icon representing a person'>
                     <p>I love the For-gift &amp; Forget app! I haven't missed a wedding anniversary since I started using it!</p>
                 </div>
                 <div class='testimonial'>
                     <h4>Joe C.</h4>
-                    <img class='person-image' src='images/person_icon.jpg' alt='A picture of a man smiling'>
+                    <img class='person-image' src='images/person_icon.jpg' alt='An icon representing a person'>
                     <p>Thanks to the For-gift &amp; Forget app, now, people are amazed when I give them gifts!</p>
                 </div>
                 <div class='testimonial'>
                     <h4>Alissa C.</h4>
-                    <img class='person-image' src='images/person_icon.jpg' alt='A picture of a woman smiling'>
+                    <img class='person-image' src='images/person_icon.jpg' alt='An icon representing a person'>
                     <p>My friends and family have been really impressed with my gifts ever since I started using For-gift &amp; Forget!</p>
                 </div>
             </div>
