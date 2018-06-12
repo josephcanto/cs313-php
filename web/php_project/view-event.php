@@ -62,6 +62,7 @@
                 echo 
                 "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Edit Gift Idea</span>
+                    <span id='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='gift-form'>
                     <p class='user-form-instructions'>
@@ -88,6 +89,7 @@
                 echo 
                 "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Add Gift Idea</span>
+                    <span id='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='gift-form'>
                     <p class='user-form-instructions'>

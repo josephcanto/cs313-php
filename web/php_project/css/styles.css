@@ -299,17 +299,19 @@ a:active {
 
 .dropdown-module {
     border: 1px solid #ccc;
-    padding: 2px 5px;
+    padding: 0 8px;
     height: 30px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.down-arrow {
+#down-arrow {
     border: solid black;
     border-width: 0 1.5px 1.5px 0;
-    padding: 3px;
+    height: 0;
+    padding: 4px;
     transform: rotate(45deg);
 }
 

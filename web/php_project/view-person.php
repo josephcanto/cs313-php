@@ -63,6 +63,7 @@
                 echo 
                 "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Edit Event</span>
+                    <span id='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='event-form'>
                     <p class='user-form-instructions'>
@@ -111,6 +112,7 @@
                 echo 
                 "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Event</span>
+                    <span id='down-arrow'></span>
                 </div>
                 <div class='form-dropdown' id='event-form'>
                     <p class='user-form-instructions'>
