@@ -77,7 +77,7 @@
                             </div>
                             <div id='form-inputs'>
                                 <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
-                                <textarea id='notes' name='notes' rows='4' cols='30'>$notes</textarea>
+                                <textarea class='input-styles' id='notes' name='notes' rows='4' cols='30'>$notes</textarea>
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Gift Idea'>
@@ -105,7 +105,7 @@
                             </div>
                             <div id='form-inputs'>
                                 <input class='input-styles' type='text' id='name' name='name' required><br>
-                                <textarea id='notes' name='notes' rows='4' cols='30'></textarea>
+                                <textarea class='input-styles' id='notes' name='notes' rows='4' cols='30'></textarea>
                             </div>
                         </div>
                         <input type='submit' value='Add Gift Idea'>

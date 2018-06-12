@@ -84,7 +84,7 @@
                                 <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
                                 <input class='input-styles' type='text' id='address' name='address' value='$address'><br>
                                 <input class='input-styles' type='url' id='website' name='website' value='$website'><br>
-                                <input type='number' id='price' name='price' value='$price'>
+                                <input class='input-styles' type='number' id='price' name='price' value='$price'>
                             </div>
                         </div>
                         <input type='submit' value='Edit Location'>
@@ -116,7 +116,7 @@
                                 <input class='input-styles' type='text' id='name' name='name' required><br>
                                 <input class='input-styles' type='text' id='address' name='address'><br>
                                 <input class='input-styles' type='url' id='website' name='website'><br>
-                                <input type='number' id='price' name='price'>
+                                <input class='input-styles' type='number' id='price' name='price'>
                             </div>
                         </div>
                         <input type='submit' value='Add Location'>

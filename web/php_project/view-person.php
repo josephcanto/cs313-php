@@ -100,7 +100,7 @@
                                 }
                                 echo
                                 "</select><br>
-                                <input type='date' id='reminder' name='reminder' value='$reminder'><br>
+                                <input class='input-styles' type='date' id='reminder' name='reminder' value='$reminder'><br>
                             </div>
                         </div>
                         <input type='submit' value='Edit Event'>
@@ -136,7 +136,7 @@
                                     <option value='Monthly'>Monthly</option>
                                     <option value='One-time'>One-time</option>
                                 </select><br>
-                                <input type='date' id='reminder' name='reminder'><br>
+                                <input class='input-styles' type='date' id='reminder' name='reminder'><br>
                             </div>
                         </div>
                         <input type='submit' value='Add Event'>
