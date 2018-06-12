@@ -311,7 +311,6 @@ a:active {
     overflow-y: hidden;
     border-color: #ccc;
     transition: height 250ms ease-out;
-    text-align: right;
 }
 
 .user-form-instructions {
@@ -335,11 +334,12 @@ a:active {
 #form-container {
     display: flex;
     flex-flow: row nowrap;
-}
-
-#form-labels {
     text-align: right;
 }
+
+/* #form-labels {
+    text-align: right;
+} */
 
 #form-labels label {
     line-height: 30px;
