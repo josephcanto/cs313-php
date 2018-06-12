@@ -64,7 +64,7 @@
                 "<div id='dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Edit Event</span>
                 </div>
-                <div id='form-dropdown'>
+                <div class='form-dropdown' id='event-form'>
                     <p class='user-form-instructions'>
                         Use the form below to edit " . $_SESSION['personName'] . "'s $name event.
                         <br><small><em>Required fields are marked with a *</em></small>
@@ -112,7 +112,7 @@
                 "<div id='dropdown-module' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Event</span>
                 </div>
-                <div id='form-dropdown'>
+                <div class='form-dropdown' id='event-form'>
                     <p class='user-form-instructions'>
                         Use the form below to add a new event for " . $_SESSION['personName'] . ".
                         <br><small><em>Required fields are marked with a *</em></small>

@@ -305,12 +305,13 @@ a:active {
     cursor: pointer;
 }
 
-#form-dropdown {
+.form-dropdown {
     height: 0px;
     width: 261px;
     overflow-y: hidden;
     border-color: #ccc;
     transition: height 250ms ease-out;
+    text-align: right;
 }
 
 .user-form-instructions {
@@ -321,12 +322,14 @@ a:active {
 .user-form {
     background-color: #ccc;
     padding: 10px;
-    width: 50%;
 }
 
-#add-person-form {
+#person-form {
     width: 250px;
-    text-align: right;
+}
+
+#event-form {
+    width: 275px;
 }
 
 #form-container {
