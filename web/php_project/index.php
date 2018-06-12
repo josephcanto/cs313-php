@@ -25,12 +25,12 @@
         <section id='comic'>
             <h1>For-gift &amp; Forget</h1>
             <p class='intro-paragraph'>With For-gift &amp; Forget, you can keep track of your awesome gift ideas the moment that you think of them, and then when that special occasion arrives, you'll be prepared to give the perfect gifts to your friends and family. Never forget a special occasion or a great gift idea ever again!</p>
-            <p class='intro-paragraph'>Registration is completely free. All you have to do is create an account, and you can start tracking your gift ideas and special occasions today!</p>
             <div id='comic-images'>
                 <img class='comic-strip' src='images/lightbulb.png' alt='A digital drawing of a lightbulb'>
-                <img class='comic-strip' src='images/comic_2.png' alt='A digital drawing of a smartphone with the for-gift &amp; forget app open on the screen'>
+                <img class='comic-strip' src='images/comic_2.png' alt='A digital drawing of a smartphone with the For-gift &amp; Forget app open on the screen'>
                 <img class='comic-strip' src='images/gift_giving.png' alt='A digital drawing of a person giving a gift'>
             </div>
+            <p class='intro-paragraph'>Registration is completely free. All you have to do is create an account, and you can start tracking your gift ideas and special occasions today!</p>
         </section><!-- end of section 'comic' -->
         <section id='testimonials-container'>
             <h2>Testimonials</h2>
