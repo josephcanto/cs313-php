@@ -26,9 +26,9 @@
             <h1>For-gift &amp; Forget</h1>
             <p class='intro-paragraph'>With For-gift &amp; Forget, you can keep track of your awesome gift ideas the moment you think of them, and then when that special occasion arrives, you'll be prepared to give the perfect gifts to your friends and family. Never forget a special occasion or an awesome gift idea ever again!</p>
             <div id='comic-images'>
-                <img class='comic-strip' src='images/lightbulb.png' alt='A digital drawing of a lightbulb'>
-                <img class='comic-strip' src='images/comic_2.png' alt='A digital drawing of a smartphone with the For-gift &amp; Forget app open on the screen'>
-                <img class='comic-strip' src='images/gift_giving.png' alt='A digital drawing of a person giving a gift'>
+                <img class='comic-strip' src='images/lightbulb.png' alt='A vector image of a lightbulb'>
+                <img class='comic-strip' src='images/app_on_phone.png' alt='A vector image of a smartphone with the For-gift &amp; Forget app open on the screen'>
+                <img class='comic-strip' src='images/gift_giving.png' alt='A vector image of a person giving a gift'>
             </div>
             <?php
                 if(!isset($_SESSION['loggedIn'])) {
