@@ -18,7 +18,7 @@
                 if(isset($_SESSION['loggedIn'])) {
                     echo "<a id='action-button' href='dashboard.php' title='Click here to go to your dashboard page'>Go To Dashboard</a>";
                 } else {
-                    echo "<a id='action-button' href='#registration' title='Click here to proceed to the registration form'>Create Account</a>";
+                    echo "<a id='action-button' href='#registration' title='Click here to go to the registration form'>Create Account</a>";
                 }
             ?>
         </section><!-- end of section 'banner' -->
@@ -30,7 +30,11 @@
                 <img class='comic-strip' src='images/comic_2.png' alt='A digital drawing of a smartphone with the For-gift &amp; Forget app open on the screen'>
                 <img class='comic-strip' src='images/gift_giving.png' alt='A digital drawing of a person giving a gift'>
             </div>
-            <p class='intro-paragraph'>Registration is completely free. All you have to do is create an account, and you can start tracking your gift ideas and special occasions today!</p>
+            <?php
+                if(!isset($_SESSION['loggedIn'])) {
+                    echo "<p class='intro-paragraph'>Registration is completely free. All you have to do is <a href='#registration' class='register-link' title='Click here to go to the registration form'>create an account</a>, and you can start tracking your gift ideas and special occasions today!</p>";
+                }
+           ?>
         </section><!-- end of section 'comic' -->
         <section id='testimonials-container'>
             <h2>Testimonials</h2>

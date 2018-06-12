@@ -295,7 +295,8 @@ a:active {
 .event-link:link, .event-link:visited,
 .location-link:link, .location-link:visited,
 .store-website-link:link, .store-website-link:visited,
-.breadcrumb-trail:link, .breadcrumb-trail:visited {
+.breadcrumb-trail:link, .breadcrumb-trail:visited,
+.register-link:link, .register-link:visited {
     text-decoration: underline;
     color: yellowgreen;
 }
