@@ -71,11 +71,11 @@
                     <form action='library/edit-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:</label>
+                                <label for='name'>Name:*</label>
                                 <label for='notes'>Notes:</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required value='$name'><br>
+                                <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
                                 <textarea id='notes' name='notes' rows='4' cols='30'>$notes</textarea>
                             </div>
                         </div>
@@ -97,11 +97,11 @@
                     <form action='library/add-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:</label>
+                                <label for='name'>Name:*</label>
                                 <label for='notes'>Notes:</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required><br>
+                                <input class='input-styles' type='text' id='name' name='name' required><br>
                                 <textarea id='notes' name='notes' rows='4' cols='30'></textarea>
                             </div>
                         </div>

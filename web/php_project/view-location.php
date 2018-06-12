@@ -80,9 +80,9 @@
                                 <label for='price'>Price: $</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required value='$name'><br>
-                                <input type='text' id='address' name='address' value='$address'><br>
-                                <input type='url' id='website' name='website' value='$website'><br>
+                                <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
+                                <input class='input-styles' type='text' id='address' name='address' value='$address'><br>
+                                <input class='input-styles' type='url' id='website' name='website' value='$website'><br>
                                 <input type='number' id='price' name='price' value='$price'>
                             </div>
                         </div>
@@ -110,9 +110,9 @@
                                 <label for='price'>Price: $</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required><br>
-                                <input type='text' id='address' name='address'><br>
-                                <input type='url' id='website' name='website'><br>
+                                <input class='input-styles' type='text' id='name' name='name' required><br>
+                                <input class='input-styles' type='text' id='address' name='address'><br>
+                                <input class='input-styles' type='url' id='website' name='website'><br>
                                 <input type='number' id='price' name='price'>
                             </div>
                         </div>

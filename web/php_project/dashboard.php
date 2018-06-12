@@ -78,8 +78,8 @@
                                 <label for='family'>Family?*</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required value='$name'><br>
-                                <input type='text' id='address' name='address' value='$address'><br>
+                                <input class='input-styles' type='text' id='name' name='name' required value='$name'><br>
+                                <input class='input-styles' type='text' id='address' name='address' value='$address'><br>
                                 <input type='checkbox' id='family' name='family' $isFamily>
                             </div>
                         </div>
@@ -105,8 +105,8 @@
                             <label for='family'>Family?*</label>
                         </div>
                         <div id='form-inputs'>
-                            <input type='text' id='name' name='name' required><br>
-                            <input type='text' id='address' name='address'><br>
+                            <input class='input-styles' type='text' id='name' name='name' required><br>
+                            <input class='input-styles' type='text' id='address' name='address'><br>
                             <input type='checkbox' id='family' name='family'>
                         </div>
                     </div>

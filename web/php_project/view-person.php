@@ -72,9 +72,9 @@
                     <form class='user-form' action='library/edit-event.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:</label>
-                                <label for='date'>Date:</label>
-                                <label for='frequency'>Frequency:</label>
+                                <label for='name'>Name:*</label>
+                                <label for='date'>Date:*</label>
+                                <label for='frequency'>Frequency:*</label>
                                 <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
@@ -120,15 +120,15 @@
                     <form class='user-form' action='library/add-event.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:</label>
-                                <label for='date'>Date:</label>
-                                <label for='frequency'>Frequency:</label>
+                                <label for='name'>Name:*</label>
+                                <label for='date'>Date:*</label>
+                                <label for='frequency'>Frequency:*</label>
                                 <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
-                                <input type='text' id='name' name='name' required><br>
-                                <input type='date' id='date' name='date' required><br>
-                                <select id='frequency' name='frequency' required>
+                                <input class='input-styles' type='text' id='name' name='name' required><br>
+                                <input class='input-styles' type='date' id='date' name='date' required><br>
+                                <select class='input-styles' id='frequency' name='frequency' required>
                                     <option value='Yearly' selected='selected'>Yearly</option>
                                     <option value='Monthly'>Monthly</option>
                                     <option value='One-time'>One-time</option>
