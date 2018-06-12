@@ -62,7 +62,7 @@
                 }
 
                 echo 
-                "<div class='dropdown-module' id='person-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='person-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Edit $name's Record</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -85,12 +85,13 @@
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Person'>
+                        <a href='dashboard.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='personid' value='$personId'>
                     </form>
                 </div>";
             } else {
                 echo
-                "<div class='dropdown-module' id='person-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='person-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Person</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -112,7 +113,8 @@
                             <input type='checkbox' id='family' name='family'>
                         </div>
                     </div>
-                    <input type='submit' value='Add Person' style='margin-bottom: 0;'>
+                    <input type='submit' value='Add Person''>
+                    <a href='dashboard.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                     <input type='hidden' name='userid' value='$userId'>
                     </form>
                 </div>";

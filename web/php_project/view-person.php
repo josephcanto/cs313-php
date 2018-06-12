@@ -61,7 +61,7 @@
                 }
 
                 echo 
-                "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='event-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Edit Event</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -104,13 +104,14 @@
                             </div>
                         </div>
                         <input type='submit' value='Edit Event'>
+                        <a href='view-person.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='eventid' value='$eventId'>
                         <input type='hidden' name='personid' value='$person_id'>
                     </form>
                 </div>";
             } else {
                 echo 
-                "<div class='dropdown-module' id='event-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='event-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Event</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -139,6 +140,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Add Event'>
+                        <a href='view-person.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='personid' value='$personId'>
                     </form>
                 </div>";

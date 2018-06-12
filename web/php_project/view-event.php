@@ -60,7 +60,7 @@
                 }
 
                 echo 
-                "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='gift-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Edit Gift Idea</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -81,13 +81,14 @@
                             </div>
                         </div>
                         <input type='submit' id='submit-btn' value='Edit Gift Idea'>
+                        <a href='view-event.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='giftid' value='$giftId'>
                         <input type='hidden' name='eventid' value='$event_id'>
                     </form>
                 </div>";
             } else {
                 echo 
-                "<div class='dropdown-module' id='gift-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='gift-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label' onclick='toggleDropdown()'>Add Gift Idea</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -108,6 +109,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Add Gift Idea'>
+                        <a href='view-event.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='eventid' value='$eventId'>
                     </form>
                 </div>";

@@ -63,7 +63,7 @@
                 }
 
                 echo 
-                "<div class='dropdown-module' id='location-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='location-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Edit Location</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -88,13 +88,14 @@
                             </div>
                         </div>
                         <input type='submit' value='Edit Location'>
+                        <a href='view-location.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='locationid' value='$locationId'>
                         <input type='hidden' name='giftid' value='$gift_id'>
                     </form>
                 </div>";
             } else {
                 echo 
-                "<div class='dropdown-module' id='location-dropdown-module' onclick='toggleDropdown()'>
+                "<div class='dropdown-module' id='location-dropdown-module' title='Click to expand' onclick='toggleDropdown()'>
                     <span id='dropdown-label'>Add Location</span>
                     <span id='down-arrow'></span>
                 </div>
@@ -119,6 +120,7 @@
                             </div>
                         </div>
                         <input type='submit' value='Add Location'>
+                        <a href='view-location.php' title='Cancel edit'><button type='button'>Cancel</button></a>
                         <input type='hidden' name='giftid' value='$giftId'>
                     </form>
                 </div>";
