@@ -310,6 +310,7 @@ a:active {
     overflow-y: hidden;
     border-color: #ccc;
     transition: max-height 250ms ease-in;
+    transition: border-width 250ms ease-in;
 }
 
 .user-form-instructions {
