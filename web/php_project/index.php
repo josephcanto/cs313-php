@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="apple-touch-startup-image" href="images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="For-gift &amp; Forget">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
