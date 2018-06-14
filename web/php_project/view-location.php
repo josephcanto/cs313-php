@@ -128,9 +128,9 @@
             }
 
             if($_SESSION['locationsList'] != NULL) {
-                echo $_SESSION['locationsList'] . "<br><br><br><br><br><br><br><br>";
+                echo $_SESSION['locationsList'] . "<br><br><br><br><br><br><br><br><br><br><br>";
             } else {
-                echo "<p>Looks like you haven't added any locations to buy " . $_SESSION['giftName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                echo "<p>Looks like you haven't added any locations to buy " . $_SESSION['giftName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
             }
         ?>
     </main>

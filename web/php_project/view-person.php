@@ -74,9 +74,9 @@
                     <form class='user-form' action='library/edit-event.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
-                                <label for='date'>Date:*</label>
-                                <label for='frequency'>Frequency:*</label>
+                                <label for='name'>Name:*</label><br>
+                                <label for='date'>Date:*</label><br>
+                                <label for='frequency'>Frequency:*</label><br>
                                 <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
@@ -124,9 +124,9 @@
                     <form class='user-form' action='library/add-event.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
-                                <label for='date'>Date:*</label>
-                                <label for='frequency'>Frequency:*</label>
+                                <label for='name'>Name:*</label><br>
+                                <label for='date'>Date:*</label><br>
+                                <label for='frequency'>Frequency:*</label><br>
                                 <label for='reminder'>Reminder:</label>
                             </div>
                             <div id='form-inputs'>
@@ -148,9 +148,9 @@
             }
 
             if($_SESSION['eventsInfoList'] != NULL) {
-                echo $_SESSION['eventsInfoList'] . "<br><br><br><br><br><br><br><br><br><br>";
+                echo $_SESSION['eventsInfoList'] . "<br><br><br><br><br><br><br><br><br><br><br><br><br>";
             } else {
-                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br><br>";
+                echo "<p>Looks like you haven't added any events for " . $_SESSION['personName'] . " yet.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
             }
         ?>
     </main>
