@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
     <?php require 'modules/header.php'; ?>
