@@ -73,7 +73,7 @@
                     <form class='user-form' action='library/edit-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
+                                <label for='name'>Name:*</label><br>
                                 <label for='notes'>Notes:</label>
                             </div>
                             <div id='form-inputs'>
@@ -101,7 +101,7 @@
                     <form class='user-form' action='library/add-idea.php' method='post'>
                         <div id='form-container'>
                             <div id='form-labels'>
-                                <label for='name'>Name:*</label>
+                                <label for='name'>Name:*</label><br>
                                 <label for='notes'>Notes:</label>
                             </div>
                             <div id='form-inputs'>
