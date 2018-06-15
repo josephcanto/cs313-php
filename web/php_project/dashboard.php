@@ -122,9 +122,7 @@
             }
         
             if(isset($_SESSION['peopleList'])) {
-                echo $_SESSION['peopleList'] . "<br><br><br><br><br>";
-            } else {
-                echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                echo $_SESSION['peopleList'];
             }
         ?>
     </main>
